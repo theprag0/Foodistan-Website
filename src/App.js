@@ -1,7 +1,5 @@
-import logo from './logo.svg';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar,Container, NavDropdown , Nav} from 'react-bootstrap';
-import './App.css';
+import React from "react"
 
 function App() {
   return (
