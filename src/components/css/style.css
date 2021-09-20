@@ -1,0 +1,40 @@
+.main-heading-font {
+    font-size: var(--xxl-font);
+}
+
+.heading-font {
+    font-size: var(--l-font);
+}
+
+.normal-font {
+    font-size: var(--sm-font);
+}
+
+.colour-grey {
+    color: #999999;
+}
+
+ul li {
+    padding: 1rem;
+    color: #999999
+}
+
+.footer-download-container {
+    background-color: #FAB84C;
+    height: 80px;
+    width: 300px;
+}
+
+.footer-download-icons {
+    font-size: 5rem;
+    margin: inherit;
+}
+
+.footer-icons {
+    font-size: 4rem;
+    margin: 0 1rem;
+}
+
+.font-weight-bolder {
+    font-weight: bolder;
+}
