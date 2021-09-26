@@ -5,7 +5,6 @@ import {
   FaTwitter,
   FaFacebookF,
   FaInstagram,
-  FaFacebook,
 } from "react-icons/fa";
 
 export default function footer() {
@@ -14,8 +13,10 @@ export default function footer() {
       <footer>
         <div className="container-fluid normal-font">
           <div className="row py-4">
-            <div className="col-12 col-sm-12 col-lg-4 col-xl-4"></div>
-            <div className="col-12 col-sm-12 col-lg-2 col-xl-2">
+            <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 food-background">
+                <img src="/logo.png" alt="  " className="opacity-100" width="100%"></img>
+            </div>
+            <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
               <ul className="">
                 <li className="heading-font my-4 text-dark">Company</li>
                 <li>About Us</li>
@@ -25,7 +26,7 @@ export default function footer() {
                 <li>Feedback</li>
               </ul>
             </div>
-            <div className="col-12 col-sm-12 col-lg-2 col-xl-2">
+            <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
               {" "}
               <ul>
                 <li className="heading-font my-4 text-dark">For You</li>
@@ -35,7 +36,7 @@ export default function footer() {
                 <li>Become a Partner</li>
               </ul>
             </div>
-            <div className="col-12 col-sm-12 col-lg-4 col-xl-4  text-light">
+            <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4  text-light">
               <div className="footer-download-container mx-auto my-4 px-5 d-flex">
                 <FaApple className="footer-download-icons" />
                 <div className="my-auto">
@@ -62,7 +63,7 @@ export default function footer() {
             </div>
           </div>
           <hr></hr>
-          <div className="row px-5">
+          <div className="row px-5 text-muted">
             <p className=" py-2">
               By continuing past this page, you agree to our Terms of Service,
               Cookie Policy, Privacy Policy and Content Policies. All trademarks
