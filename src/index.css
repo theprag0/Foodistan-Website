@@ -159,6 +159,13 @@ body {
     --xxl-font: 3rem;
 }
 
+@media (max-width:1599.98px) {
+    html,
+    body {
+        font-size: 50%;
+    }
+}
+
 @media (max-width: 1399.98px) {
     html,
     body {
