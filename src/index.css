@@ -148,15 +148,6 @@ body {
 }
 
 :root {
-    /* --dark-blue: #112949;
-    --light-blue: #3cc3f2;
-    --black: #000000;
-    --white: #ffffff;
-    --orange: #ea7b2c;
-    --light-orange: #e98742;
-    --light-grey: #bdbdbd;
-    --dark-grey: #8a8888;
-    --background-blue: #ebf2f5; */
     --xxs-font: 1.2rem;
     --xs-font: 1.4rem;
     --s-font: 1.6rem;
@@ -166,4 +157,39 @@ body {
     --l-font: 2.4rem;
     --xl-font: 2.8rem;
     --xxl-font: 3rem;
+}
+
+@media (max-width: 1399.98px) {
+    html,
+    body {
+        font-size: 43%;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    html,
+    body {
+        font-size: 35%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    html,
+    body {
+        font-size: 25%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    html,
+    body {
+        font-size: 35%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    html,
+    body {
+        font-size: 27%;
+    }
 }

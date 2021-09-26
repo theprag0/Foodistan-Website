@@ -1,6 +1,7 @@
 import { Navbar, Container, NavDropdown, Nav } from "react-bootstrap";
 import React from "react";
 import Footer from "./components/common/footer";
+import ListingCards from "./components/common/listingCards";
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>{" "}
+      <div className="my-5 py-5">
+        <ListingCards />
+      </div>
       <Footer />{" "}
     </div>
   );
