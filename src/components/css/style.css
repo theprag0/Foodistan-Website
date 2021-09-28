@@ -59,8 +59,8 @@ ul li {
 
 .card {
     position: relative;
-    height: 30rem;
-    width: 55rem;
+    height: 28rem;
+    width: 50rem;
     border-radius: 2rem;
     overflow: hidden;
     margin: auto;
@@ -130,4 +130,58 @@ ul li {
     width: 2rem;
     background-color: red;
     border-radius: 50%;
+}
+
+
+/* ---------------trolly----------------- */
+
+.tab-selection-container {
+    border-bottom: 0.1px solid #C4C4C4;
+    width: fit-content;
+    position: relative;
+    margin-left: 2rem;
+}
+
+.tab-selection-container::before {
+    content: "";
+    display: block;
+    width: 14rem;
+    height: 0.6rem;
+    background-color: #F8EDDB;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.tab-selection-container::after {
+    content: "";
+    display: block;
+    width: 12rem;
+    height: 1rem;
+    background-color: #C4C4C4;
+    position: absolute;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+.trolly-tab-selection {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+    margin: 0 5rem 2rem 0;
+    background-color: #FAB84C;
+    padding: 1rem;
+    border-radius: 50%;
+    overflow: none;
+}
+
+.lunch-tab-selection {
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+    padding: 1rem;
+    margin: 0 0 2rem 5rem;
+    background-color: #FAB84C;
+    border-radius: 50%;
+    overflow: none;
 }
