@@ -9,8 +9,8 @@ import tiffin from "../../images/tiffin.svg";
 function Header(){
     return(
         <div>   <Navbar bg="white" expand="sm"  className="navbar">
-        <Container>
-          <Navbar.Brand className="navbar-brand " href="#home"><img src={logo} width="200px" height="50px"></img></Navbar.Brand>
+        <Container >
+          <Navbar.Brand className="navbar-brand " href="#home"><img src={logo} className="logo"></img></Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Nav className="ml-auto">
@@ -27,10 +27,10 @@ function Header(){
           <Col xs={1}></Col>
           <Col xs={1}>
             <div className="location">
-             <h3> <Badge bg="light"><img width="10px" height="10px" src={pin}/></Badge><span>Home <br />Rohini,India</span></h3>
+             <h3> <Badge bg="light"><img width="20px" height="20px" src={pin}/></Badge><span style={{"font-weight":'bold'}, {"font-size":'2.5rem'}}>Home </span><br /><span style={{"font-size":'2.5rem'}}>Rohini,India</span></h3>
             </div>
           </Col>
-          <Col xs={7}>
+          <Col xs={8}>
           <div>
           <Form className="d-flex">
             <FormControl

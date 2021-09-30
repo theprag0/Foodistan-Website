@@ -1,6 +1,10 @@
 img{
     max-height: 26rem;
     max-width: 34rem;
+    margin: auto auto;
+}
+.mx-auto{
+    margin: auto;
 }
 .carousel{
     margin-bottom: 5rem;

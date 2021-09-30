@@ -1,7 +1,60 @@
-.Deals{
+/* common class in dealsoftheday and orderbycuisine */
+
+.big-font{
     font-size: 2.5rem;
+    font-weight: bold;
     margin-bottom: 2rem;
 }
-.deal-img{
-    min-width: 25rem;
+.md-font{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
 }
+.cuisine-img{
+    max-width: 20rem;
+    max-height: 20rem;
+}
+/* end  */
+
+
+
+
+/* DealsOfTheDay */
+.deal-container{
+    margin-bottom: 2rem;
+    background-color: rgba(252, 225, 158, 0.171);
+    padding-top: 4rem;
+    
+}
+.deal-img{
+    width: 35rem;
+    height: 18rem;
+    border-radius: 5%;
+    padding-top: 2rem;
+    margin: auto;
+}
+.deal-img-discount{
+    font-size: 2rem;
+    text-align: center;
+    height: 5rem;
+    width: 60%;
+    padding: 1.5rem;
+ 
+    /* margin-top: 6rem; */
+}
+.viewMore-btn{
+    color: #ffc107;
+    width: 100%;
+}
+.viewMore-btn:hover{
+    color: black;
+}
+@media (max-width:400px) {
+.hide{
+    display: none;
+}
+.big-font{
+    text-align: center;
+}
+}
+    

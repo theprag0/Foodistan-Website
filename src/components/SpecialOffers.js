@@ -4,86 +4,91 @@ import offer from "../images/offer.png" ;
 
 export default function SpecialOffers(){
     return(
-        <div><Container>
-                <Carousel className="carousel">
-        <Carousel.Item>
-        <Row>
-           <Col>
+        <div><Container fluid >
+                <Carousel indicators={false} className="carousel ">
+        <Carousel.Item interval={1000000}>
+        <Row className="mx-auto">
+           <Col sm={3} xs={6}>
            <img
             src={offer}
             alt="First slide"
           />
            </Col>
-           <Col>
+           <Col sm={3} xs={6}>
            <img
             src={offer}
             alt="First slide"
           />
            </Col>
-           <Col>
+           <Col sm={3} xs={6}>
+           <img
+            src={offer}
+            alt="First slide"
+          />
+           </Col>
+           <Col sm={3} xs={6}>
            <img
             src={offer}
             alt="First slide"
           />
            </Col>
         </Row>
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
         <Row>
-           <Col>
+           <Col sm={3} xs={6}>
+           <img
+            src={offer}
+            alt="First slide"
+           />
+           </Col>
+           <Col sm={3} xs={6}>
            <img
             src={offer}
             alt="First slide"
           />
            </Col>
-           <Col>
+           <Col sm={3} xs={6}>
            <img
             src={offer}
             alt="First slide"
           />
            </Col>
-           <Col>
+           <Col sm={3} xs={6}>
            <img
             src={offer}
             alt="First slide"
           />
            </Col>
         </Row>
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
         <Row>
-           <Col>
+        <Col sm={3} xs={6}>
            <img
             src={offer}
             alt="First slide"
           />
            </Col>
-           <Col>
+           <Col sm={3} xs={6}>
            <img
             src={offer}
             alt="First slide"
           />
            </Col>
-           <Col>
+           <Col sm={3} xs={6}>
+           <img
+            src={offer}
+            alt="First slide"
+          />
+           </Col>
+           <Col sm={3} xs={6}>
            <img
             src={offer}
             alt="First slide"
           />
            </Col>
         </Row>
-      
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
             </Container></div>
