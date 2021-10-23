@@ -1,3 +1,7 @@
+.logo{
+    width:200px;
+    height:60px
+}
 .btn{
     padding: 0.5rem 1.4rem;
     color: #FCFCFC;
@@ -22,7 +26,7 @@ a:hover{
 .navbar{
     box-shadow: 1px 1px 10px rgb(184, 184, 184);
     padding: 0rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3.5rem;
 }
 .navbar-brand{
     padding: 0rem;
@@ -35,7 +39,7 @@ a:hover{
 }
 .search{
     background-color: rgba(252, 225, 158, 0.356);
-    max-height: 5rem;
+    min-height: 4rem;
 }
 .services{
     font-size: 1.6rem;
@@ -44,3 +48,10 @@ a:hover{
 .round{
     border-radius: 100%;
 }
+
+ @media (max-width:400px){
+    .logo{
+        width:25rem;
+        height:8rem
+    }
+ }
