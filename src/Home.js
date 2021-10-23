@@ -7,6 +7,8 @@ import OrderByCuisines from "./components/OrderByCuisines";
 import Footer from "./components/common/footer";
 import Trolly from "./components/common/trolly";
 import ListingCards from "./components/common/listingCards";
+import Item from "./delivery-dashboard/food-item";
+import Menu from "./delivery-dashboard/main-menu";
 
 function Home() {
   return (
