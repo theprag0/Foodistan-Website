@@ -14,6 +14,10 @@
     font-size: var(--sm-font);
 }
 
+.small-font {
+    font-size: var(--xs-font);
+}
+
 .colour-grey {
     color: #999999;
 }
@@ -184,4 +188,164 @@ ul li {
     background-color: #FAB84C;
     border-radius: 50%;
     overflow: none;
+}
+
+
+/* -----------------Delivery-Dashboard------------------ */
+
+.food-dashboard-rating-container {
+    position: absolute;
+    background-color: #3BB755;
+    top: 3rem;
+    width: 10rem;
+    height: 6rem;
+    border-radius: 0 1rem 1rem 0;
+    color: white;
+}
+
+.food-dashboard-offer-card {
+    background-color: #3BB755;
+    width: 25rem;
+    height: 8.5rem;
+    display: inline-block;
+    border-radius: 1rem;
+    color: white;
+}
+
+.food-dashboard-offer-card-2 {
+    background-color: #E23744;
+    width: 25rem;
+    height: 8.5rem;
+    display: inline-block;
+    border-radius: 1rem;
+    color: white;
+}
+
+.food-dashboard-horizontal {
+    position: absolute;
+    left: 0.5rem;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+    bottom: -2rem;
+    border-bottom: 0.1rem solid white;
+}
+
+.food-dashboard-rating-card-text {
+    padding: 0.5rem 0 0 4rem;
+}
+
+.food-dashboard-items {
+    display: inline-block;
+    width: auto;
+}
+
+.food-dashboard-items-icon-1 {
+    color: white;
+    background-color: #E23744;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: 0.3rem;
+    margin-right: 0.5rem;
+}
+
+.food-dashboard-items-icon-2 {
+    color: white;
+    background-color: #8CC8FF;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.3rem;
+    margin-right: 0.5rem;
+}
+
+.food-dashboard-items-icon-3 {
+    color: white;
+    background-color: #3BB755;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.3rem;
+    margin-right: 0.5rem;
+}
+
+.availability-selection-section {
+    border-radius: 5rem;
+    border: 0.2rem solid #E9E9E9;
+    padding: 2rem;
+    width: 70rem;
+    margin: auto;
+    color: #B6B6B6;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 1px 1px 10px #E9E9E9;
+}
+
+.cart-container {
+    box-shadow: 1px 1px 10px #E9E9E9;
+    border-radius: 1rem;
+}
+
+.cart-container-inner-top {
+    border-bottom: 0.1rem solid black;
+    text-align: center;
+}
+
+.cart-container-inner-bottom {}
+
+.card-container-resturant {
+    height: 7rem;
+}
+
+.cart-container-inner-image {
+    background-color: grey;
+    width: 7rem;
+    height: 100%;
+}
+
+.cart-btns {
+    width: 4rem;
+    height: 4rem;
+    border: none;
+}
+
+.cart-icon {
+    color: white;
+    background-color: #FAC05E;
+    width: 5rem;
+    height: fit-content;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.cart-btn-add {
+    color: #F7C12B;
+    background-color: rgba(247, 193, 43, 36%);
+}
+
+.cart-btn-remove {
+    color: #999999;
+    background-color: #EEEEEE;
+}
+
+.mainmenu-card-container {
+    height: 50rem;
+    width: 40rem;
+    box-shadow: 1px 1px 10px #E9E9E9;
+    border-radius: 1rem;
+}
+
+.mainmenu-card-container-img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.food-item-addbtn {
+    background-color: #E23744;
+    color: white;
+    border: none;
+    width: 12rem;
+    height: 5rem;
+    border-radius: 1rem;
 }
