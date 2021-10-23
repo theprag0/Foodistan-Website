@@ -200,3 +200,9 @@ body {
         font-size: 27%;
     }
 }
+
+.main-container {
+    width: 85%;
+    height: auto;
+    margin: auto;
+}

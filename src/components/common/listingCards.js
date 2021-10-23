@@ -65,12 +65,15 @@ const listing = [
 export default function listingCards() {
   return (
     <>
-      <div className="container-fluid normal-font">
-        <div className="row mx-5">
+      <div className="container-fluid normal-font main-container">
+        <div className="row my-2">
           {" "}
-          {listing.map((item,i) => {
+          {listing.map((item, i) => {
             return (
-              <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mx-auto py-3" key={i}>
+              <div
+                className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mx-auto my-3"
+                key={i}
+              >
                 <div className="card">
                   <div className="card-image-container">
                     <img
@@ -79,7 +82,7 @@ export default function listingCards() {
                       alt="not found"
                     />
                     <div className="card-image-footer">
-                      <p className="h-100 d-flex align-items-center noraml-heading-font">
+                      <p className="h-100 d-flex align-items-center noraml-font">
                         <MdVerifiedUser />
                         Foodistan - Certified{" "}
                       </p>{" "}
@@ -88,7 +91,7 @@ export default function listingCards() {
                   <div className="card-details">
                     <div className="card-details-container">
                       <div className="card-details-container-padding">
-                        <h1 className="font-weight-bolder pt-5 pb-2 heading-font">
+                        <h1 className="font-weight-bolder pt-4 pb-2 heading-font">
                           {" "}
                           {item.name}{" "}
                         </h1>{" "}
@@ -111,7 +114,7 @@ export default function listingCards() {
                           <FaShoppingBag className="normal-heading-font" />
                           Takeaway{" "}
                         </p>{" "}
-                      </div>
+                      </div>{" "}
                       <div className="card-details-footer d-flex flex-row align-items-center justify-content-around text-light">
                         <p>
                           <IoLocationSharp className="heading-font" />{" "}
