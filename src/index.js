@@ -14,18 +14,19 @@ import ProfileOrders from "./Profile/P-components/profileOrders";
 import Address from "./Profile/P-components/address";
 import Payments from "./Profile/P-components/payments";
 import reportWebVitals from "./reportWebVitals";
-
+import Login from "../src/login"
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />{" "}
-        <Route path="/profile" component={Profile} />
-        <Route exact path="/orders" component={ProfileNoOrder} />
-        <Route path="/orders/1" component={ProfileOrders} />
-        <Route path="/address" component={Address} />
-        <Route path="/payments" component={Payments}/>
+        <Route path="/profile" component={Profile} />{" "}
+        <Route exact path="/orders" component={ProfileNoOrder} />{" "}
+        <Route path="/orders/1" component={ProfileOrders} />{" "}
+        <Route path="/address" component={Address} />{" "}
+        <Route path="/payments" component={Payments} />{" "}
+        <Route path="/login" component={Login} />
       </Switch>{" "}
     </Router>{" "}
   </React.StrictMode>,
