@@ -9,9 +9,11 @@
 }
 
 .md-font{
-    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 2rem;
+}
+.md-font-thin,.md-font{
+    font-size: 2rem;
 }
 .cuisine-img{
     max-width: 20rem;
@@ -21,6 +23,7 @@
 .order-container{
     margin-bottom: 10rem;
     padding-top: 4rem;
+    padding-bottom: 2rem;
     
 }
 /* end  */

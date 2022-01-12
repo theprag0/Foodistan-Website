@@ -9,6 +9,8 @@ import Trolly from "./components/common/trolly";
 import ListingCards from "./components/common/listingCards";
 import Item from "./delivery-dashboard/food-item";
 import Menu from "./delivery-dashboard/main-menu";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 function Home() {
   return (

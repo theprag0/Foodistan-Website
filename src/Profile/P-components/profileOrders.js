@@ -16,7 +16,7 @@ export default function profile(){
     return(
         <div className="bg-color">
             <Header/>
-            <div className="container">
+            <div className="container marginB">
                <div className="row outer-container">
                    <div className="col-5 light-yellow profile-attributes">
                        <div className="image-card">
@@ -31,7 +31,7 @@ export default function profile(){
                                <li className="marginB"><Link to="/track-order" className="big-font">Track my order</Link></li>
                                <li className="marginB"><Link to="/payments" className="big-font">Payments</Link></li>
                                <li className="marginB"><Link to="/address"  className="big-font">Addresses</Link></li>
-                               <li className="marginB">Notifications</li>
+                               <li className="marginB"><Link to="/notifications"  className="big-font">Notifications</Link></li>
                            </ul>
                        </div>
                     </div>
