@@ -11,7 +11,7 @@ export default function footer() {
   return (
     <>
       <footer>
-        <div className="container-fluid normal-font">
+        <div className="container-fluid normal-font bg-white">
           <div className="row py-4">
             <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 food-background">
                 <img src="/logo.png" alt="  " className="opacity-100" width="100%"></img>

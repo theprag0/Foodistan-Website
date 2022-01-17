@@ -17,7 +17,8 @@ import trackOrder from "./Profile/P-components/trackOrder";
 import notifications from "./Profile/P-components/notifications";
 import reportWebVitals from "./reportWebVitals";
 import landingPage from "./components/landingPage";
-
+import Login from "../src/login"
+import Menu from "./delivery-dashboard/main-menu";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -32,6 +33,8 @@ ReactDOM.render(
         <Route path="/payments" component={Payments}/>
         <Route path="/track-order" component={trackOrder}/>
         <Route path="/notifications" component={notifications}/>
+        <Route path="/login" component={Login} />
+        <Route path="/menu" component={Menu} />
       </Switch>{" "}
     </Router>{" "}
   </React.StrictMode>,
