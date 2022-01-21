@@ -12,7 +12,7 @@
 
 .normal-font {
     font-size: var(--sm-font);
-    box-shadow: 0px -5px 10px rgb(211, 209, 209);
+    /* box-shadow: 0px -5px 10px rgb(211, 209, 209); */
 }
 
 .small-font {
@@ -38,6 +38,8 @@ ul li {
 }
 footer{
     background-color: white;
+    box-shadow: 0px -5px 10px rgb(211, 209, 209);
+    margin-top: 40rem;
 }
 
 .footer-download-icons {
@@ -139,7 +141,7 @@ footer{
     width: fit-content;
     position: relative;
     margin-left: 2rem;
-}
+} 
 
 .tab-selection-container::before {
     content: "";
@@ -359,20 +361,33 @@ footer{
     padding: 5rem;
     text-align: center;
 }
-
-.login-tab-btn {
-    border: none;
-    background: none;
+.login-tab-btn-S{
     width: 30rem;
     height: 5rem;
+    border: none;
+}
+.login-tab-btn {
+    width: 30rem;
+    height: 5rem;
+}
+.active-log-sign{
+    border: none;
+    background: none;
     border-top: 0.2rem solid #FAC05E;
 }
 
-.signup-tab-btn {
+.signup-tab-btn-L {
     width: 30rem;
     height: 5rem;
     border: none;
-    background: #E3E3E3;
+}
+.signup-tab-btn-S {
+    width: 30rem;
+    height: 5rem;
+   
+}
+.signUp-display-btn{
+    margin-bottom: 4rem;
 }
 
 .login-form-container {
@@ -384,12 +399,15 @@ footer{
     width: 100%;
 }
 
-.login-input {
+.login-input, .login-input-S {
     border: 0.1rem solid #FAB84C;
     height: 5rem;
     width: 100%;
     outline: none;
     padding: 0 1rem;
+}
+.login-input-S{
+    margin-bottom: 1rem;
 }
 
 .login-input-btn {
@@ -402,8 +420,25 @@ footer{
     border-left: 0.1rem solid #FAB84C;
     color: white;
 }
+.login-input-btn-S{
+    width: 100%;
+    padding: 1rem 4rem;
+    background: #FAB84C;
+    border: none;
+    border-left: 0.1rem solid #FAB84C;
+    color: white;
+}
 
 .login-input-select {
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0 1rem;
+    border: 0.1rem solid #FAB84C;
+    border-right: 0;
+    height: 5rem;
+}
+.login-input-select-S{
     outline: none;
     border: none;
     background: none;

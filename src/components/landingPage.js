@@ -1,4 +1,7 @@
-import React from 'react'
+import React, {useState } from 'react'
+import {Swiper, SwiperSlide} from "swiper/react";
+import SwiperCore, {Pagination} from 'swiper';
+import "swiper/swiper-bundle.css";
 import { Button } from 'react-bootstrap';
 import Header from './common/header'
 import Footer from './common/footer'
@@ -16,15 +19,28 @@ import { Link } from 'react-router-dom';
 const HomePage = ()=>{
     <Link to={"/explore"}></Link>
 }
+var flag;
+function WindowWidth(){
+    
+    const screenSize= window.innerWidth;
+    return screenSize;     
+}
 
-export default function landingPage(){
+export default function LandingPage(){
+
+    if (WindowWidth() <= 600) {
+        flag = 2;
+    }else{
+        flag = 4;
+    } 
+
     return(
-    <div>
+    <div className='container-fluid'>
         <div className='landingPage'>
         <Header/>
     <div className='row outer-search-bar container-fluid'>
-        <div className='col-3'></div>
-        <div className='col-6 search-bar'>
+        <div className='col-md-3 '></div>
+        <div className='col-md-6 search-bar'>
             <div className='location-container'>
                 <div className='location-wrapper'>
                 <div className='location-icon-name'>
@@ -38,7 +54,7 @@ export default function landingPage(){
                    <input placeholder='Search Cuisines' className='search-input'/>
                 </div>
     </div>
-    <div className='col-3'></div>
+    <div className='col-md-3 '></div>
         </div>
             <div className='banner-text'><h1 className='title'>Not sure where to get the best <br/>taste of street style?</h1>
                 <h2 className='sub-title'>Perfect. We'll help you!</h2>
@@ -54,38 +70,96 @@ export default function landingPage(){
                     <div className='heading-text'>
                             Explore Nearby Food
                     </div>
-                    <div className='row'>
-                    <div className='col-3'>
-                    <div className='nearby-food-card'>
-                        {/* <div className='nearby-food-card-img' ></div> */}
-                        <div className='nearby-food-card-details'>
-                            <div className='shop-name'>Shaman Chaat Corner</div>
-                            <div className='shop-location'>GT, Karnal Road</div>
-                        </div>
-                    </div>
-                    </div>
-                    <div className='col-3'>    <div className='nearby-food-card'>
-                        {/* <div className='nearby-food-card-img' ></div> */}
-                        <div className='nearby-food-card-details'>
-                            <div className='shop-name'>Shaman Chaat Corner</div>
-                            <div className='shop-location'>GT, Karnal Road</div>
-                        </div>
-                    </div></div>
-                    <div className='col-3'>    <div className='nearby-food-card'>
-                        {/* <div className='nearby-food-card-img' ></div> */}
-                        <div className='nearby-food-card-details'>
-                            <div className='shop-name'>Shaman Chaat Corner</div>
-                            <div className='shop-location'>GT, Karnal Road</div>
-                        </div>
-                    </div></div>
-                    <div className='col-3'>    <div className='nearby-food-card'>
-                        {/* <div className='nearby-food-card-img' ></div> */}
-                        <div className='nearby-food-card-details'>
-                            <div className='shop-name'>Shaman Chaat Corner</div>
-                            <div className='shop-location'>GT, Karnal Road</div>
-                        </div>
-                    </div></div>
-                </div>
+
+                
+                    <Swiper slidesPerView={`${flag}`} spaceBetween={10} pagination={{
+                    "clickable": true
+                    }} className="mySwiper">
+                    <SwiperSlide>  <div className='' >
+                                    <div className='nearby-food-card'>
+                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                        <div className='nearby-food-card-details'>
+                                            <div className='shop-name'>Shaman Chaat Corner</div> 
+                                            <div className='shop-location'>GT, Karnal Road</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                    </SwiperSlide>
+                    <SwiperSlide>  <div className='' >
+                                    <div className='nearby-food-card'>
+                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                        <div className='nearby-food-card-details'>
+                                            <div className='shop-name'>Shaman Chaat Corner</div> 
+                                            <div className='shop-location'>GT, Karnal Road</div>
+                                        </div>
+                                      </div>
+                                    </div></SwiperSlide>
+                    <SwiperSlide>  <div className='' >
+                                    <div className='nearby-food-card'>
+                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                        <div className='nearby-food-card-details'>
+                                            <div className='shop-name'>Shaman Chaat Corner</div> 
+                                            <div className='shop-location'>GT, Karnal Road</div>
+                                        </div>
+                                      </div>
+                                    </div></SwiperSlide>
+                    <SwiperSlide>  <div className='' >
+                                    <div className='nearby-food-card'>
+                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                        <div className='nearby-food-card-details'>
+                                            <div className='shop-name'>Shaman Chaat Corner</div> 
+                                            <div className='shop-location'>GT, Karnal Road</div>
+                                        </div>
+                                      </div>
+                                    </div></SwiperSlide>
+                    <SwiperSlide>  <div className='' >
+                                    <div className='nearby-food-card'>
+                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                        <div className='nearby-food-card-details'>
+                                            <div className='shop-name'>Shaman Chaat Corner</div> 
+                                            <div className='shop-location'>GT, Karnal Road</div>
+                                        </div>
+                                      </div>
+                                    </div></SwiperSlide>
+                    <SwiperSlide>  <div className='' >
+                                    <div className='nearby-food-card'>
+                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                        <div className='nearby-food-card-details'>
+                                            <div className='shop-name'>Shaman Chaat Corner</div> 
+                                            <div className='shop-location'>GT, Karnal Road</div>
+                                        </div>
+                                      </div>
+                                    </div></SwiperSlide>
+                    <SwiperSlide>  <div className='' >
+                                    <div className='nearby-food-card'>
+                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                        <div className='nearby-food-card-details'>
+                                            <div className='shop-name'>Shaman Chaat Corner</div> 
+                                            <div className='shop-location'>GT, Karnal Road</div>
+                                        </div>
+                                      </div>
+                                    </div></SwiperSlide>
+                    <SwiperSlide>  <div className='' >
+                                    <div className='nearby-food-card'>
+                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                        <div className='nearby-food-card-details'>
+                                            <div className='shop-name'>Shaman Chaat Corner</div> 
+                                            <div className='shop-location'>GT, Karnal Road</div>
+                                        </div>
+                                      </div>
+                                    </div></SwiperSlide>
+                    <SwiperSlide>  <div className='' >
+                                    <div className='nearby-food-card'>
+                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                        <div className='nearby-food-card-details'>
+                                            <div className='shop-name'>Shaman Chaat Corner</div> 
+                                            <div className='shop-location'>GT, Karnal Road</div>
+                                        </div>
+                                      </div>
+                                    </div></SwiperSlide>
+                    </Swiper>
+
+
             </div>
                 <div className='vendors-wrapper'>
                     <div className='heading-text'>Listen from vendors</div>

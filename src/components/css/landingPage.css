@@ -12,7 +12,11 @@
     background-position: fixed;
     padding-bottom: 15rem;
     margin-bottom: 6rem;
-    
+}
+@media (max-width:600px){
+    .landingPage{
+        padding-bottom: 8rem;
+    }
 }
 .banner-text{
     text-align: center;
@@ -24,7 +28,7 @@
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    width: 60%;
+    width: 100%;
     border-radius: 8px;
     box-shadow: 1px 1px 2px gray;
     background-color: white;
@@ -70,7 +74,7 @@
     /* margin: 0rem 1rem; */
 }
 .search-icon{
-    font-size: 3.9rem;
+    font-size: 3.9rem; 
     color:#686868 ;
     margin-right: 3rem;
     margin-left: 2rem;
@@ -82,6 +86,14 @@
     font-size: 3rem;
     font-family:segoe;
     letter-spacing: .5rem;
+}
+@media (max-width:600px){
+    .search-bar{
+        height: 30px;
+    }
+    .outer-search-bar{
+        padding: 0rem 6rem;
+    } 
 }
 .title{
     color: #ffffff;
@@ -108,7 +120,27 @@
     font-family: segoe;
     letter-spacing: 2px;
 }
+@media (max-width:600px){
+    .title{
+        font-size: 4.5rem;
+        margin-top: 1.5rem;
+    }
+    .sub-title{
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    .explore-btn{
+        margin-top: 5rem;
+        padding: 0.8rem 3.5rem;
+    }
+}
 
+/*--------------- slider---------------- */
+
+.slide{
+    width: 35rem;
+    
+}
 
 .heading-text{
     color: black;
@@ -131,6 +163,7 @@
     text-shadow: 1px 1px 5px gray;
     overflow: hidden;
     transition: 1s;
+    
 }
 .nearby-food-card:hover,.nearby-food-card:hover>.nearby-food-card-details
 ,.nearby-food-card-details:hover{
@@ -172,6 +205,7 @@
 .vendor-img{
     margin-bottom: 2rem;
     border-radius: 8px;
+    max-width: 100%;
 }
 .vendor-name{
     font-size: 2.5rem;
@@ -207,6 +241,20 @@
 }
 .partner-img{
     width: 100%;
+}
+@media (max-width:600px){
+    .partner-wrapper{
+        padding: 4rem 5rem;
+        margin-bottom: 10rem;
+    }
+    .partner-banner-text{
+        font-size: 5rem;
+        margin-bottom: 3rem;
+    }
+    .below-banner{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
 }
 .our-services-wrapper{
     margin-bottom: 15rem;
@@ -246,6 +294,9 @@
 
 /* mobile view */
 
-@media (max-width:400px){
-
+@media (max-width:600px){
+    .get-app-banner{
+        font-size: 6rem;
+        margin-bottom: 3rem;
+        }
  }

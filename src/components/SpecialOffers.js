@@ -1,4 +1,3 @@
-import { Carousel, Col, Container, Row } from "react-bootstrap";
 import offer from "../images/offer.png" ;
 import React, { Component } from "react";
 import Slider from "react-slick";
@@ -83,6 +82,42 @@ export default class CenterMode extends Component {
    </div>
  );
 </div>
+          // <div className='row'>
+          // <div className='col-6 col-sm-3' >
+          // <div className='nearby-food-card'>
+          //     {/* <div className='nearby-food-card-img' ></div> */}
+          //     <div className='nearby-food-card-details'>
+          //         <div className='shop-name'>Shaman Chaat Corner</div> 
+          //         <div className='shop-location'>GT, Karnal Road</div>
+          //     </div>
+          // </div>
+          // </div>
+//           <div className='col-6 col-sm-3'>   
+//            <div className='nearby-food-card'>
+//               {/* <div className='nearby-food-card-img' ></div> */}
+//               <div className='nearby-food-card-details'>
+//                   <div className='shop-name'>Shaman Chaat Corner</div>
+//                   <div className='shop-location'>GT, Karnal Road</div>
+//               </div>
+//           </div></div>
+//           <div className='col-6 col-sm-3 '>   
+//            <div className='nearby-food-card'>
+//               {/* <div className='nearby-food-card-img' ></div> */}
+//               <div className='nearby-food-card-details'>
+//                   <div className='shop-name'>Shaman Chaat Corner</div>
+//                   <div className='shop-location'>GT, Karnal Road</div>
+//               </div>
+//           </div></div>
+//           <div className='col-6 col-sm-3'>    
+//           <div className='nearby-food-card'>
+//               {/* <div className='nearby-food-card-img' ></div> */}
+//               <div className='nearby-food-card-details'>
+//                   <div className='shop-name'>Shaman Chaat Corner</div>
+//                   <div className='shop-location'>GT, Karnal Road</div>
+//               </div>
+//           </div>
+//       </div>
+// </div>
    
                 /* <Carousel indicators={false} className="carousel ">
         <Carousel.Item interval={1000000}>

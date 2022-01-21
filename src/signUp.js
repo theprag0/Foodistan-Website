@@ -54,30 +54,36 @@ export default function Login() {
         </div>
         <div className="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 login-container-right">
           <img src="/logo.png" width="80%" />
-          <div>
-            <button className="active-log-sign login-tab-btn">Login</button>
-            <Link to='/signUp'><button className="signup-tab-btn-L">Sign Up</button></Link>
+          <div className="signUp-display-btn">
+          <Link to='/login'> <button className="login-tab-btn-S">Login</button></Link>
+            <button className="active-log-sign signup-tab-btn-S">Sign Up</button>
           </div>
-          <div className="d-flex align-items-center login-form-container mx-auto">
-            <select className="login-input-select">
+          <div className="d-flex login-form-container mx-auto">
+            <select className="login-input-select-S">
               <option>+91</option>
               <option>+92</option>
             </select>
-            <form className="my-5 login-form">
+            <form className="login-form">
               <div id="sign-in-button"></div>
               <input
                 type="tel"
-                className="login-input"
+                className="login-input-S"
                 placeholder="Enter mobile number"
                 onChange={e => {
                   setPhoneno(e.target.value);
                 }}
               ></input>
+              <input type="email"
+                className="login-input-S"
+                placeholder="Enter email address"
+                onChange={e => {
+                  setPhoneno(e.target.value);
+                }}></input>
               <button
                 onClick={e => {
                  onSignInSubmit(e)
                 }}
-                className="login-input-btn"
+                className="login-input-btn-S"
               >
                 <FaArrowRight />
               </button>

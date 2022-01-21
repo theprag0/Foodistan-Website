@@ -16,8 +16,9 @@ import Payments from "./Profile/P-components/payments";
 import trackOrder from "./Profile/P-components/trackOrder";
 import notifications from "./Profile/P-components/notifications";
 import reportWebVitals from "./reportWebVitals";
-import landingPage from "./components/landingPage";
+import landingPage from "./components/LandingPage";
 import Login from "../src/login"
+import SignUp from "../src/signUp"
 import Menu from "./delivery-dashboard/main-menu";
 
 ReactDOM.render(
@@ -34,6 +35,7 @@ ReactDOM.render(
         <Route path="/track-order" component={trackOrder}/>
         <Route path="/notifications" component={notifications}/>
         <Route path="/login" component={Login} />
+        <Route path="/signUp" component={SignUp} />
         <Route path="/menu" component={Menu} />
       </Switch>{" "}
     </Router>{" "}

@@ -3,12 +3,11 @@ import {TiLocation} from "react-icons/ti"
 import {FiSearch} from "react-icons/fi"
 
 export default function searchBar(){
-    return(
+    return( 
       
-      <div className='row container-fluid'>
-        <div className='col-3'></div>
-        <div className="outer-sear-bar">
-        <div className='col-6 search-bar'>
+   <div className="container-fluid">
+        <div className="outer-search-bar">
+        <div className='search-bar'>
             <div className='location-container'>
                 <div className='location-wrapper'>
                 <div className='location-icon-name'>
@@ -23,7 +22,6 @@ export default function searchBar(){
                 </div>
     </div>
         </div>
-        <div className='col-3'></div>
        </div>
         
     )
