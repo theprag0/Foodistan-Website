@@ -1,0 +1,302 @@
+@font-face {
+    font-family:segoe;
+    src: url(../../fonts/Segoe\ UI.ttf);
+}
+.container-fluid{
+    padding: 0px;
+}
+.landingPage{
+    background-image: url("/src/images/landingBG.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    padding-bottom: 15rem;
+    margin-bottom: 6rem;
+}
+@media (max-width:600px){
+    .landingPage{
+        padding-bottom: 8rem;
+    }
+}
+.banner-text{
+    text-align: center;
+}
+
+.search-bar{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px gray;
+    background-color: white;
+    padding: 0;
+}
+.absolute-center{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.location-container{
+    align-items: center;
+    padding: 0px 2px;
+    justify-content: center;
+}
+.location-icon-name{
+    display: flex;
+    color: #494949;
+    text-align: left;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 550;
+    line-height: 2.5rem;
+    padding-left:1.5rem;
+    font-family:segoe;
+    letter-spacing: 1px;
+}
+.home-text{
+    font-weight: 600;
+}
+.location-icon{
+    font-size: 4rem;
+    color: #FAC05E;
+    margin-right: 1rem;
+}
+.location-wrapper{
+    border-right: 2px solid #dfdfdf;
+    padding-right: 2rem;
+}
+.input-search-bar{
+   display: flex; 
+    flex: 2;
+    /* margin: 0rem 1rem; */
+}
+.search-icon{
+    font-size: 3.9rem; 
+    color:#686868 ;
+    margin-right: 3rem;
+    margin-left: 2rem;
+}
+.search-input{
+    border: none;
+    outline: none;
+    width: 99%; 
+    font-size: 3rem;
+    font-family:segoe;
+    letter-spacing: .5rem;
+}
+@media (max-width:600px){
+    .search-bar{
+        height: 30px;
+    }
+    .outer-search-bar{
+        padding: 0rem 6rem;
+    } 
+}
+.title{
+    color: #ffffff;
+    font-size: 10.5rem;
+    margin-top: 5rem;
+    font-family: segoe;
+    font-weight:500;
+    text-shadow: 2px 2px 5px black;
+}
+.sub-title{
+    color: white;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-top: 3rem;
+    font-family: segoe;
+    text-shadow: 2px 2px 5px black;
+
+}
+.explore-btn{
+    color: white;
+    padding: 1rem 5rem;
+    border-radius: 4px;
+    margin-top: 8rem;
+    font-family: segoe;
+    letter-spacing: 2px;
+}
+@media (max-width:600px){
+    .title{
+        font-size: 4.5rem;
+        margin-top: 1.5rem;
+    }
+    .sub-title{
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    .explore-btn{
+        margin-top: 5rem;
+        padding: 0.8rem 3.5rem;
+    }
+}
+
+/*--------------- slider---------------- */
+
+.slide{
+    width: 35rem;
+    
+}
+
+.heading-text{
+    color: black;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 8rem;
+    font-family: segoe;
+}
+.explore-nearby-wrapper{
+    margin-bottom: 15rem;
+}
+
+.nearby-food-card{
+    background-color: #D93B30;
+    border-radius: 10px;
+    background-image: url(../Images/nearbyShop.png);
+    padding-top: 26rem; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 1px 1px 5px gray;
+    overflow: hidden;
+    transition: 1s;
+    
+}
+.nearby-food-card:hover,.nearby-food-card:hover>.nearby-food-card-details
+,.nearby-food-card-details:hover{
+    padding-top: 6rem;
+    background-color: #d93b3000;
+    padding-bottom: 11rem;
+    text-shadow: 1px 1px 5px gray;
+    font-weight: 600;
+
+}
+.nearby-food-card-img{
+    width: 100%;
+
+}
+.nearby-food-card-details{
+    padding: 2rem 4rem 6rem 4rem; 
+    /* justify-content: baseline; */
+    background-color: #D93B30;
+    transition: 1s;
+
+}
+.shop-name{
+    font-family: segoe;
+    font-size:3rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 2rem;
+}
+.shop-location{
+    font-size: 2.5rem;
+    color: white;
+    font-family: segoe;
+    font-weight: 500;
+}
+.vendors-wrapper{
+    text-align: center;
+    margin-bottom: 15rem;
+}
+.vendor-img{
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    max-width: 100%;
+}
+.vendor-name{
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: segoe;
+}
+.vendor-location{
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-family: segoe;
+}
+.partner-wrapper{
+    background-color: #040404;
+    padding: 8rem 10rem;
+    margin-bottom: 10rem;
+}
+.partner-banner-text{
+    font-size: 10rem;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    letter-spacing: 3px;
+    font-family: segoe;
+}
+.below-banner{
+    font-size: 4rem;
+    color: white;
+    font-weight: 400;
+    font-family: segoe;
+}
+.partner-img{
+    width: 100%;
+}
+@media (max-width:600px){
+    .partner-wrapper{
+        padding: 4rem 5rem;
+        margin-bottom: 10rem;
+    }
+    .partner-banner-text{
+        font-size: 5rem;
+        margin-bottom: 3rem;
+    }
+    .below-banner{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+}
+.our-services-wrapper{
+    margin-bottom: 15rem;
+}
+.services{
+    height: 25rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.vendors{
+    background-color: #c4c2c2;
+    border-radius: 8px;
+    width: 40%;
+}
+.tiffin-service{
+    background-color: #c4c2c2;
+    border-radius: 8px;
+    width: 40%;
+}
+.get-app{
+    background-color: #FFAB38;
+    margin-bottom: 30rem;
+    padding: 8rem;
+}
+.get-app-banner{
+    font-size: 10rem;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    letter-spacing: 3px;
+}
+.below-get-app{
+    font-size: 4rem;
+    color: white;
+    font-weight: 400;
+}
+
+/* mobile view */
+
+@media (max-width:600px){
+    .get-app-banner{
+        font-size: 6rem;
+        margin-bottom: 3rem;
+        }
+ }
