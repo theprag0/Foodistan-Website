@@ -1,0 +1,21 @@
+.cart-info__dropDown {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 150px;
+}
+
+.cart-info__dropDown-other__option {
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #000;
+  width: 100px;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.cart-info__dropDown-other__option:hover {
+  background-color: #fffcde;
+}
