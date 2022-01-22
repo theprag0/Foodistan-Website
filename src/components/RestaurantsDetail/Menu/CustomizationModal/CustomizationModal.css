@@ -1,0 +1,86 @@
+.customize-modal__header {
+  background-color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: -1rem -1rem 1rem;
+  padding: 2rem;
+}
+
+.customization-input {
+  margin: 10px;
+}
+
+.customization-input input:after {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #fffcde;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #000;
+}
+
+.customization-input input:checked:after {
+  background-color: #f7c12b;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #000;
+}
+
+.customization-input label {
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.customization-footer {
+  text-align: end;
+}
+
+.customization-footer button {
+  height: 40px;
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.customization-footer button:last-of-type {
+  color: #d72525;
+  background-color: #fff;
+}
+
+.customization-footer button:last-of-type:hover {
+  background-color: #d72525;
+  color: #fff;
+}
+
+@media (max-width: 60rem) {
+  .customization-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  .customization-footer button {
+    width: 80%;
+    height: 50px;
+  }
+
+  .customization-footer button:first-of-type {
+    margin-bottom: 0;
+  }
+}

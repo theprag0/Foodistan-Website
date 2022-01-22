@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Segoe Ui;
+  src: url('../../../fonts/Segoe\ UI.ttf');
+}
+
+.menu {
+  margin-top: 50px;
+  display: flex;
+  position: relative;
+}
+
+.menu h1,
+.menu h3,
+.menu ul,
+.menu li,
+.menu p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 60rem) {
+  .menu h1,
+  .menu h3,
+  .menu ul,
+  .menu li,
+  .menu p {
+    letter-spacing: normal;
+  }
+}

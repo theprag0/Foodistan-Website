@@ -1,0 +1,21 @@
+.restaurant-detail__info-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  margin-top: 20px;
+}
+
+@media (max-width: 60rem) {
+  .restaurant-detail__info-information {
+    height: max-content;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 40rem) {
+  .restaurant-detail__info-information {
+    height: max-content;
+    justify-content: space-around;
+  }
+}
