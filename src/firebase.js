@@ -1,5 +1,10 @@
+// v9 compat packages are API compatible with v8 code
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+import { FacebookAuthProvider, getAuth ,signInWithPopup,GoogleAuthProvider,} from "firebase/auth"
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth"
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyD1ynPRWWpLlFNwsFmAHz9R7xw6Ja5MDb4",
@@ -12,5 +17,8 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app)
+export const auth = getAuth(app);
+export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+//export const facebookAuthProvider = new  firebase.auth.FacebookAuthProvider();
+
 export default app;

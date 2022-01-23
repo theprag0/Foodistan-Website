@@ -6,7 +6,7 @@ export default function searchBar() {
   return (
     <div className="row container-fluid search">
       <div className="col-3"></div>
-      <div className="outer-sear-bar">
+      <div className="outer-search-bar">
         <div className="col-6 search-bar">
           <div className="location-container">
             <div className="location-wrapper">
