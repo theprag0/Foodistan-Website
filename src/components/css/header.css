@@ -1,3 +1,7 @@
+@font-face {
+  font-family:segoe;
+  src: url(../../fonts/Segoe\ UI.ttf);
+}
 .navlink-logo {
   padding: 0;
 }
@@ -7,13 +11,17 @@
 }
 
 .logo {
-  width: 200px;
-  height: 60px;
+  width: 26rem;
+  height: 7rem;
 }
 
 .btn {
-  padding: 0.5rem 1.4rem;
+  font-size: 2rem;
+  font-family: segoe;
+  font-weight: 600;
   color: #fcfcfc;
+  margin-top: .5rem;
+  padding: .5rem 4rem;
 }
 .btn:hover {
   color: #fcfcfc;
@@ -22,18 +30,30 @@
 .bg-white {
   background-color: #fcfcfc;
 }
-a {
-  font-size: 1.6rem;
+a{
+  padding: 0rem;
+}
+.header-items{
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-family: segoe;
+  padding: 1rem 0rem 2rem 0rem;
+  transition: .2s;
+}
+.header-items>a{
   color: black;
   text-decoration: none;
-  line-height: 2.5rem;
 }
-a:hover {
-  color: #ffc107;
-  text-shadow: 1px 1px 1px #ffc107;
+.header-items:hover {
+  color: black;
+  text-shadow: 1px 1px 1px #e0e0e0;
+  border-bottom: 4px solid #FAB84C;
+  padding: 1rem 0rem 1.42rem 0rem;
 }
 .navbar {
   box-shadow: 1px 1px 10px rgb(184, 184, 184);
+  background-color: rgb(253, 253, 253);
+  padding-bottom: .5rem;
   padding: 0rem;
   margin-bottom: 3.5rem;
 }

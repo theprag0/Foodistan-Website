@@ -3,7 +3,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import SwiperCore, {Pagination} from 'swiper';
 import "swiper/swiper-bundle.css";
 import { Button } from 'react-bootstrap';
-import Header from './common/header'
+import Header from './common/header' 
 import Footer from './common/footer'
 import {TiLocation} from "react-icons/ti"
 import {FiSearch} from "react-icons/fi"
@@ -13,13 +13,14 @@ import vendor2 from "./Images/vendor2.png"
 import vendor3 from "./Images/vendor3.png"
 import vendor4 from "./Images/vendor4.png"
 import partner from "./Images/partner.png"
+import nearbyFoodImg from "./Images/nearbyShop.png"
 import nearbyShop from './Images/nearbyShop.png'
 import { Link } from 'react-router-dom';
 
 const HomePage = ()=>{
     <Link to={"/explore"}></Link>
 }
-var flag;
+var flag,flag2;
 function WindowWidth(){
     
     const screenSize= window.innerWidth;
@@ -29,9 +30,11 @@ function WindowWidth(){
 export default function LandingPage(){
 
     if (WindowWidth() <= 600) {
-        flag = 2;
+        flag = 1.7;
+        flag2 = 1.4
     }else{
         flag = 4;
+        flag2 = 4
     } 
 
     return(
@@ -53,19 +56,19 @@ export default function LandingPage(){
                    <FiSearch className='search-icon'/>
                    <input placeholder='Search Cuisines' className='search-input'/>
                 </div>
-    </div>
+     </div>
     <div className='col-md-3 '></div>
         </div>
-            <div className='banner-text'><h1 className='title'>Not sure where to get the best <br/>taste of street style?</h1>
-                <h2 className='sub-title'>Perfect. We'll help you!</h2>
-                <Link to={"/explore"}><Button variant="warning" className="explore-btn md-font" >Explore</Button></Link>
+            <div className='banner-text'><h1 className='title'>
+               <span className='title'></span>Not sure where to get the best taste of street style ?</h1>
+                <Link to={"/explore"}><Button variant="warning" className="explore-btn" >Perfect. We'll help you! </Button></Link>
             </div>
             
         </div>
 
             {/* --------------------banner complete---------------------- */}
 
-            <div className='container'>
+            <div className='container-fluid'>
                 <div className='explore-nearby-wrapper'>
                     <div className='heading-text'>
                             Explore Nearby Food
@@ -77,7 +80,7 @@ export default function LandingPage(){
                     }} className="mySwiper">
                     <SwiperSlide>  <div className='' >
                                     <div className='nearby-food-card'>
-                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                        <div><img className='nearby-food-card-img' src={nearbyFoodImg}></img></div>
                                         <div className='nearby-food-card-details'>
                                             <div className='shop-name'>Shaman Chaat Corner</div> 
                                             <div className='shop-location'>GT, Karnal Road</div>
@@ -87,7 +90,7 @@ export default function LandingPage(){
                     </SwiperSlide>
                     <SwiperSlide>  <div className='' >
                                     <div className='nearby-food-card'>
-                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                    <div><img className='nearby-food-card-img' src={nearbyFoodImg}></img></div>
                                         <div className='nearby-food-card-details'>
                                             <div className='shop-name'>Shaman Chaat Corner</div> 
                                             <div className='shop-location'>GT, Karnal Road</div>
@@ -96,7 +99,7 @@ export default function LandingPage(){
                                     </div></SwiperSlide>
                     <SwiperSlide>  <div className='' >
                                     <div className='nearby-food-card'>
-                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                    <div><img className='nearby-food-card-img' src={nearbyFoodImg}></img></div>
                                         <div className='nearby-food-card-details'>
                                             <div className='shop-name'>Shaman Chaat Corner</div> 
                                             <div className='shop-location'>GT, Karnal Road</div>
@@ -105,7 +108,7 @@ export default function LandingPage(){
                                     </div></SwiperSlide>
                     <SwiperSlide>  <div className='' >
                                     <div className='nearby-food-card'>
-                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                    <div><img className='nearby-food-card-img' src={nearbyFoodImg}></img></div>
                                         <div className='nearby-food-card-details'>
                                             <div className='shop-name'>Shaman Chaat Corner</div> 
                                             <div className='shop-location'>GT, Karnal Road</div>
@@ -114,7 +117,7 @@ export default function LandingPage(){
                                     </div></SwiperSlide>
                     <SwiperSlide>  <div className='' >
                                     <div className='nearby-food-card'>
-                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                    <div><img className='nearby-food-card-img' src={nearbyFoodImg}></img></div>
                                         <div className='nearby-food-card-details'>
                                             <div className='shop-name'>Shaman Chaat Corner</div> 
                                             <div className='shop-location'>GT, Karnal Road</div>
@@ -123,7 +126,7 @@ export default function LandingPage(){
                                     </div></SwiperSlide>
                     <SwiperSlide>  <div className='' >
                                     <div className='nearby-food-card'>
-                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                    <div><img className='nearby-food-card-img' src={nearbyFoodImg}></img></div>
                                         <div className='nearby-food-card-details'>
                                             <div className='shop-name'>Shaman Chaat Corner</div> 
                                             <div className='shop-location'>GT, Karnal Road</div>
@@ -132,7 +135,7 @@ export default function LandingPage(){
                                     </div></SwiperSlide>
                     <SwiperSlide>  <div className='' >
                                     <div className='nearby-food-card'>
-                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                    <div><img className='nearby-food-card-img' src={nearbyFoodImg}></img></div>
                                         <div className='nearby-food-card-details'>
                                             <div className='shop-name'>Shaman Chaat Corner</div> 
                                             <div className='shop-location'>GT, Karnal Road</div>
@@ -141,7 +144,7 @@ export default function LandingPage(){
                                     </div></SwiperSlide>
                     <SwiperSlide>  <div className='' >
                                     <div className='nearby-food-card'>
-                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                    <div><img className='nearby-food-card-img' src={nearbyFoodImg}></img></div>
                                         <div className='nearby-food-card-details'>
                                             <div className='shop-name'>Shaman Chaat Corner</div> 
                                             <div className='shop-location'>GT, Karnal Road</div>
@@ -150,7 +153,7 @@ export default function LandingPage(){
                                     </div></SwiperSlide>
                     <SwiperSlide>  <div className='' >
                                     <div className='nearby-food-card'>
-                                        {/* <div className='nearby-food-card-img' ></div> */}
+                                    <div><img className='nearby-food-card-img' src={nearbyFoodImg}></img></div>
                                         <div className='nearby-food-card-details'>
                                             <div className='shop-name'>Shaman Chaat Corner</div> 
                                             <div className='shop-location'>GT, Karnal Road</div>
@@ -161,32 +164,72 @@ export default function LandingPage(){
 
 
             </div>
-                <div className='vendors-wrapper'>
-                    <div className='heading-text'>Listen from vendors</div>
-                    <div className='row'>
-                        <div className='col-3'><img src={vendor1} className='vendor-img'/>
+            <div className='vendors-wrapper'>
+            <div className='heading-text'>Listen from vendors</div>
+            <Swiper slidesPerView={`${flag2}`} spaceBetween={10} pagination={{
+                    "clickable": true
+                    }} className="mySwiper">
+                    <SwiperSlide>
+                        <div><img src={vendor1} className='vendor-img'/>
 
                             <div className='vendor-name'>Ram Ramesh Chandra</div>
-                            <p className='vendor-location'>Khana Khaza corner</p></div>
-
-
-                        <div className='col-3'><img src={vendor2} className='vendor-img'/>
-
-                            <div className='vendor-name'>Ram Ramesh Chandra</div>
-                            <span className='vendor-location'>Khana Khaza corner</span></div>
-
-
-                        <div className='col-3'><img src={vendor3} className='vendor-img'/>
+                            <p className='vendor-location'>Khana Khaza corner</p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div><img src={vendor2} className='vendor-img'/>
 
                             <div className='vendor-name'>Ram Ramesh Chandra</div>
-                            <span className='vendor-location'>Khana Khaza corner</span></div>
+                            <span className='vendor-location'>Khana Khaza corner</span>
+                        </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
 
+                        <div ><img src={vendor3} className='vendor-img'/>
+
+                            <div className='vendor-name'>Ram Ramesh Chandra</div>
+                            <span className='vendor-location'>Khana Khaza corner</span>
+                        </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
                             
-                        <div className='col-3'><img src={vendor4} className='vendor-img'/>
+                        <div><img src={vendor4} className='vendor-img'/>
                             <div className='vendor-name'>Ram Ramesh Chandra</div>
-                            <span className='vendor-location'>Khana Khaza corner</span></div>
-                    </div>
-                </div>
+                            <span className='vendor-location'>Khana Khaza corner</span>
+                        </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <div><img src={vendor1} className='vendor-img'/>
+
+                            <div className='vendor-name'>Ram Ramesh Chandra</div>
+                            <p className='vendor-location'>Khana Khaza corner</p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div><img src={vendor2} className='vendor-img'/>
+
+                            <div className='vendor-name'>Ram Ramesh Chandra</div>
+                            <span className='vendor-location'>Khana Khaza corner</span>
+                        </div>
+                        </SwiperSlide>
+                            <SwiperSlide>
+
+                        <div ><img src={vendor3} className='vendor-img'/>
+
+                            <div className='vendor-name'>Ram Ramesh Chandra</div>
+                            <span className='vendor-location'>Khana Khaza corner</span>
+                        </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            
+                            <div><img src={vendor4} className='vendor-img'/>
+                                <div className='vendor-name'>Ram Ramesh Chandra</div>
+                                <span className='vendor-location'>Khana Khaza corner</span>
+                            </div>
+                            </SwiperSlide>
+                
+        </Swiper>
+              </div>
             </div>
 
             <div className='container-fluid'>
@@ -203,34 +246,73 @@ export default function LandingPage(){
                 </div>
             </div>
 
-            <div className='container'>
-                <div className='vendors-wrapper'>
-                    <div className='heading-text'>Popular vendors</div>
-                    <div className='row'>
-                        <div className='col-3'><img src={vendor1} className='vendor-img'/>
+            <div className='vendors-wrapper'>
+            <div className='heading-text'>Listen from vendors</div>
+            <Swiper slidesPerView={`${flag2}`} spaceBetween={10} pagination={{
+                    "clickable": true
+                    }} className="mySwiper">
+                    <SwiperSlide>
+                        <div><img src={vendor1} className='vendor-img'/>
 
                             <div className='vendor-name'>Ram Ramesh Chandra</div>
-                            <p className='vendor-location'>Khana Khaza corner</p></div>
-
-
-                        <div className='col-3'><img src={vendor2} className='vendor-img'/>
-
-                            <div className='vendor-name'>Ram Ramesh Chandra</div>
-                            <span className='vendor-location'>Khana Khaza corner</span></div>
-
-
-                        <div className='col-3'><img src={vendor3} className='vendor-img'/>
+                            <p className='vendor-location'>Khana Khaza corner</p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div><img src={vendor2} className='vendor-img'/>
 
                             <div className='vendor-name'>Ram Ramesh Chandra</div>
-                            <span className='vendor-location'>Khana Khaza corner</span></div>
+                            <span className='vendor-location'>Khana Khaza corner</span>
+                        </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
 
+                        <div ><img src={vendor3} className='vendor-img'/>
+
+                            <div className='vendor-name'>Ram Ramesh Chandra</div>
+                            <span className='vendor-location'>Khana Khaza corner</span>
+                        </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
                             
-                        <div className='col-3'><img src={vendor4} className='vendor-img'/>
+                        <div><img src={vendor4} className='vendor-img'/>
                             <div className='vendor-name'>Ram Ramesh Chandra</div>
-                            <span className='vendor-location'>Khana Khaza corner</span></div>
-                    </div>
-                </div>
-            </div>
+                            <span className='vendor-location'>Khana Khaza corner</span>
+                        </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <div><img src={vendor1} className='vendor-img'/>
+
+                            <div className='vendor-name'>Ram Ramesh Chandra</div>
+                            <p className='vendor-location'>Khana Khaza corner</p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div><img src={vendor2} className='vendor-img'/>
+
+                            <div className='vendor-name'>Ram Ramesh Chandra</div>
+                            <span className='vendor-location'>Khana Khaza corner</span>
+                        </div>
+                        </SwiperSlide>
+                            <SwiperSlide>
+
+                        <div ><img src={vendor3} className='vendor-img'/>
+
+                            <div className='vendor-name'>Ram Ramesh Chandra</div>
+                            <span className='vendor-location'>Khana Khaza corner</span>
+                        </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            
+                            <div><img src={vendor4} className='vendor-img'/>
+                                <div className='vendor-name'>Ram Ramesh Chandra</div>
+                                <span className='vendor-location'>Khana Khaza corner</span>
+                            </div>
+                            </SwiperSlide>
+                
+        </Swiper>
+              </div>
+        
 
             <div className='container'>
                 <div className='our-services-wrapper'>
