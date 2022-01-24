@@ -93,13 +93,6 @@
   padding: 0 3rem;
 }
 
-.nocart-img__container {
-  height: 500px;
-  flex: 3;
-  overflow: hidden;
-  position: relative;
-}
-
 @media (max-width: 60rem) {
   .cart {
     display: none;

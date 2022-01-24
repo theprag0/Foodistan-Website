@@ -23,26 +23,31 @@ import RestaurantDetail from './Pages/RestaurantDetail';
 import Checkout from './Pages/Checkout';
 import CartProvider from './store/cart-context';
 import SignUp from '../src/signUp';
+import ScrollToTop from './components/common/util/ScrollToTop';
+import Blog from './Pages/Blog';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <CartProvider>
         <Switch>
-          <Route exact path="/" component={landingPage} />{' '}
-          <Route path="/explore" component={Home} />
-          <Route path="/restaurant/:rid" component={RestaurantDetail} />
-          <Route path="/profile" component={Profile} />
-          <Route exact path="/orders" component={ProfileNoOrder} />
-          <Route path="/orders/1" component={ProfileOrders} />
-          <Route path="/address" component={Address} />
-          <Route path="/payments" component={Payments} />
-          <Route path="/track-order" component={trackOrder} />
-          <Route path="/notifications" component={notifications} />
-          <Route path="/login" component={Login} />
-          <Route path="/menu" component={Menu} />
-          <Route path="/signUp" component={SignUp} />
-          <Route path="/cart" component={Checkout} />
+          <ScrollToTop>
+            <Route exact path="/" component={landingPage} />{' '}
+            <Route path="/explore" component={Home} />
+            <Route path="/restaurant/:rid" component={RestaurantDetail} />
+            <Route path="/profile" component={Profile} />
+            <Route exact path="/orders" component={ProfileNoOrder} />
+            <Route path="/orders/1" component={ProfileOrders} />
+            <Route path="/address" component={Address} />
+            <Route path="/payments" component={Payments} />
+            <Route path="/track-order" component={trackOrder} />
+            <Route path="/notifications" component={notifications} />
+            <Route path="/login" component={Login} />
+            <Route path="/menu" component={Menu} />
+            <Route path="/signUp" component={SignUp} />
+            <Route path="/cart" component={Checkout} />
+            <Route path="/blogs" component={Blog} />
+          </ScrollToTop>
         </Switch>
       </CartProvider>
     </Router>

@@ -16,12 +16,12 @@
 }
 
 .logo-badge {
-  font-size: 10px;
+  font-size: 9px;
   position: absolute;
   top: -12px;
   left: 25px;
   border-radius: 50%;
-  padding: 0 6px;
+  width: 18px;
   color: #fff;
   background-color: #000;
   text-align: center;
@@ -48,24 +48,30 @@
   display: none;
 }
 
+.bump {
+  animation: bump 300ms ease forwards;
+}
+
 @media (max-width: 60rem) {
   .cart-info__mobile {
     display: block;
     position: fixed;
-    bottom: 20px;
+    bottom: 0;
     background-color: #f7c12b;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 100px 1rem 1rem;
-    padding: 2rem;
+    margin: 100px 0 0;
+    padding: 3rem;
     width: 100%;
+    animation: slideUp 300ms ease forwards;
   }
 
   .cart-info__mobile .logo-badge {
     font-size: 10px;
     top: -6px;
     left: 25px;
+    width: 18px;
   }
 
   .cart-info__mobile a {
@@ -74,5 +80,18 @@
 
   .cart-info__footer-btn {
     padding: 1rem 2rem;
+  }
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
