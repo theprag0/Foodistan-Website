@@ -1,7 +1,14 @@
-.nocart-img__container img {
+.nocart-img__container img,
+.checkout-nocart img {
   height: 500px;
-  width: 350px;
   object-fit: cover;
+}
+
+.nocart-img__container {
+  height: 500px;
+  flex: 3;
+  overflow: hidden;
+  position: relative;
 }
 
 .nocart-img__container p {
@@ -10,15 +17,38 @@
   font-size: 16px;
   font-weight: 700;
   top: 50%;
-  left: 12.5%;
+  left: 25%;
+}
+.checkout-nocart p {
+  position: absolute;
+  color: #838383;
+  font-size: 16px;
+  font-weight: 700;
+  top: 50%;
+  left: 45%;
 }
 
 .checkout-nocart {
   text-align: center;
+  position: relative;
 }
 
 @media (max-width: 60rem) {
   .nocart-img__container {
     display: none;
+  }
+
+  .checkout-nocart {
+    width: 100%;
+    height: 100%;
+  }
+
+  .checkout-nocart img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .checkout-nocart p {
+    left: 25%;
   }
 }
