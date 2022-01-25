@@ -16,13 +16,7 @@ function Home() {
   return (
     <div className="App">
       <Header />
-      <div className="row">
-        <div className="col-3"></div>
-        <div className="col-6">
-           <SearchBar />
-        </div>
-        <div className="col-3"></div>
-      </div>
+      <SearchBar />
       <SpecialOffers />
       <Trolly />
       <Deals /> 

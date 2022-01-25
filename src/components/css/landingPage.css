@@ -11,7 +11,6 @@
     background-size: cover;
     background-position: fixed;
     /* padding-bottom: 10rem; */
-    margin-bottom: 6rem;
 }
 .banner-text{
     text-align: center;
@@ -20,8 +19,11 @@
     padding-bottom: 10rem;
     padding-top: 30rem;
 }
+.outer-search-bar-2{
+    padding: 0rem 40rem 0rem 20rem;
+}
 
-.search-bar{
+.search-bar,.search-bar-2{
     display: flex;
     flex: 1;
     justify-content: space-between;
@@ -29,7 +31,6 @@
     height: 60px;
     width: 100%;
     border-radius: 8px;
-    box-shadow: 1px 1px 2px gray;
     background-color: white;
     padding: 0;
 }
@@ -67,11 +68,22 @@
     border-right: 2px solid #dfdfdf;
     padding-right: 2rem;
 }
+.location-wrapper-2{
+    padding-right: 2rem;
+}
 .input-search-bar{
    display: flex; 
     flex: 2;
     /* margin: 0rem 1rem; */
 }
+.input-search-bar-2{
+    display: flex; 
+     flex: 2;
+     background-color: #fce19e5d; 
+     padding: 1rem 2rem;
+     border-radius: 8px;
+     /* margin: 0rem 1rem; */
+ }
 .search-icon{
     font-size: 3.9rem; 
     color:#686868 ;
@@ -85,6 +97,7 @@
     font-size: 3rem;
     font-family:segoe;
     letter-spacing: .2rem;
+    background-color: #fce19e00; 
 }
 .title{
     color: #ffffff;
@@ -122,64 +135,39 @@
 }
 
 .heading-text{
-    color: black;
-    font-size: 5rem;
+    color: white;
+    font-size: 6rem;
     font-weight: 600;
-    margin-bottom: 8rem;
     font-family: segoe;
     text-align: center;
-    border-radius: 5rem;
-    padding: 3rem;
+    padding: 10rem 0rem 25rem 0rem ;
+    text-shadow: 1px 1px .5px black;
+    background-image: linear-gradient(to right, #FFAB38, #FFEE8A);
 }
 .explore-nearby-wrapper{
-    margin-bottom: 15rem;
-    padding: 2rem 10rem;
+    margin: -20rem 10rem 15rem 10rem;
 }
-
-.nearby-food-card{
-    background-color: #D93B30;
-    border-radius: 20px;
-    text-shadow: 1px 1px 5px gray;
-    overflow: hidden;
-    transition: .2s;
-    height: 55rem;
-    width: 95%;
+.nearbyFoodImgBurger{
+    width:80% ;
 }
-.nearby-food-card:hover{
- box-shadow: -6px 0px 5px gray;
-
+.nearbyFoodImgFries{
+    width: 72%;
 }
-.nearby-food-card-img{
-    width:100%;
-    /* height: 80%; */
-    background-size: contain;
+.explore-nearby-bg{
+    background-color: #0f0f0f09;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 8px;
 }
-.nearby-food-card-details{
-    position: relative;
-    top: 0;
-    padding: 2rem 4rem 6rem 4rem; 
-    /* justify-content: baseline; */
-    background-color: #D93B30;
-    transition: 1s;
-
-}
-.shop-name{
+.explore-nearby-food-name{
+    font-size: 4rem;
     font-family: segoe;
-    font-size:4rem;
-    font-weight: 599;
-    color: white;
-    margin-bottom: 2rem;
-}
-.shop-location{
-    font-size: 2.5rem;
-    color: white;
-    font-family: segoe;
-    font-weight: 500;
+    font-weight: bold;
 }
 .vendors-wrapper{
     text-align: center;
-    margin-bottom: 15rem;
-    padding: 2rem 10rem;
+    margin: -12rem 10rem 15rem 10rem;
+
 }
 .vendor-img{
     margin-bottom: 2rem;
@@ -221,28 +209,31 @@
     width: 100%;
 }
 .our-services-wrapper{
-    margin-bottom: 15rem;
-    padding: 1rem 10rem;
+    margin: -12rem 10rem 15rem 10rem;
+
 }
 .services{
-    height: 25rem;
+    height:30rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .vendors{
     background-color: #c4c2c2;
     border-radius: 8px;
-    width: 40%;
+    width: 47.5%;
 }
 .tiffin-service{
     background-color: #c4c2c2;
     border-radius: 8px;
-    width: 40%;
+    width: 47.5%;
 }
 .get-app{
     background-color: #FFAB38;
     margin-bottom: 30rem;
-    padding: 8rem;
+    
+}
+.get-app-left{
+    padding: 8rem 0rem 8rem 8rem;
 }
 .get-app-banner{
     font-size: 10rem;
@@ -257,6 +248,18 @@
     color: white;
     font-weight: 400;
 }
+.mobile{
+    background-image: url(../Images/Ellipse.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding: 1rem 5rem 1rem 0rem;
+    text-align: right;
+    
+}
+.mobile-img{
+    width:55%;
+}
 
 /* mobile view */
 
@@ -269,7 +272,7 @@
     .search-bar{
         height: 30px;
     }
-    .outer-search-bar{
+    .outer-search-bar, .outer-search-bar-2{
         padding: 0rem 6rem;
     } 
     .title{
@@ -286,18 +289,24 @@
         font-size: 3rem;
     }  
     .explore-nearby-wrapper{
-        padding: 1rem 6rem;
+        margin: 1rem 0rem 10rem 2rem;
+    }
+    .explore-nearby-bg{
+        background-color: rgba(221, 221, 221, 0.377);
     }
     .vendors-wrapper{
-        padding: 1rem 6rem;
-    } 
+        margin: 1rem 0rem 10rem 2rem;
+    
+    }
     .partner-wrapper{
         padding: 4rem 5rem;
         margin-bottom: 10rem;
     }
-    
     .heading-text{
-        text-align: left;
+        /* text-align: left; */
+        padding: 5rem 2rem ;
+        text-shadow: 1px 1px .5px black;
+        background-image: linear-gradient(to right, #FFAB38, #FFEE8A);
     }
     .partner-banner-text{
         font-size: 6rem;
@@ -312,11 +321,30 @@
         margin-bottom: 10rem;
     }
     .our-services-wrapper{
-        padding: 1rem 5rem;
+        margin: 1rem 5rem 15rem 5rem;
+    }
+    .services{
+        height:25rem;
+    }
+    .get-app{
+        background-color:white;        
     }
     .get-app-banner{
-        font-size: 6rem;
+        font-size: 5rem;
         margin-bottom: 3rem;
-
+        font-weight:bolder;
+        color: black;
+        }
+        .below-get-app{
+            font-size: 4rem;
+            color: black;
+        }
+    .mobile{
+        padding: 5rem 5rem 1rem 0rem;
+        text-align: right;
+            
+        }
+        .mobile-img{
+            width:70%;
         }
  }

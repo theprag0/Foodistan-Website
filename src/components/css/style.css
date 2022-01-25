@@ -186,10 +186,13 @@ footer{
     height: 10rem;
     display: inline-block;
     padding: 1rem;
-    margin: 0 0 2rem 5rem;
-    background-color: #FAB84C;
+    margin: 0rem 0 2rem 5rem;
+    /* background-color: #FAB84C; */
     border-radius: 50%;
     overflow: none;
+}
+.trolly-img{
+    width: 100%;
 }
 
 

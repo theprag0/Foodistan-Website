@@ -38,9 +38,9 @@ export default class CenterMode extends Component {
   render() {
     
     if (WindowWidth() <= 600) {
-      flag = 2;
+      flag = 1.5;
   }else{
-      flag = 4;
+      flag = 2.5;
   } 
     // const settings = {
     //   className: "center",
@@ -53,7 +53,7 @@ export default class CenterMode extends Component {
     // };
 
     return (
-      
+    <div className="specialOffer-slider">
       <Swiper slidesPerView={`${flag}`} spaceBetween={10} pagination={{
         "clickable": true
         }} className="mySwiper container-fluid slider">
@@ -105,7 +105,7 @@ export default class CenterMode extends Component {
                        </div>
                         </div></SwiperSlide>
         </Swiper>
-
+      </div>
 
 //      <div className="container-fluid bg-yellow slider"> 
 //    <div className="container">

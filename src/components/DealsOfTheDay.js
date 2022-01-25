@@ -8,7 +8,7 @@ export default function Deals(){
         <div>
             <Container fluid className="deal-container main-container ">
             <h2 className="big-font">Deals Of The Day</h2>
-            <Row className="deal-container" >
+            <Row className="big-font" >
                 <Col md={4} xs={6}>
                 <div className="deal-img" style={{background: `url(${deal})center center`}} >
                     <div className="deal-img-discount"style={{background: `url(${vector})no-repeat center center` ,"background-size":'cover'}}>

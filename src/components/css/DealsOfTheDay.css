@@ -2,7 +2,7 @@
 
 .big-font,.big-font-thin{
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 .big-font{
     font-weight: bold;
@@ -16,8 +16,7 @@
     font-size: 2rem;
 }
 .cuisine-img{
-    max-width: 20rem;
-    max-height: 20rem;
+    width: 100%;
     box-shadow: 1px 1px 5px gray;
 }
 .order-container{
@@ -33,9 +32,9 @@
 
 /* DealsOfTheDay */
 .deal-container{
-    margin-bottom: 2rem;
+    margin-bottom: 8rem;
     padding-top: 4rem;
-    
+    margin-top: 5rem;
 }
 .deal-img{
     width: 70%;
@@ -73,14 +72,14 @@
     text-align: center;
 } */
 .deal-container{
-    text-align: center;
+    text-align: left;
     justify-content: space-around;
 }
 .deal-img{
     width: 100%;
 }
 .big-font,.big-font-thin{
-    font-size: 2rem;
+    font-size: 4rem;
 
 }
     
