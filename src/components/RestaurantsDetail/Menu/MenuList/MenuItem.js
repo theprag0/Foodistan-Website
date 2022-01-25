@@ -10,8 +10,9 @@ const MenuItem = ({
   name,
   id,
   price,
+  image,
   description,
-  dietaryType,
+  veg,
   address,
   selectedMethod,
   restaurantName,
@@ -47,17 +48,14 @@ const MenuItem = ({
           name={name}
           price={price}
           onClose={customizationModalHandler}
-          dietaryType={dietaryType}
+          dietaryType={veg ? 'Veg' : 'Non Veg'}
           onAddItem={addItemFromMenuItemHandler}
           customize={'Half'}
         />
       )}
       <li className="menu-list__item">
         <div className="menu-list__img-container">
-          <img
-            src={name === 'Blue Berry Waffle' ? waffleImg : fvPizzaImg}
-            alt=""
-          />
+          <img src={image} alt="" />
         </div>
         <div>
           <div className="menu-list__item-info">
@@ -65,15 +63,7 @@ const MenuItem = ({
               <h3>{name}</h3>
               <h3>₹ {price}</h3>
             </div>
-            <span
-              className={
-                dietaryType === 'Veg'
-                  ? 'dot veg'
-                  : dietaryType === 'Non Veg'
-                  ? 'dot non-veg'
-                  : 'dot egg'
-              }
-            >
+            <span className={veg ? 'dot veg' : 'dot non-veg'}>
               <span></span>
             </span>
           </div>
