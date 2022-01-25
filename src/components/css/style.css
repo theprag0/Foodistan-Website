@@ -44,6 +44,11 @@ footer {
   box-shadow: 0px -5px 10px rgb(211, 209, 209);
   margin-top: 40rem;
 }
+@media (max-width:600px){
+    footer{
+    margin-top: 20rem;
+    }
+}
 
 .footer-download-icons {
   font-size: 5rem;

@@ -27,29 +27,26 @@ function Header() {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Nav className="ml-auto">
-              <Nav.Item className="mx-4">
-                <a href="#login">About Us</a>
+              <Nav.Item className="mx-4 header-items">
+                <Link to="/about"className=''> About Us</Link>
+              </Nav.Item>
+              <Nav.Item className="mx-4 header-items ">
+                  <Link to="/Blogs" className=''>Blogs </Link>
+              </Nav.Item>
+              <Nav.Item className="mx-4 header-items">
+                <Link to="/become-our-patner" className=''>Become our patner</Link>
               </Nav.Item>
               <Nav.Item className="mx-4">
-                <Link to="/Blogs">Blogs </Link>
-              </Nav.Item>
-              <Nav.Item className="mx-4">
-                <Link to="/explore">Explore</Link>
-              </Nav.Item>
-              <Nav.Item className="mx-4">
-                <a href="#login">Become our patner</a>
-              </Nav.Item>
-              <Nav.Item className="mx-4">
-                <Link to="/login">
-                  <Button
-                    type="button"
-                    className="btn"
-                    variant="warning"
-                    size="lg"
-                  >
-                    Login/Sign Up
-                  </Button>
-                </Link>{' '}
+                  <Link to="/login" >
+                    <Button
+                      type="button"
+                      variant="warning"
+                      size="lg"
+                      className='btn'
+                    >
+                      Login/Sign Up
+                    </Button>
+                  </Link>{' '}
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>

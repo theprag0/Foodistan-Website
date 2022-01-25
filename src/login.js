@@ -1,38 +1,80 @@
 import React from "react";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { auth } from "./firebase";
-import { RecaptchaVerifier } from "firebase/auth";
+import { auth,googleAuthProvider } from "./firebase";
+import app from "./firebase";
+import { RecaptchaVerifier,signInWithPopup } from "firebase/auth";
 import { signInWithPhoneNumber } from "firebase/auth";
 import { Link } from "react-router-dom";
 
+
 export default function Login() {
-  const [phoneno, setPhoneno] = useState();
-  const configureCaptcha = () => {
-    window.recaptchaVerifier = new RecaptchaVerifier(
-      "sign-in-button",
-      {
-        size: "invisible",
-        callback: response => {
-          onSignInSubmit();
-        },
-      },
-      auth
-    );
-  };
-  const onSignInSubmit = (e) => {
+
+  const [phoneno, setPhoneno] = useState('');
+  const [countryCode,setCountryCode] = useState("+91");
+  const [OTP, setOTP] = useState('');
+
+
+  const generateRecaptcha = ()=>{
+    window.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
+      'size': 'invisible',
+      'callback': (response) => {
+        // reCAPTCHA solved, allow signInWithPhoneNumber.   
+      }
+    }, auth);
+  }
+
+
+  const requestOTP = (e)=>{
     e.preventDefault();
-    configureCaptcha()
-    const phoneNumber = phoneno;
-    const appVerifier = window.recaptchaVerifier;
-    
-    signInWithPhoneNumber(auth, phoneNumber, appVerifier)
-      .then(confirmationResult => {
+    const phoneNumber = countryCode +phoneno;
+   
+    if(phoneNumber.length>=12){
+      generateRecaptcha();
+     
+      let appVerifier = window.recaptchaVerifier;
+      console.log(appVerifier);
+      signInWithPhoneNumber(auth,phoneNumber,appVerifier)
+      .then(confirmationResult =>{
         window.confirmationResult = confirmationResult;
-        console.log("OTP sent")
+        console.log("OTP has been sent");
+      }).catch((error)=>{
+        console.log(error);
       })
-      .catch(error => {console.log(error.message)});
-  };
+    }
+  }
+
+  const verifyOTP = (e)=>{
+    e.preventDefault();
+    let otp = e.target.value;
+    setOTP(otp);
+    if(otp.length===6)
+    {
+      let confirmationResult= window.confirmationResult;
+      confirmationResult.confirm(otp).then((result)=>{
+        const user = result.user;
+        console.log(JSON.stringify(user))
+        alert("User is verified")
+      }).catch((error)=>{
+        console.log(error)
+      })
+    }
+  }
+
+    //Google , Facebook authentication function
+  const handleOnClick = async(provider)=>{
+       signInWithPopup(auth,provider)
+      .then((res)=>{     
+          console.log( res.user);
+      })
+      .catch((er)=>{
+         console.log(er);
+      })
+ };
+
+
+
+
 
   return (
     <div className="container-fluid normal-font">
@@ -59,11 +101,15 @@ export default function Login() {
             <Link to='/signUp'><button className="signup-tab-btn-L">Sign Up</button></Link>
           </div>
           <div className="d-flex align-items-center login-form-container mx-auto">
-            <select className="login-input-select">
+            <select 
+            className="login-input-select" 
+            onChange={e => {setCountryCode(e.target.value); }}
+            >
               <option>+91</option>
               <option>+92</option>
             </select>
-            <form className="my-5 login-form">
+            
+            <form onSubmit={requestOTP} className="my-5 login-form">
               <div id="sign-in-button"></div>
               <input
                 type="tel"
@@ -74,14 +120,32 @@ export default function Login() {
                 }}
               ></input>
               <button
-                onClick={e => {
-                 onSignInSubmit(e)
-                }}
+                className="login-input-btn"
+              >
+                <FaArrowRight />
+              </button>
+             <div className="sign-in-button"></div>
+            </form>
+       
+
+            <form className="my-5 login-form">
+             
+              <input
+                type="tel"
+                className="login-input"
+                placeholder="Enter OTP"
+                value={OTP}
+                onChange={verifyOTP}
+              ></input>
+              <button               
                 className="login-input-btn"
               >
                 <FaArrowRight />
               </button>
             </form>
+
+
+
           </div>
           <div className="d-flex justify-content-center align-items-center my-2">
             <div className="login-or-dash"></div>
@@ -89,18 +153,18 @@ export default function Login() {
             <div className="login-or-dash"></div>
           </div>
           <div className="my-5">
-            <button className="google-tab-btn mx-2 ">
+            <button onClick={()=>handleOnClick(googleAuthProvider)} className="google-tab-btn mx-2 ">
               <div className="d-flex justify-content-center align-items-center">
                 <img src="/goggle.png" className="login-icons" />
                 <p className="mx-2">Login with Google</p>
               </div>
             </button>
-            <button className="facebook-tab-btn mx-2">
+            {/* <button className="facebook-tab-btn mx-2">
               <div className="d-flex justify-content-center align-items-center">
                 <img src="/facebook.png" className="login-icons" />
                 <p className="mx-2">Login with Facebook</p>
               </div>
-            </button>
+            </button> */}
           </div>
           <button className="email-tab-btn">
             <div className="d-flex justify-content-center align-items-center">
