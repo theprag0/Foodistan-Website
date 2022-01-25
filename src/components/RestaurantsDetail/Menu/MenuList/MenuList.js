@@ -20,13 +20,13 @@ const MenuList = ({
           {menu.map((f) => (
             <MenuItem
               key={f.id}
-              name={f.name}
+              name={f.title}
               id={f.id}
-              price={f.price}
+              price={+f.price}
               description={f.description}
-              dietaryType={f.dietaryType}
+              veg={f.veg}
               image={f.image}
-              type={f.type}
+              type={f.cuisine}
               selectedMethod={selectedMethod}
               restaurantName={restaurantName}
               address={address}

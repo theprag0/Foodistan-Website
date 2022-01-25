@@ -1,483 +1,487 @@
 .main-heading-font {
-    font-size: var(--xxl-font);
+  font-size: var(--xxl-font);
 }
 
 .heading-font {
-    font-size: var(--l-font);
+  font-size: var(--l-font);
 }
 
 .noraml-heading-font {
-    font-size: var(--m-font);
+  font-size: var(--m-font);
 }
 
 .normal-font {
-    font-size: var(--sm-font);
-    /* box-shadow: 0px -5px 10px rgb(211, 209, 209); */
+  font-size: var(--sm-font);
+  /* box-shadow: 0px -5px 10px rgb(211, 209, 209); */
 }
 
 .small-font {
-    font-size: var(--xs-font);
+  font-size: var(--xs-font);
 }
 
 .colour-grey {
-    color: #999999;
+  color: #999999;
+}
+
+.center {
+  text-align: center;
 }
 
 ul li {
-    padding: 1rem;
-    color: #999999
+  padding: 1rem;
+  color: #999999;
 }
-
 
 /* -------------footer-css----------- */
 
 .footer-download-container {
-    background-color: black;
-    height: 8rem;
-    width: 30rem; 
+  background-color: black;
+  height: 8rem;
+  width: 30rem;
 }
-footer{
-    background-color: white;
-    box-shadow: 0px -5px 10px rgb(211, 209, 209);
-    margin-top: 40rem;
+footer {
+  background-color: white;
+  box-shadow: 0px -5px 10px rgb(211, 209, 209);
+  margin-top: 40rem;
 }
 
 .footer-download-icons {
-    font-size: 5rem;
-    margin: inherit;
+  font-size: 5rem;
+  margin: inherit;
 }
 
 .footer-icons {
-    font-size: 4rem;
-    margin: 0 1rem;
+  font-size: 4rem;
+  margin: 0 1rem;
 }
 
 .font-weight-bolder {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 .food-background {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("/src/components/Images/food.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* opacity: 0.5; */
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url('/src/components/Images/food.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* opacity: 0.5; */
 }
-
 
 /* ------------listingcards-------------- */
 
 .card {
-    position: relative;
-    height: 40rem;
-    width: 50rem;
-    border-radius: 2rem;
-    overflow: hidden;
-    margin: auto;
-    box-shadow: 0px 1px 5px 1px #e0e0e0;
+  position: relative;
+  height: 40rem;
+  width: 50rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 0px 1px 5px 1px #e0e0e0;
 }
 
 .card-image-container {
-    position: relative;
-    width: 100%;
-    height: 24rem;
-    border-radius: 2rem;
+  position: relative;
+  width: 100%;
+  height: 24rem;
+  border-radius: 2rem;
 }
 
 .card-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
 }
 
 .card-image-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: #f6c12a;
-    padding-left: 1rem;
-    color: white;
-    border-radius: 0 0 2rem 2rem;
-    height: 4rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #f6c12a;
+  padding-left: 1rem;
+  color: white;
+  border-radius: 0 0 2rem 2rem;
+  height: 4rem;
 }
 
 .card-footer {
-    position: absolute;
-    bottom: 0;
-    height: 4rem;
-    width: 100%;
-    background: #e3493a;
+  position: absolute;
+  bottom: 0;
+  height: 4rem;
+  width: 100%;
+  background: #e3493a;
 }
 
 .card-details {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 .card-details-container {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background: white;
-    -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(47% 0, 100% 0, 100% 100%, 0% 100%);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: white;
+  -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(47% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .card-details-container-padding {
-    padding-left: 14rem;
+  padding-left: 14rem;
 }
 
 .icons-circle {
-    height: 2rem;
-    width: 2rem;
-    background-color: red;
-    border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  background-color: red;
+  border-radius: 50%;
 }
-
 
 /* ---------------trolly----------------- */
 
 .tab-selection-container {
-    border-bottom: 0.1px solid #C4C4C4;
-    width: fit-content;
-    position: relative;
-    margin-left: 2rem;
-} 
+  border-bottom: 0.1px solid #c4c4c4;
+  width: fit-content;
+  position: relative;
+  margin-left: 2rem;
+}
 
 .tab-selection-container::before {
-    content: "";
-    display: block;
-    width: 14rem;
-    height: 0.6rem;
-    background-color: #F8EDDB;
-    position: absolute;
-    bottom: 0;
-    border-radius: 0.5rem 0.5rem 0 0;
+  content: '';
+  display: block;
+  width: 14rem;
+  height: 0.6rem;
+  background-color: #f8eddb;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .tab-selection-container::after {
-    content: "";
-    display: block;
-    width: 12rem;
-    height: 1rem;
-    background-color: #C4C4C4;
-    position: absolute;
-    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+  content: '';
+  display: block;
+  width: 12rem;
+  height: 1rem;
+  background-color: #c4c4c4;
+  position: absolute;
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
 }
 
 .trolly-tab-selection {
-    position: relative;
-    width: 10rem;
-    height: 10rem;
-    display: inline-block;
-    margin: 0 5rem 2rem 0;
-    background-color: #FAB84C;
-    padding: 1rem;
-    border-radius: 50%;
-    overflow: none;
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  display: inline-block;
+  margin: 0 5rem 2rem 0;
+  background-color: #fab84c;
+  padding: 1rem;
+  border-radius: 50%;
+  overflow: none;
 }
 
 .lunch-tab-selection {
-    width: 10rem;
-    height: 10rem;
-    display: inline-block;
-    padding: 1rem;
-    margin: 0 0 2rem 5rem;
-    background-color: #FAB84C;
-    border-radius: 50%;
-    overflow: none;
+  width: 10rem;
+  height: 10rem;
+  display: inline-block;
+  padding: 1rem;
+  margin: 0 0 2rem 5rem;
+  background-color: #fab84c;
+  border-radius: 50%;
+  overflow: none;
 }
-
 
 /* -----------------Delivery-Dashboard------------------ */
 
 .food-dashboard-rating-container {
-    position: absolute;
-    background-color: #3BB755;
-    top: 3rem;
-    width: 10rem;
-    height: 6rem;
-    border-radius: 0 1rem 1rem 0;
-    color: white;
+  position: absolute;
+  background-color: #3bb755;
+  top: 3rem;
+  width: 10rem;
+  height: 6rem;
+  border-radius: 0 1rem 1rem 0;
+  color: white;
 }
 
 .food-dashboard-offer-card {
-    background-color: #3BB755;
-    width: 25rem;
-    height: 8.5rem;
-    display: inline-block;
-    border-radius: 1rem;
-    color: white;
+  background-color: #3bb755;
+  width: 25rem;
+  height: 8.5rem;
+  display: inline-block;
+  border-radius: 1rem;
+  color: white;
 }
 
 .food-dashboard-offer-card-2 {
-    background-color: #E23744;
-    width: 25rem;
-    height: 8.5rem;
-    display: inline-block;
-    border-radius: 1rem;
-    color: white;
+  background-color: #e23744;
+  width: 25rem;
+  height: 8.5rem;
+  display: inline-block;
+  border-radius: 1rem;
+  color: white;
 }
 
 .food-dashboard-horizontal {
-    position: absolute;
-    left: 0.5rem;
-    transform-origin: 0 0;
-    transform: rotate(-90deg);
-    bottom: -2rem;
-    border-bottom: 0.1rem solid white;
+  position: absolute;
+  left: 0.5rem;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+  bottom: -2rem;
+  border-bottom: 0.1rem solid white;
 }
 
 .food-dashboard-rating-card-text {
-    padding: 0.5rem 0 0 4rem;
+  padding: 0.5rem 0 0 4rem;
 }
 
 .food-dashboard-items {
-    display: inline-block;
-    width: auto;
+  display: inline-block;
+  width: auto;
 }
 
 .food-dashboard-items-icon-1 {
-    color: white;
-    background-color: #E23744;
-    border-radius: 50%;
-    width: 2.2rem;
-    height: 2.2rem;
-    padding: 0.3rem;
-    margin-right: 0.5rem;
+  color: white;
+  background-color: #e23744;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: 0.3rem;
+  margin-right: 0.5rem;
 }
 
 .food-dashboard-items-icon-2 {
-    color: white;
-    background-color: #8CC8FF;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0.3rem;
-    margin-right: 0.5rem;
+  color: white;
+  background-color: #8cc8ff;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.3rem;
+  margin-right: 0.5rem;
 }
 
 .food-dashboard-items-icon-3 {
-    color: white;
-    background-color: #3BB755;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0.3rem;
-    margin-right: 0.5rem;
+  color: white;
+  background-color: #3bb755;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.3rem;
+  margin-right: 0.5rem;
 }
 
 .availability-selection-section {
-    border-radius: 5rem;
-    border: 0.2rem solid #E9E9E9;
-    padding: 2rem;
-    width: 70rem;
-    margin: auto;
-    color: #B6B6B6;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 1px 1px 10px #E9E9E9;
+  border-radius: 5rem;
+  border: 0.2rem solid #e9e9e9;
+  padding: 2rem;
+  width: 70rem;
+  margin: auto;
+  color: #b6b6b6;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 1px 1px 10px #e9e9e9;
 }
 
 .cart-container {
-    box-shadow: 1px 1px 10px #E9E9E9;
-    border-radius: 1rem;
+  box-shadow: 1px 1px 10px #e9e9e9;
+  border-radius: 1rem;
 }
 
 .cart-container-inner-top {
-    border-bottom: 0.1rem solid black;
-    text-align: center;
+  border-bottom: 0.1rem solid black;
+  text-align: center;
 }
 
-.cart-container-inner-bottom {}
+.cart-container-inner-bottom {
+}
 
 .card-container-resturant {
-    height: 7rem;
+  height: 7rem;
 }
 
 .cart-container-inner-image {
-    background-color: grey;
-    width: 7rem;
-    height: 100%;
+  background-color: grey;
+  width: 7rem;
+  height: 100%;
 }
 
 .cart-btns {
-    width: 4rem;
-    height: 4rem;
-    border: none;
+  width: 4rem;
+  height: 4rem;
+  border: none;
 }
 
 .cart-icon {
-    color: white;
-    background-color: #FAC05E;
-    width: 5rem;
-    height: fit-content;
-    padding: 1rem;
-    border-radius: 50%;
+  color: white;
+  background-color: #fac05e;
+  width: 5rem;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 50%;
 }
 
 .cart-btn-add {
-    color: #F7C12B;
-    background-color: rgba(247, 193, 43, 36%);
+  color: #f7c12b;
+  background-color: rgba(247, 193, 43, 36%);
 }
 
 .cart-btn-remove {
-    color: #999999;
-    background-color: #EEEEEE;
+  color: #999999;
+  background-color: #eeeeee;
 }
 
 .mainmenu-card-container {
-    height: 50rem;
-    width: 40rem;
-    box-shadow: 1px 1px 10px #E9E9E9;
-    border-radius: 1rem;
+  height: 50rem;
+  width: 40rem;
+  box-shadow: 1px 1px 10px #e9e9e9;
+  border-radius: 1rem;
 }
 
 .mainmenu-card-container-img {
-    width: 100%;
-    border-radius: 1rem;
+  width: 100%;
+  border-radius: 1rem;
 }
 
 .food-item-addbtn {
-    background-color: #E23744;
-    color: white;
-    border: none;
-    width: 12rem;
-    height: 5rem;
-    border-radius: 1rem;
+  background-color: #e23744;
+  color: white;
+  border: none;
+  width: 12rem;
+  height: 5rem;
+  border-radius: 1rem;
 }
-
 
 /* -------------Login-------------------- */
 
 .login-container-left {
-    height: 100vh;
-    background-color: #FAB84C;
-    padding: 5rem;
+  height: 100vh;
+  background-color: #fab84c;
+  padding: 5rem;
 }
 
 .login-container-right {
-    height: 100vh;
-    padding: 5rem;
-    text-align: center;
+  height: 100vh;
+  padding: 5rem;
+  text-align: center;
 }
-.login-tab-btn-S{
-    width: 30rem;
-    height: 5rem;
-    border: none;
+.login-tab-btn-S {
+  width: 30rem;
+  height: 5rem;
+  border: none;
 }
 .login-tab-btn {
-    width: 30rem;
-    height: 5rem;
+  width: 30rem;
+  height: 5rem;
 }
-.active-log-sign{
-    border: none;
-    background: none;
-    border-top: 0.2rem solid #FAC05E;
+.active-log-sign {
+  border: none;
+  background: none;
+  border-top: 0.2rem solid #fac05e;
 }
 
 .signup-tab-btn-L {
-    width: 30rem;
-    height: 5rem;
-    border: none;
+  width: 30rem;
+  height: 5rem;
+  border: none;
 }
 .signup-tab-btn-S {
-    width: 30rem;
-    height: 5rem;
-   
+  width: 30rem;
+  height: 5rem;
 }
-.signUp-display-btn{
-    margin-bottom: 4rem;
+.signUp-display-btn {
+  margin-bottom: 4rem;
 }
 
 .login-form-container {
-    width: 60rem;
+  width: 60rem;
 }
 
 .login-form {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
-.login-input, .login-input-S {
-    border: 0.1rem solid #FAB84C;
-    height: 5rem;
-    width: 100%;
-    outline: none;
-    padding: 0 1rem;
+.login-input,
+.login-input-S {
+  border: 0.1rem solid #fab84c;
+  height: 5rem;
+  width: 100%;
+  outline: none;
+  padding: 0 1rem;
 }
-.login-input-S{
-    margin-bottom: 1rem;
+.login-input-S {
+  margin-bottom: 1rem;
 }
 
 .login-input-btn {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    width: 5rem;
-    background: #FAB84C;
-    border: none;
-    border-left: 0.1rem solid #FAB84C;
-    color: white;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 5rem;
+  background: #fab84c;
+  border: none;
+  border-left: 0.1rem solid #fab84c;
+  color: white;
 }
-.login-input-btn-S{
-    width: 100%;
-    padding: 1rem 4rem;
-    background: #FAB84C;
-    border: none;
-    border-left: 0.1rem solid #FAB84C;
-    color: white;
+.login-input-btn-S {
+  width: 100%;
+  padding: 1rem 4rem;
+  background: #fab84c;
+  border: none;
+  border-left: 0.1rem solid #fab84c;
+  color: white;
 }
 
 .login-input-select {
-    outline: none;
-    border: none;
-    background: none;
-    padding: 0 1rem;
-    border: 0.1rem solid #FAB84C;
-    border-right: 0;
-    height: 5rem;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0 1rem;
+  border: 0.1rem solid #fab84c;
+  border-right: 0;
+  height: 5rem;
 }
-.login-input-select-S{
-    outline: none;
-    border: none;
-    background: none;
-    padding: 0 1rem;
-    border: 0.1rem solid #FAB84C;
-    border-right: 0;
-    height: 5rem;
+.login-input-select-S {
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0 1rem;
+  border: 0.1rem solid #fab84c;
+  border-right: 0;
+  height: 5rem;
 }
 
 .google-tab-btn {
-    width: 29.5rem;
-    height: 5rem;
-    border: none;
-    box-shadow: 0px 1px 5px 1px #e0e0e0;
-    background: none;
+  width: 29.5rem;
+  height: 5rem;
+  border: none;
+  box-shadow: 0px 1px 5px 1px #e0e0e0;
+  background: none;
 }
 
 .facebook-tab-btn {
-    width: 29.5rem;
-    height: 5rem;
-    border: none;
-    box-shadow: 0px 1px 5px 1px #e0e0e0;
-    background: none;
+  width: 29.5rem;
+  height: 5rem;
+  border: none;
+  box-shadow: 0px 1px 5px 1px #e0e0e0;
+  background: none;
 }
 
 .email-tab-btn {
-    width: 60rem;
-    height: 5rem;
-    border: none;
-    box-shadow: 0px 1px 5px 1px #e0e0e0;
-    background: none;
+  width: 60rem;
+  height: 5rem;
+  border: none;
+  box-shadow: 0px 1px 5px 1px #e0e0e0;
+  background: none;
 }
 
 .login-or-dash {
-    width: 30rem;
-    height: 0.1rem;
-    border-top: 0.01rem solid #999999;
+  width: 30rem;
+  height: 0.1rem;
+  border-top: 0.01rem solid #999999;
 }
 
 .login-icons {
-    height: 3rem;
+  height: 3rem;
 }

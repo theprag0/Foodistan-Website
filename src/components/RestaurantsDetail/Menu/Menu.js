@@ -1,16 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import Cart from './Cart/Cart';
+import { collection, getDocs } from 'firebase/firestore';
 
+import { database } from '../../../firebase';
+import Cart from './Cart/Cart';
 import './Menu.css';
 import MenuList from './MenuList/MenuList';
 import OverView from './OverView/OverView';
 import MenuTypes from './Types/MenuTypes';
+import LoadingSpinner from '../../common/LoadingSpinner/LoadingSpinner';
 
-const Menu = ({ menuTypes, menu, name, address, restaurantId }) => {
+const menuTypes = [
+  { id: 't1', type: 'Recommended' },
+  { id: 't2', type: 'Best Seller' },
+  { id: 't3', type: "Chef's Choice" },
+];
+
+const Menu = ({ menu, name, address, restaurantId }) => {
   const [selectedType, setSelectedType] = useState('Recommended');
   const [selectedMethod, setSelectedMethod] = useState('Delivery');
+  const [menuItems, setMenuItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const [filteredMenu, setFilteredMenu] = useState([]);
+  console.log(name, address, restaurantId);
+
+  // const [filteredMenu, setFilteredMenu] = useState([]);
 
   const typeClickHandler = (type) => {
     setSelectedType(type);
@@ -21,11 +34,40 @@ const Menu = ({ menuTypes, menu, name, address, restaurantId }) => {
   };
 
   useEffect(() => {
-    const filteredListBySelectedType = menu.filter(
-      (m) => m.type === selectedType
-    );
-    setFilteredMenu(filteredListBySelectedType);
-  }, [selectedType, menu]);
+    const fetchMenuItems = async () => {
+      setIsLoading(true);
+
+      try {
+        const menuItemsRef = collection(
+          database,
+          'DummyData',
+          restaurantId,
+          'menu-items'
+        );
+        const snapshot = await getDocs(menuItemsRef);
+
+        const loadedMenu = [];
+
+        snapshot.forEach((doc) => {
+          loadedMenu.push(doc.data());
+        });
+
+        setMenuItems(loadedMenu);
+      } catch (err) {
+        console.log(err);
+      }
+      setIsLoading(false);
+    };
+
+    fetchMenuItems();
+  }, [restaurantId]);
+
+  // useEffect(() => {
+  //   const filteredListBySelectedType = menu.filter(
+  //     (m) => m.type === selectedType
+  //   );
+  //   setFilteredMenu(filteredListBySelectedType);
+  // }, [selectedType, menu]);
 
   return (
     <section className="menu">
@@ -35,9 +77,14 @@ const Menu = ({ menuTypes, menu, name, address, restaurantId }) => {
         onSelect={typeClickHandler}
         selectedMethod={selectedMethod}
       />
-      {selectedMethod !== 'Overview' && (
+      {selectedMethod !== 'Overview' && isLoading && (
+        <div className="menu-list__list">
+          <LoadingSpinner center />
+        </div>
+      )}
+      {selectedMethod !== 'Overview' && !isLoading && menuItems.length > 0 && (
         <MenuList
-          menu={filteredMenu}
+          menu={menuItems}
           restaurantName={name}
           address={address}
           restaurantId={restaurantId}

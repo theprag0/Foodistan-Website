@@ -5,6 +5,18 @@ import './Info.css';
 import NameAddress from './NameAddress/NameAddress';
 import Offers from './Offers/Offers';
 
+const offers = [
+  {
+    title: '20% OFF UPTO ₹ 300',
+    id: 'o1',
+    offer: 'USE MASTERCARD100 | APPLIED 200 ABOVE',
+  },
+  {
+    title: '20% OFF UPTO ₹ 300',
+    id: 'o2',
+    offer: 'USE MASTERCARD100 | APPLIED 200 ABOVE',
+  },
+];
 const Info = (props) => {
   return (
     <section>
@@ -14,7 +26,7 @@ const Info = (props) => {
           type={props.type}
           address={props.address}
         />
-        <Offers offers={props.offers} />
+        <Offers offers={offers} />
       </div>
       <Features
         costForTwo={props.costForTwo}

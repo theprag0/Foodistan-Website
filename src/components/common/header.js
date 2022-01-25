@@ -28,34 +28,28 @@ function Header() {
           <Navbar.Collapse className="justify-content-end">
             <Nav className="ml-auto">
               <Nav.Item className="mx-4">
-                <Nav.Link>
-                  <a href="#login">About Us</a>
-                </Nav.Link>
+                <a href="#login">About Us</a>
               </Nav.Item>
               <Nav.Item className="mx-4">
-                <Nav.Link>
-                  {' '}
-                  <Link to="/Blogs">Blogs </Link>
-                </Nav.Link>
+                <Link to="/Blogs">Blogs </Link>
               </Nav.Item>
               <Nav.Item className="mx-4">
-                <Nav.Link>
-                  <a href="#login">Become our patner</a>
-                </Nav.Link>
+                <Link to="/explore">Explore</Link>
               </Nav.Item>
               <Nav.Item className="mx-4">
-                <Nav.Link>
-                  <Link to="/login">
-                    <Button
-                      type="button"
-                      className="btn"
-                      variant="warning"
-                      size="lg"
-                    >
-                      Login/Sign Up
-                    </Button>
-                  </Link>{' '}
-                </Nav.Link>
+                <a href="#login">Become our patner</a>
+              </Nav.Item>
+              <Nav.Item className="mx-4">
+                <Link to="/login">
+                  <Button
+                    type="button"
+                    className="btn"
+                    variant="warning"
+                    size="lg"
+                  >
+                    Login/Sign Up
+                  </Button>
+                </Link>{' '}
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
