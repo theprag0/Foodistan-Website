@@ -24,61 +24,62 @@ function WindowWidth(){
   } 
 
     return (
-
-      <div className="specialOffer-slider"> 
+      <div className="specialOffer-slider2 slider-gray-bg"> 
+      <div className="container">
         <h2 className="big-font">Order By Cuisines</h2>
-         <Swiper slidesPerView={`${flag}`} spaceBetween={10} pagination={{
+         <Swiper slidesPerView={`${flag}`} spaceBetween={5} pagination={{
         "clickable": true
         }} className="mySwiper container-fluid slider">
-        <SwiperSlide>  <div className='' >
+        <SwiperSlide>  <div className='absolute-center' >
                          <div>
                           <h3><img className="cuisine-img"src={red}alt="First slide"/></h3>
                          </div>
                        </div>
         </SwiperSlide>
-        <SwiperSlide>  <div className='' >
+        <SwiperSlide>  <div className='absolute-center' >
                          <div>
                           <h3><img className="cuisine-img"src={yellow}alt="First slide"/></h3>
                          </div>
                        </div>
                         </SwiperSlide>
-        <SwiperSlide>  <div className='' >
+        <SwiperSlide>  <div className='absolute-center' >
                          <div>
                           <h3><img className="cuisine-img"src={green}alt="First slide"/></h3>
                          </div>
                        </div>
                       </SwiperSlide>
-        <SwiperSlide>  <div className='' >
+        <SwiperSlide>  <div className='absolute-center' >
                          <div>
                           <h3><img className="cuisine-img"src={blue}alt="First slide"/></h3>
                          </div>
                        </div></SwiperSlide>
-        <SwiperSlide>  <div className='' >
+        <SwiperSlide>  <div className='absolute-center' >
                          <div>
                           <h3><img className="cuisine-img"src={red}alt="First slide"/></h3>
                          </div>
                        </div></SwiperSlide>
-        <SwiperSlide>  <div className='' >
+        <SwiperSlide>  <div className='absolute-center' >
                          <div>
                           <h3><img className="cuisine-img"src={yellow}alt="First slide"/></h3>
                          </div>
                        </div></SwiperSlide>
-        <SwiperSlide>  <div className='' >
+        <SwiperSlide>  <div className='absolute-center'>
                          <div>
                           <h3><img className="cuisine-img"src={green}alt="First slide"/></h3>
                          </div>
                        </div></SwiperSlide>
-        <SwiperSlide>  <div className='' >
+        <SwiperSlide>  <div className='absolute-center'>
                          <div>
                           <h3><img className="cuisine-img"src={blue}alt="First slide"/></h3>
                          </div>
                        </div></SwiperSlide>
-        <SwiperSlide>  <div className='' >
+        <SwiperSlide>  <div className='absolute-center'>
                          <div>
                           <h3><img className="cuisine-img"src={red}alt="First slide"/></h3>
                          </div>
                        </div></SwiperSlide>
         </Swiper>
+        </div>
         </div>
     )};
     }

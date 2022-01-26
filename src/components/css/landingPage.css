@@ -135,14 +135,14 @@
 }
 
 .heading-text{
-    color: white;
-    font-size: 6rem;
+    color: black;
+    font-size: 5rem;
     font-weight: 600;
-    font-family: segoe;
+    font-family: segoe; 
     text-align: center;
     padding: 10rem 0rem 25rem 0rem ;
-    text-shadow: 1px 1px .5px black;
-    background-image: linear-gradient(to right, #FFAB38, #FFEE8A);
+    /* text-shadow: 1px 1px .5px black; */
+    /* background-image: linear-gradient(to right, #FFAB38, #FFEE8A); */
 }
 .explore-nearby-wrapper{
     margin: -20rem 10rem 15rem 10rem;
@@ -160,9 +160,9 @@
     border-radius: 8px;
 }
 .explore-nearby-food-name{
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: segoe;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .vendors-wrapper{
     text-align: center;
@@ -181,7 +181,7 @@
     font-family: segoe;
 }
 .vendor-location{
-    font-size:3rem;
+    font-size:3rem;  
     font-weight: 600;
     letter-spacing: 2px;
     font-family: segoe;
@@ -228,7 +228,7 @@
     width: 47.5%;
 }
 .get-app{
-    background-color: #FFAB38;
+    /* background-color: #FFAB38; */
     margin-bottom: 30rem;
     
 }
@@ -237,7 +237,7 @@
 }
 .get-app-banner{
     font-size: 10rem;
-    color: white;
+    color: black;
     font-weight: 600;
     margin-bottom: 4rem;
     letter-spacing: 3px;
@@ -245,7 +245,7 @@
 }
 .below-get-app{
     font-size: 4rem;
-    color: white;
+    color: black;
     font-weight: 400;
 }
 .mobile{
@@ -323,7 +323,7 @@
     .our-services-wrapper{
         margin: 1rem 5rem 15rem 5rem;
     }
-    .services{
+    .services{ 
         height:25rem;
     }
     .get-app{

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { BsFilterLeft } from 'react-icons/bs';
 import { ImCross } from 'react-icons/im';
@@ -8,6 +8,10 @@ const MenuTypesMobile = ({ types, selectedType, onSelect }) => {
   const [showMenuTypes, setShowMenuTypes] = useState(false);
 
   const menuRef = useRef();
+
+  useEffect(() => {
+    console.log(menuRef.current.getBoundingClientRect());
+  }, [menuRef]);
 
   const showMenuTypesItemHandler = () => {
     setShowMenuTypes((prev) => !prev);

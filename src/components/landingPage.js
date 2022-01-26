@@ -80,58 +80,54 @@ export default function LandingPage(){
                     }} className="mySwiper">
                     <SwiperSlide>  <div className='explore-nearby-bg' >
                                      <div><img className='nearbyFoodImgBurger' src={nearbyFoodImgBurger}></img></div>
-                                        <div className='explore-nearby-food-name'>
-                                            <div className='absolute-center'>BURGER BOMB</div> 
+                                        <div className='explore-nearby-food-name '>BURGER <span style={{'font-weight':'600'}}>  BOMB</span>
                                         </div>
                                      </div>
                     </SwiperSlide>
                     <SwiperSlide>  <div className='explore-nearby-bg' >
                                      <div><img className='nearbyFoodImgFries' src={nearbyFoodImgFries}></img></div>
-                                        <div className='explore-nearby-food-name'>
-                                            <div className='absolute-center'>FRIES FUSION</div> 
+                                     <div className='explore-nearby-food-name '>FRIES<span style={{'font-weight':'600'}}> FUSION</span>
                                         </div>
                                      </div>
                                     </SwiperSlide>
                     <SwiperSlide>  <div className='explore-nearby-bg' >
                                      <div><img className='nearbyFoodImgBurger' src={nearbyFoodImgBurger}></img></div>
-                                        <div className='explore-nearby-food-name'>
-                                            <div className='absolute-center'>BURGER BOMB</div> 
+                                     <div className='explore-nearby-food-name '>BURGER <span style={{'font-weight':'600'}}>  BOMB</span>
+
                                         </div>
                                      </div></SwiperSlide>
                     <SwiperSlide>  <div className='explore-nearby-bg' >
                                      <div><img className='nearbyFoodImgFries' src={nearbyFoodImgFries}></img></div>
-                                        <div className='explore-nearby-food-name'>
-                                            <div className='absolute-center'>FRIES FUSION</div> 
+                                     <div className='explore-nearby-food-name '>FRIES<span style={{'font-weight':'600'}}> FUSION</span>
+
                                         </div>
                                      </div></SwiperSlide>
                     <SwiperSlide> <div className='explore-nearby-bg' >
                                      <div><img className='nearbyFoodImgBurger' src={nearbyFoodImgBurger}></img></div>
-                                        <div className='explore-nearby-food-name'>
-                                            <div className='absolute-center'>BURGER BOMB</div> 
+                                     <div className='explore-nearby-food-name '>BURGER <span style={{'font-weight':'600'}}>  BOMB</span>
                                         </div>
                                      </div></SwiperSlide>
                     <SwiperSlide>  <div className='explore-nearby-bg' >
                                      <div><img className='nearbyFoodImgFries' src={nearbyFoodImgFries}></img></div>
-                                        <div className='explore-nearby-food-name'>
-                                            <div className='absolute-center'>FRIES FUSION</div> 
+                                     <div className='explore-nearby-food-name '>FRIES<span style={{'font-weight':'600'}}> FUSION</span>
                                         </div>
                                      </div></SwiperSlide>
                     <SwiperSlide>  <div className='explore-nearby-bg' >
                                      <div><img className='nearbyFoodImgBurger' src={nearbyFoodImgBurger}></img></div>
-                                        <div className='explore-nearby-food-name'>
-                                            <div className='absolute-center'>BURGER BOMB</div> 
+                                     <div className='explore-nearby-food-name '>BURGER <span style={{'font-weight':'600'}}>  BOMB</span>
+
                                         </div>
                                      </div></SwiperSlide>
                     <SwiperSlide>  <div className='explore-nearby-bg' >
                                      <div><img className='nearbyFoodImgFries' src={nearbyFoodImgFries}></img></div>
-                                        <div className='explore-nearby-food-name'>
-                                            <div className='absolute-center'>FRIES FUSION</div> 
+                                     <div className='explore-nearby-food-name '>FRIES<span style={{'font-weight':'600'}}> FUSION</span>
+
                                         </div>
                                      </div></SwiperSlide>
                     <SwiperSlide>  <div className='explore-nearby-bg' >
                                      <div><img className='nearbyFoodImgBurger' src={nearbyFoodImgBurger}></img></div>
-                                        <div className='explore-nearby-food-name'>
-                                            <div className='absolute-center'>BURGER BOMB</div> 
+                                     <div className='explore-nearby-food-name '>BURGER <span style={{'font-weight':'600'}}>  BOMB</span>
+
                                         </div>
                                      </div></SwiperSlide>
                     </Swiper>

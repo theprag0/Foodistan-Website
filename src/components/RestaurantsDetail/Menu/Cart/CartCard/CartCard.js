@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { HiShoppingCart } from 'react-icons/hi';
 
 import CartLink from '../CartLink/CartLink';
@@ -6,14 +6,6 @@ import './CartCard.css';
 
 const CartCard = (props) => {
   const cartRef = useRef();
-
-  const { checkout } = props;
-
-  useEffect(() => {
-    if (checkout) {
-      cartRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [checkout]);
 
   return (
     <div className={props.checkout ? 'checkout' : 'cart'} ref={cartRef}>

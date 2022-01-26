@@ -3,13 +3,11 @@ import { Card } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 
 import './Cover.css';
-import AnnaImg from '../assets/Anna.jpg';
-import PizzaCoverImg from '../assets/PizzaCover.jpg';
 
-const Cover = ({ type, name, rating }) => {
+const Cover = ({ name, rating, image }) => {
   return (
     <section className="restaurant-detail__cover">
-      <img src={type === 'South Indian' ? AnnaImg : PizzaCoverImg} alt={name} />
+      <img src={image} alt={name} />
       <Card>
         <Card.Body>
           <Card.Title>

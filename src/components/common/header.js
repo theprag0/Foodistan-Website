@@ -47,7 +47,6 @@ function Header() {
                       Login/Sign Up
                     </Button>
                   </Link>{' '}
-               
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>

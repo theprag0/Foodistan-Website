@@ -7,21 +7,23 @@ import Menu from './Menu/Menu';
 const FoundRestaurantsDetail = ({ details }) => {
   return (
     <>
-      <Cover type={details.type} rating={details.rating} name={details.name} />
+      <Cover
+        rating={details.Stars}
+        name={details.Name}
+        image={details.FoodImage}
+      />
       <Info
-        name={details.name}
-        type={details.type}
-        address={details.address}
+        name={details.Name}
+        type={details.Cuisines}
+        address={details.Address}
         offers={details.offers}
-        costForTwo={details.costForTwo}
-        delivery={details.delivery}
-        seating={details.seating}
+        costForTwo={details.Cost}
+        delivery={details.Delivery}
+        seating={details.Takeaway}
       />
       <Menu
-        menuTypes={details.menuTypes}
-        menu={details.menu}
-        name={details.name}
-        address={details.address}
+        name={details.Name}
+        address={details.Address}
         restaurantId={details.id}
       />
     </>

@@ -10,10 +10,17 @@ const RestaurantsList = ({ restaurants }) => {
           <RestaurantsItem
             key={r.id}
             id={r.id}
-            name={r.name}
-            address={r.address}
-            type={r.type}
+            name={r.Name}
+            address={r.Address}
+            cost={r.Cost}
+            type={r.cuisine}
             distance={r.distance}
+            image={r.FoodImage}
+            delivery={r.Delivery}
+            takeaway={r.Takeaway}
+            stars={r.Stars}
+            cuisines={r.Cuisines}
+            foodistaanCertified={r.FoodistaanCertified}
           />
         ))}
       </div>
