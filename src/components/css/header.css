@@ -16,12 +16,13 @@
 }
 
 .btn {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: segoe;
   font-weight: 600;
   color: #fcfcfc;
   margin-top: .5rem;
-  padding: .5rem 4rem;
+  padding: 1rem 3rem;
+  border-radius: 6px;
 }
 .btn:hover {
   color: #fcfcfc;
@@ -37,7 +38,8 @@ a{
   font-size: 2.2rem;
   font-weight: 500;
   font-family: segoe;
-  padding: 1rem 0rem 2rem 0rem;
+  padding: 1.6rem 0rem 2rem 0rem;
+  margin-right: 8rem;
   transition: .2s;
 }
 .header-items>a{
@@ -58,16 +60,16 @@ a{
   margin-bottom: 3.5rem;
 }
 .navbar-brand {
-  padding: 0rem;
+  padding: 0rem; 
 }
 .location {
   font-size: 1.2rem;
 }
+
 .search-bar {
   margin-bottom: 2.5rem;
 }
 .search {
-  background-color: rgba(252, 225, 158, 0.356);
   min-height: 4rem;
 }
 .services {
