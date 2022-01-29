@@ -64,6 +64,9 @@ background-color:rgb(250,184,76);
 .marginB-4rem{
     margin-bottom: 4rem;
 }
+.marginB-2rem{
+    margin-bottom: 2rem;
+}
 .voucher-discount{
     font-size: 3rem; 
     padding: 1rem;
