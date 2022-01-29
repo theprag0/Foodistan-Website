@@ -1,8 +1,9 @@
 import offer from "../images/offer.png" ;
 import {Swiper, SwiperSlide} from "swiper/react";
-import SwiperCore, {Pagination} from 'swiper';
+import SwiperCore, {Pagination,Navigation} from 'swiper';
 import React, { Component } from "react";
 import Slider from "react-slick";
+
 
 
 
@@ -33,6 +34,7 @@ function WindowWidth(){
     const screenSize= window.innerWidth;
     return screenSize;     
 }
+SwiperCore.use([Navigation]);
 
 export default class CenterMode extends Component {
   render() {
@@ -40,7 +42,7 @@ export default class CenterMode extends Component {
     if (WindowWidth() <= 600) {
       flag = 1.5;
   }else{
-      flag = 2.5;
+      flag = 3.5;
   } 
     // const settings = {
     //   className: "center",
@@ -54,9 +56,9 @@ export default class CenterMode extends Component {
 
     return (
     <div className="specialOffer-slider">
-      <Swiper slidesPerView={`${flag}`} spaceBetween={10} pagination={{
+      <Swiper slidesPerView={`${flag}`} spaceBetween={10} centeredSlides={true} loop={true} Pagination={{
         "clickable": true
-        }} className="mySwiper container-fluid slider">
+        }} navigation={true} className="mySwiper container-fluid slider">
         <SwiperSlide>  <div className='' >
                         <div>
                           <h3><img className="specialoffer-img" src={offer}alt="First slide"/></h3>
