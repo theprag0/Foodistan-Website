@@ -25,6 +25,7 @@ import CartProvider from './store/cart-context';
 import SignUp from '../src/signUp';
 import ScrollToTop from './components/common/util/ScrollToTop';
 import Blog from './Pages/Blog';
+import AboutUs from './Pages/AboutUs';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -34,6 +35,7 @@ ReactDOM.render(
           <ScrollToTop>
             <Route exact path="/" component={landingPage} />{' '}
             <Route path="/explore" component={Home} />
+            <Route path="/about" component={AboutUs} />
             <Route path="/restaurant/:rid" component={RestaurantDetail} />
             <Route path="/profile" component={Profile} />
             <Route exact path="/orders" component={ProfileNoOrder} />

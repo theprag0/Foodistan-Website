@@ -6,12 +6,17 @@ import './MenuTypesMobile.css';
 
 const MenuTypesMobile = ({ types, selectedType, onSelect }) => {
   const [showMenuTypes, setShowMenuTypes] = useState(false);
+  const [showMenuButton, setShowMenuButton] = useState(false);
 
   const menuRef = useRef();
 
-  useEffect(() => {
-    console.log(menuRef.current.getBoundingClientRect());
-  }, [menuRef]);
+  // useEffect(() => {
+  //   console.log(menuRef.current.getBoundingClientRect());
+  // }, [menuRef]);
+  window.onscroll = () => {
+    setShowMenuButton(window.pageYOffset === 0 ? false : true);
+    return (window.onscroll = null);
+  };
 
   const showMenuTypesItemHandler = () => {
     setShowMenuTypes((prev) => !prev);
@@ -19,7 +24,7 @@ const MenuTypesMobile = ({ types, selectedType, onSelect }) => {
 
   return (
     <>
-      {!showMenuTypes && (
+      {!showMenuTypes && showMenuButton && (
         <button
           className="menu-types__mobile-button"
           onClick={showMenuTypesItemHandler}
