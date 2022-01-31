@@ -21,8 +21,6 @@ const Menu = ({ menu, name, address, restaurantId }) => {
   const [menuItems, setMenuItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log(name, address, restaurantId);
-
   // const [filteredMenu, setFilteredMenu] = useState([]);
 
   const typeClickHandler = (type) => {
@@ -80,6 +78,11 @@ const Menu = ({ menu, name, address, restaurantId }) => {
       {selectedMethod !== 'Overview' && isLoading && (
         <div className="menu-list__list">
           <LoadingSpinner center />
+        </div>
+      )}
+      {selectedMethod !== 'Overview' && !isLoading && menuItems.length === 0 && (
+        <div className="menu-list__list">
+          <h1 className="center">No items in Menu</h1>
         </div>
       )}
       {selectedMethod !== 'Overview' && !isLoading && menuItems.length > 0 && (

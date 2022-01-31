@@ -9,7 +9,7 @@
   width: 80rem;
   height: 25rem;
   object-fit: cover;
-  transform: scale(1.2);
+  transform: scale(1.1);
   margin-right: 5rem;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .blog-item__blog-container {
-  align-self: flex-start;
+  align-self: center;
 }
 
 .blog-item__title {
@@ -53,7 +53,7 @@
 
 .blog-item__actions button {
   background-color: #fff;
-  font-size: 12px;
+  font-size: 16px;
   border: none;
   color: #fab84c;
 }
