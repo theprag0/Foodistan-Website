@@ -1,57 +1,92 @@
-.logo{
-    width:200px;
-    height:60px
+@font-face {
+  font-family:segoe;
+  src: url(../../fonts/Segoe\ UI.ttf);
 }
-.btn{
-    padding: 0.5rem 1.4rem;
-    color: #FCFCFC;
+.navlink-logo {
+  padding: 0;
 }
-.btn:hover{
-    color: #FCFCFC;
-    box-shadow: 1px 1px 5px gray;
+
+.navlink-logo.active {
+  padding: 0;
 }
-.bg-white{
-    background-color: #FCFCFC;
+
+.logo {
+  width: 26rem;
+  height: 7rem;
+}
+
+.btn {
+  font-size: 1.8rem;
+  font-family: segoe;
+  font-weight: 600;
+  color: #fcfcfc;
+  margin-top: .5rem;
+  padding: 1rem 3rem;
+  border-radius: 6px;
+}
+.btn:hover {
+  color: #fcfcfc;
+  box-shadow: 1px 1px 5px gray;
+}
+.bg-white {
+  background-color: #fcfcfc;
 }
 a{
-    font-size: 1.6rem;
-    color: black;
-    text-decoration: none;
-    line-height: 2.5rem;
+  padding: 0rem;
 }
-a:hover{
-    color: #ffc107;
-    text-shadow:1px 1px 1px #ffc107 ;
+.header-items{
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-family: segoe;
+  padding: 1.6rem 0rem 2rem 0rem;
+  margin-right: 8rem;
+  transition: .2s;
 }
-.navbar{
-    box-shadow: 1px 1px 10px rgb(184, 184, 184);
-    padding: 0rem;
-    margin-bottom: 3.5rem;
+.header-items>a{
+  color: black;
+  text-decoration: none;
 }
-.navbar-brand{
-    padding: 0rem;
+.header-items:hover {
+  color: black;
+  text-shadow: 1px 1px 1px #e0e0e0;
+  border-bottom: 4px solid #FAB84C;
+  padding: 1rem 0rem 1.42rem 0rem;
 }
-.location{
-    font-size: 1.2rem;
+.navbar {
+  box-shadow: 1px 1px 10px rgb(184, 184, 184);
+  background-color: rgb(253, 253, 253);
+  padding-bottom: .5rem;
+  padding: 0rem;
+  margin-bottom: 3.5rem;
 }
-.search-bar{
-    margin-bottom:2.5rem ;
+.navbar-brand {
+  padding: 0rem; 
 }
-.search{
-    background-color: rgba(252, 225, 158, 0.356);
-    min-height: 4rem;
+.location {
+  font-size: 1.2rem;
 }
-.services{
-    font-size: 1.6rem;
 
+.search-bar {
+  margin-bottom: 2.5rem;
 }
-.round{
-    border-radius: 100%;
+.search {
+  min-height: 4rem;
+}
+.services {
+  font-size: 1.6rem;
+}
+.round {
+  border-radius: 100%;
 }
 
- @media (max-width:400px){
-    .logo{
-        width:25rem;
-        height:8rem
-    }
- }
+.blog {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+@media (max-width: 400px) {
+  .logo {
+    width: 25rem;
+    height: 8rem;
+  }
+}

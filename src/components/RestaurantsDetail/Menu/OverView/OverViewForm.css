@@ -1,0 +1,38 @@
+.overview-review {
+  margin: 6rem;
+}
+
+.overview-review__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overview-review__form textarea {
+  flex: 1;
+  margin: 0 10px;
+  border: none;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 1.5rem;
+}
+
+.overview-review__form textarea:focus {
+  outline: none;
+}
+
+.overview-review__form button {
+  border-radius: 50%;
+  padding: 8px 10px;
+  border: 1px solid #f7c12b;
+  font-size: 16px;
+  font-weight: 800;
+  color: #f7c12b;
+  background-color: #fffcde;
+}
+
+.overview-review__form button:hover {
+  background-color: #f7c12b;
+  color: #fffcde;
+}

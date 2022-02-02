@@ -1,0 +1,30 @@
+.overview-item {
+  margin: 1rem 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overview-review__card {
+  background-color: #f5f5f5;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.overview-review__card h2 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.overview-review__rating {
+  margin: 1rem 0;
+}
+
+.overview-review__rating svg {
+  font-size: 16px;
+  color: #ffd256;
+}
+
+.overview-review__card p {
+  font-size: 12px;
+}

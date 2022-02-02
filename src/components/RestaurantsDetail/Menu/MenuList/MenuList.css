@@ -1,0 +1,10 @@
+.menu-list__list {
+  flex: 7;
+}
+
+.menu-list__items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 15px;
+}

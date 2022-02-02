@@ -10,19 +10,20 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: fixed;
-    padding-bottom: 15rem;
-    margin-bottom: 6rem;
-}
-@media (max-width:600px){
-    .landingPage{
-        padding-bottom: 8rem;
-    }
+    /* padding-bottom: 10rem; */
 }
 .banner-text{
     text-align: center;
+    margin-top: 30rem;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.062),#000000) ;
+    padding-bottom: 10rem;
+    padding-top: 30rem;
+}
+.outer-search-bar-2{
+    padding: 0rem 40rem 0rem 20rem;
 }
 
-.search-bar{
+.search-bar,.search-bar-2{
     display: flex;
     flex: 1;
     justify-content: space-between;
@@ -30,7 +31,6 @@
     height: 60px;
     width: 100%;
     border-radius: 8px;
-    box-shadow: 1px 1px 2px gray;
     background-color: white;
     padding: 0;
 }
@@ -68,11 +68,22 @@
     border-right: 2px solid #dfdfdf;
     padding-right: 2rem;
 }
+.location-wrapper-2{
+    padding-right: 2rem;
+}
 .input-search-bar{
    display: flex; 
     flex: 2;
     /* margin: 0rem 1rem; */
 }
+.input-search-bar-2{
+    display: flex; 
+     flex: 2;
+     background-color: #fce19e5d; 
+     padding: 1rem 2rem;
+     border-radius: 8px;
+     /* margin: 0rem 1rem; */
+ }
 .search-icon{
     font-size: 3.9rem; 
     color:#686868 ;
@@ -85,29 +96,22 @@
     width: 99%; 
     font-size: 3rem;
     font-family:segoe;
-    letter-spacing: .5rem;
-}
-@media (max-width:600px){
-    .search-bar{
-        height: 30px;
-    }
-    .outer-search-bar{
-        padding: 0rem 6rem;
-    } 
+    letter-spacing: .2rem;
+    background-color: #fce19e00; 
 }
 .title{
     color: #ffffff;
-    font-size: 10.5rem;
-    margin-top: 5rem;
+    font-size: 5rem;
     font-family: segoe;
-    font-weight:500;
+    font-weight:550;
     text-shadow: 2px 2px 5px black;
+    /* background-color: #FFC107; */
 }
 .sub-title{
     color: white;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 500;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     font-family: segoe;
     text-shadow: 2px 2px 5px black;
 
@@ -115,24 +119,12 @@
 .explore-btn{
     color: white;
     padding: 1rem 5rem;
+    font-size: 3rem;
+    font-family: 550;
     border-radius: 4px;
-    margin-top: 8rem;
+    margin-top: 3rem;
     font-family: segoe;
     letter-spacing: 2px;
-}
-@media (max-width:600px){
-    .title{
-        font-size: 4.5rem;
-        margin-top: 1.5rem;
-    }
-    .sub-title{
-        font-size: 3rem;
-        margin-top: 2rem;
-    }
-    .explore-btn{
-        margin-top: 5rem;
-        padding: 0.8rem 3.5rem;
-    }
 }
 
 /*--------------- slider---------------- */
@@ -144,79 +136,53 @@
 
 .heading-text{
     color: black;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 600;
-    margin-bottom: 8rem;
-    font-family: segoe;
+    font-family: segoe; 
+    text-align: center;
+    padding: 10rem 0rem 25rem 0rem ;
+    /* text-shadow: 1px 1px .5px black; */
+    /* background-image: linear-gradient(to right, #FFAB38, #FFEE8A); */
 }
 .explore-nearby-wrapper{
-    margin-bottom: 15rem;
+    margin: -20rem 10rem 15rem 10rem;
 }
-
-.nearby-food-card{
-    background-color: #D93B30;
-    border-radius: 10px;
-    background-image: url(../Images/nearbyShop.png);
-    padding-top: 26rem; 
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-shadow: 1px 1px 5px gray;
-    overflow: hidden;
-    transition: 1s;
-    
+.nearbyFoodImgBurger{
+    width:80% ;
 }
-.nearby-food-card:hover,.nearby-food-card:hover>.nearby-food-card-details
-,.nearby-food-card-details:hover{
-    padding-top: 6rem;
-    background-color: #d93b3000;
-    padding-bottom: 11rem;
-    text-shadow: 1px 1px 5px gray;
-    font-weight: 600;
-
+.nearbyFoodImgFries{
+    width: 72%;
 }
-.nearby-food-card-img{
-    width: 100%;
-
+.explore-nearby-bg{
+    background-color: #0f0f0f09;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 8px;
 }
-.nearby-food-card-details{
-    padding: 2rem 4rem 6rem 4rem; 
-    /* justify-content: baseline; */
-    background-color: #D93B30;
-    transition: 1s;
-
-}
-.shop-name{
+.explore-nearby-food-name{
+    font-size: 3rem;
     font-family: segoe;
-    font-size:3rem;
-    font-weight: 500;
-    color: white;
-    margin-bottom: 2rem;
-}
-.shop-location{
-    font-size: 2.5rem;
-    color: white;
-    font-family: segoe;
-    font-weight: 500;
+    /* font-weight: bold; */
 }
 .vendors-wrapper{
     text-align: center;
-    margin-bottom: 15rem;
+    margin: -12rem 10rem 15rem 10rem;
+
 }
 .vendor-img{
     margin-bottom: 2rem;
     border-radius: 8px;
-    max-width: 100%;
+    width: 100%;
 }
 .vendor-name{
-    font-size: 2.5rem;
-    letter-spacing: 3px;
+    font-size: 4rem;
     font-weight: 600;
     margin-bottom: 1rem;
     font-family: segoe;
 }
 .vendor-location{
-    font-size: 2rem;
-    font-weight: 400;
+    font-size:3rem;  
+    font-weight: 600;
     letter-spacing: 2px;
     font-family: segoe;
 }
@@ -242,61 +208,143 @@
 .partner-img{
     width: 100%;
 }
-@media (max-width:600px){
-    .partner-wrapper{
-        padding: 4rem 5rem;
-        margin-bottom: 10rem;
-    }
-    .partner-banner-text{
-        font-size: 5rem;
-        margin-bottom: 3rem;
-    }
-    .below-banner{
-        font-size: 3rem;
-        line-height: 3.5rem;
-    }
-}
 .our-services-wrapper{
-    margin-bottom: 15rem;
+    margin: -12rem 10rem 15rem 10rem;
+
 }
 .services{
-    height: 25rem;
+    height:30rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .vendors{
     background-color: #c4c2c2;
     border-radius: 8px;
-    width: 40%;
+    width: 47.5%;
 }
 .tiffin-service{
     background-color: #c4c2c2;
     border-radius: 8px;
-    width: 40%;
+    width: 47.5%;
 }
 .get-app{
-    background-color: #FFAB38;
+    /* background-color: #FFAB38; */
     margin-bottom: 30rem;
-    padding: 8rem;
+    
+}
+.get-app-left{
+    padding: 8rem 0rem 8rem 8rem;
 }
 .get-app-banner{
     font-size: 10rem;
-    color: white;
-    font-weight: 500;
+    color: black;
+    font-weight: 600;
     margin-bottom: 4rem;
     letter-spacing: 3px;
+    font-family: segoe;
 }
 .below-get-app{
     font-size: 4rem;
-    color: white;
+    color: black;
     font-weight: 400;
+}
+.mobile{
+    background-image: url(../Images/Ellipse.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding: 1rem 5rem 1rem 0rem;
+    text-align: right;
+    
+}
+.mobile-img{
+    width:55%;
 }
 
 /* mobile view */
 
 @media (max-width:600px){
-    .get-app-banner{
+    .banner-text{
+        margin-top: 20rem;
+        padding-bottom: 8rem;
+        padding-top: 2rem;
+    }
+    .search-bar{
+        height: 30px;
+    }
+    .outer-search-bar, .outer-search-bar-2{
+        padding: 0rem 6rem;
+    } 
+    .title{
+        font-size: 4.5rem;
+        margin-top: 1.5rem;
+    }
+    .sub-title{
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    .explore-btn{
+        margin-top: 5rem;
+        padding: 0.8rem 3.5rem;
+        font-size: 3rem;
+    }  
+    .explore-nearby-wrapper{
+        margin: 1rem 0rem 10rem 2rem;
+    }
+    .explore-nearby-bg{
+        background-color: rgba(221, 221, 221, 0.377);
+    }
+    .vendors-wrapper{
+        margin: 1rem 0rem 10rem 2rem;
+    
+    }
+    .partner-wrapper{
+        padding: 4rem 5rem;
+        margin-bottom: 10rem;
+    }
+    .heading-text{
+        /* text-align: left; */
+        padding: 5rem 2rem ;
+        text-shadow: 1px 1px .5px black;
+        background-image: linear-gradient(to right, #FFAB38, #FFEE8A);
+    }
+    .partner-banner-text{
         font-size: 6rem;
         margin-bottom: 3rem;
+    }
+    .below-banner{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    } 
+    .partner-wrapper{
+        padding: 4rem 5rem;
+        margin-bottom: 10rem;
+    }
+    .our-services-wrapper{
+        margin: 1rem 5rem 15rem 5rem;
+    }
+    .services{ 
+        height:25rem;
+    }
+    .get-app{
+        background-color:white;        
+    }
+    .get-app-banner{
+        font-size: 5rem;
+        margin-bottom: 3rem;
+        font-weight:bolder;
+        color: black;
+        }
+        .below-get-app{
+            font-size: 4rem;
+            color: black;
+        }
+    .mobile{
+        padding: 5rem 5rem 1rem 0rem;
+        text-align: right;
+            
+        }
+        .mobile-img{
+            width:70%;
         }
  }

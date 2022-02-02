@@ -1,0 +1,82 @@
+.cart-item {
+  margin: 2rem;
+}
+
+.cart-item p,
+.cart-item h1 {
+  letter-spacing: normal;
+}
+
+.cart-item__name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.cart-item__price {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.cart-item__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.cart-item p {
+  font-size: 10px;
+  color: rgb(138, 138, 138);
+}
+
+.cart-item__actions button {
+  border: none;
+  font-size: 10px;
+}
+
+.cart-item__customize button {
+  margin-top: 3px;
+  background-color: #fff;
+  padding: 0;
+}
+
+.cart-item__customize button span {
+  border-radius: 50%;
+  background-color: #f7c12b;
+  padding: 0 1px;
+}
+
+.cart-item__customize span svg {
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.cart-item__dial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item__dial button {
+  height: 25px;
+  width: 25px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cart-item__dial p {
+  height: 25px;
+  font-size: 16px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f7c12b;
+}
+
+.cart-item__dial button:last-of-type {
+  background-color: #f7c12b57;
+  color: #f7c12b;
+}

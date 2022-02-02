@@ -1,0 +1,102 @@
+.restaurant-detail__info-offers {
+  margin-right: 80px;
+  display: flex;
+  align-self: flex-start;
+}
+
+.restaurant-detail__info-offers .card {
+  height: max-content;
+  width: max-content;
+  padding: 1.5rem 2.5rem 1.5rem 6rem;
+  border-radius: 5px;
+  color: #fff;
+  position: relative;
+}
+
+.restaurant-detail__info-offers .card:first-of-type {
+  background-color: #e23744;
+  margin-right: 10px;
+}
+
+.restaurant-detail__info-offers .card:last-of-type {
+  background-color: #84c225;
+}
+
+.offers__title {
+  margin: 0;
+  position: absolute;
+  left: -15px;
+  top: 25px;
+  bottom: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  transform: rotate(270deg);
+  border-bottom: 1px solid #fff;
+}
+
+.restaurant-detail__info-offers .card-title {
+  font-size: 15px;
+}
+
+.restaurant-detail__info-offers .card-text {
+  margin-bottom: 4px;
+}
+
+.restaurant-detail__info-offers p {
+  font-size: 10px;
+}
+
+@media (max-width: 60rem) {
+  .restaurant-detail__info-offers {
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .restaurant-detail__info-offers .card:first-of-type {
+    margin: 0 0 5px 0;
+  }
+
+  .offers__title {
+    left: -20px;
+    border: none;
+  }
+}
+
+@media (max-width: 40rem) {
+  /* .restaurant-detail__info-offers {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  } */
+
+  .restaurant-detail__info-offers .card {
+    height: max-content;
+    width: max-content;
+    padding: 1rem 1rem 1rem 5rem;
+    border-radius: 5px;
+    color: #fff;
+    position: relative;
+  }
+
+  .restaurant-detail__info-offers .card:first-of-type {
+    margin: 0 0 5px 0;
+  }
+
+  .offers__title {
+    left: -8px;
+    top: 15px;
+    bottom: 15px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .restaurant-detail__info-offers .card-title {
+    font-size: 12px;
+  }
+
+  .restaurant-detail__info-offers p {
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,112 @@
+.menu-list__item {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px rgb(0, 0, 0, 0.225);
+  margin: 10px;
+  padding: 0;
+  overflow: hidden;
+  height: max-content;
+  width: 50rem;
+}
+
+.menu-list__img-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.menu-list__img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-list__item-info {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-list__name-price {
+  font-size: 15px;
+  color: #000;
+  font-weight: 700;
+}
+.menu-list__name-price h3:first-of-type {
+  margin-bottom: 5px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot.veg {
+  border: 2px solid darkgreen;
+}
+.dot.veg span {
+  background-color: darkgreen;
+}
+
+.dot.non-veg {
+  border: 2px solid darkred;
+}
+
+.dot.non-veg span {
+  background-color: darkred;
+}
+
+.dot.egg {
+  border: 2px solid darkorange;
+}
+
+.dot.egg span {
+  background-color: darkorange;
+}
+
+.dot span::after {
+  content: ' ';
+}
+
+.dot span {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.menu-list__description {
+  margin-left: 2rem;
+  font-size: 12px;
+  width: 90%;
+  height: 40px;
+  color: #000;
+  letter-spacing: 0;
+}
+
+.menu-list__add-btn {
+  margin: 2rem 0 4rem 2rem;
+  background-color: #d72525;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  width: 100px;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: none;
+  border: 1px solid #d72525;
+}
+
+.menu-list__add-btn:hover {
+  color: #d72525;
+  background-color: #fff;
+}
+
+@media (max-width: 90rem) {
+  .menu-list__item {
+    flex: 1 1 100%;
+  }
+}

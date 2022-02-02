@@ -1,0 +1,16 @@
+.res-container.container-fluid {
+  padding: 1rem;
+}
+
+.res-container .card {
+  margin: 8px auto;
+}
+
+.res-container a:hover {
+  color: black;
+  text-shadow: none;
+}
+
+.center {
+  text-align: center;
+}
