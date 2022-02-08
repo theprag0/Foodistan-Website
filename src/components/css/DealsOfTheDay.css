@@ -1,87 +1,84 @@
 /* common class in dealsoftheday and orderbycuisine */
 
-.big-font,.big-font-thin{
-    font-size: 4rem;
-    letter-spacing: 1px;
-    margin-bottom: 4rem;
+.big-font,
+.big-font-thin {
+  font-size: 4rem;
+  letter-spacing: 1px;
+  margin-bottom: 4rem;
 }
-.big-font{
-    font-weight: bold;
+.big-font {
+  font-weight: bold;
 }
 
-.md-font{
-    font-weight: bold;
-    margin-bottom: 2rem;
+.md-font {
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
-.md-font-thin,.md-font{
-    font-size: 2rem;
+.md-font-thin,
+.md-font {
+  font-size: 2rem;
 }
-.cuisine-img{
-    width: 70%;
-    /* box-shadow: 1px 1px 5px gray; */
+.cuisine-img {
+  width: 70%;
+  /* box-shadow: 1px 1px 5px gray; */
 }
-.order-container{
-    margin-bottom: 10rem;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
-    
+.order-container {
+  margin-bottom: 10rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 }
 /* end  */
 
-
-
-
 /* DealsOfTheDay */
-.deal-container{
-    margin-bottom: 8rem;
-    padding-top: 4rem;
-    margin-top: 5rem; 
+.deal-container {
+  margin-bottom: 8rem;
+  padding-top: 4rem;
+  margin-top: 5rem;
 }
-.deal-img{
-    width: 70%;
-    height: 18rem;
-    border-radius: 5%;
-    padding-top: 2rem;
-    margin: auto;
-    box-shadow: 1px 1px 4px gray;
+.deal-img {
+  width: 70%;
+  height: 18rem;
+  border-radius: 5%;
+  padding-top: 2rem;
+  margin: auto;
+  box-shadow: 1px 1px 4px gray;
 }
-.deal-img-discount{
-    font-size: 2rem;
-    text-align: center;
-    height: 5rem;
-    width: 60%;
-    padding: 1.5rem;
- 
-    /* margin-top: 6rem; */
-}
-.viewMore-btn{
-    color: #ffc107;
-    width: 100%;
-}
-.viewMore-btn:hover{
-    color: black;
-}
-@media (max-width:600px) {
-.cuisine-img{
-    width: 100%;
-}
+.deal-img-discount {
+  font-size: 2rem;
+  text-align: center;
+  height: 5rem;
+  width: 60%;
+  padding: 1.5rem;
 
-.hide{
-    display: none;
+  /* margin-top: 6rem; */
 }
-/* .big-font{
+.viewMore-btn {
+  color: #ffc107;
+  width: 100%;
+}
+.viewMore-btn:hover {
+  color: black;
+}
+@media (max-width: 600px) {
+  .cuisine-img {
+    width: 100%;
+  }
+
+  .hide {
+    display: none;
+  }
+  /* .big-font{
     text-align: center;
 } */
-.deal-container{
+  .deal-container {
     text-align: left;
     justify-content: space-around;
-}
-.deal-img{
+  }
+  .deal-img {
     width: 100%;
-}
-.big-font,.big-font-thin{
+  }
+  .big-font,
+  .big-font-thin {
     font-size: 4rem;
-
-}
-    
+  }
 }

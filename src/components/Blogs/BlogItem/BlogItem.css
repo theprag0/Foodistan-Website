@@ -6,7 +6,7 @@
 }
 
 .blog-item__img-container {
-  width: 80rem;
+  width: 120rem;
   height: 25rem;
   object-fit: cover;
   transform: scale(1.1);
@@ -75,8 +75,14 @@
   .blog-item__img-container {
     flex: 1;
     transform: scale(1);
+    height: 20rem;
+    margin: -1rem 0 0 0;
   }
   .blog-item__img-container img {
     margin: 0 auto;
+  }
+
+  .blog-item__blog p {
+    width: 100%;
   }
 }

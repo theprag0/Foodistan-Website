@@ -24,7 +24,6 @@ const Restaurants = () => {
         });
 
         setRestaurants(loadedData);
-        console.log(restaurants);
         setIsLoading(false);
       } catch (err) {
         setError('Something went wrong!!');
