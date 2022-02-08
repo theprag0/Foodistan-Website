@@ -28,7 +28,7 @@ export default function SearchBar() {       // all the CSS of this search bar is
         });
 
         setRestaurants(loadedData);
-        // console.log(loadedData);
+        //console.log(loadedData);
         setIsLoading(false);
       } catch (err) {
         setError('Something went wrong!!');
@@ -57,10 +57,9 @@ export default function SearchBar() {       // all the CSS of this search bar is
     setText(text)
   }
 
-  let cssClass="noSuggestionList"
+  let cssClass = "noSuggestionList"
 
-  if(suggestions.length>=1)
-  {
+  if (suggestions.length >= 1) {
     cssClass = "suggestionList"
   }
 
@@ -90,27 +89,34 @@ export default function SearchBar() {       // all the CSS of this search bar is
               onBlur={() => {
                 setTimeout(() => {
                   setSuggestions([])
-                }, 100)
+                }, 300)
               }}
             />
 
           </div>
         </div>
         <div className={cssClass}>
-          {suggestions && suggestions.map((suggestion, i) =>
+          {suggestions.map((suggestion, i) =>
             <Link to={`/restaurant/${suggestion.id}`}>
               <div
                 className="search-input suggestion"
                 key={i}
                 onClick={() => onSuggestHandler(suggestion.Name)}>
-                <span><img style={{ height: '5.5rem',weight:'5rem' }} src={suggestion.FoodImage} alt="food" /></span>
+                <span><img style={{ height: '5.5rem', weight: '5rem' }} src={suggestion.FoodImage} alt="food" /></span>
                 <div className="suggestionName">
-                {suggestion.Name}
+                  {suggestion.Name}
                 </div>
-                
               </div>
             </Link>
           )}
+
+        </div>
+        <div>
+          {suggestions.length==0 && text.length!=0 && <div className="noResultText">
+            <div>
+          No Results Found</div>
+          </div>}
+
         </div>
 
 

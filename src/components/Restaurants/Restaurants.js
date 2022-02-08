@@ -10,6 +10,7 @@ const Restaurants = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+
   useEffect(() => {
     const fetchdatahandler = async () => {
       setIsLoading(true);
