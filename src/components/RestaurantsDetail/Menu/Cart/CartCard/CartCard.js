@@ -45,11 +45,6 @@ const CartCard = (props) => {
           alert(response.razorpay_order_id);
           alert(response.razorpay_signature)
       },
-      prefill: {
-          "name": "Gaurav Kumar",
-          "email": "gaurav.kumar@example.com",
-          "contact": "9999999999"
-      },
       notes: {
           "address": "Razorpay Corporate Office"
       },
