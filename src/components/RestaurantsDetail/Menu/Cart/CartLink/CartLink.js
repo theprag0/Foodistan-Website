@@ -5,7 +5,7 @@ import { CartContext } from '../../../../../store/cart-context';
 
 import './CartLink.css';
 
-const CartLink = ({ mobile }) => {
+const CartLink = ({ mobile, cartId }) => {
   const [btnIsHighLighted, setBtnIsHighlighted] = useState(false);
 
   const { cartItems } = useContext(CartContext);
@@ -32,11 +32,11 @@ const CartLink = ({ mobile }) => {
 
   return (
     <div className={mobile ? 'cart-info__mobile' : 'cart-info__footer'}>
-      <Link className="cart-info__footer-logo" to="/cart">
+      <Link className="cart-info__footer-logo" to={`/cart/${cartId}`}>
         <HiShoppingCart />
         <span className={btnClassName}>{numOfItems}</span>
       </Link>
-      <Link to="/cart" className="cart-info__footer-btn">
+      <Link to={`/cart/${cartId}`} className="cart-info__footer-btn">
         View Cart
       </Link>
     </div>

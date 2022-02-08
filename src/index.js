@@ -47,7 +47,7 @@ ReactDOM.render(
             <Route path="/login" component={Login} />
             <Route path="/menu" component={Menu} />
             <Route path="/signUp" component={SignUp} />
-            <Route path="/cart" component={Checkout} />
+            <Route path="/cart/:cid" component={Checkout} />
             <Route path="/blogs" component={Blog} />
           </ScrollToTop>
         </Switch>

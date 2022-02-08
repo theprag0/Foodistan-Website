@@ -1,8 +1,10 @@
 .restaurant-detail__cover {
-  width: 100%;
+  width: calc(100% + 30rem);
   height: 350px;
   margin-top: -3.5rem;
   position: relative;
+  margin-left: -15rem;
+  margin-right: -15rem;
 }
 
 .restaurant-detail__cover img {
@@ -38,9 +40,12 @@
   color: #fff;
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 60rem) {
   .restaurant-detail__cover {
+    width: 100%;
     height: 250px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .restaurant-detail__cover img {

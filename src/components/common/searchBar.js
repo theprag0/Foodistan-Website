@@ -4,8 +4,9 @@ import { FiSearch } from 'react-icons/fi';
 import { database } from '../../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
-import '../css/searchBar.css'
-export default function SearchBar() {       // all the CSS of this search bar is in landing.css file
+import '../css/searchBar.css';
+export default function SearchBar() {
+  // all the CSS of this search bar is in landing.css file
 
   const [state, setState] = useState([]);
   const [restaurants, setRestaurants] = useState([]);
@@ -42,20 +43,20 @@ export default function SearchBar() {       // all the CSS of this search bar is
   const onSuggestHandler = (text) => {
     setText(text);
     setSuggestions([]);
-  }
+  };
 
   const onChangeHandler = (text) => {
-    let matches = []
+    let matches = [];
     if (text.length > 0) {
-      matches = restaurants.filter(restaurant => {
-        const regex = new RegExp(`${text}`, "gi");
-        return restaurant.search.match(regex)
-      })
+      matches = restaurants.filter((restaurant) => {
+        const regex = new RegExp(`${text}`, 'gi');
+        return restaurant.search.match(regex);
+      });
     }
 
-    setSuggestions(matches)
-    setText(text)
-  }
+    setSuggestions(matches);
+    setText(text);
+  };
 
   let cssClass = "noSuggestionList"
 
@@ -85,14 +86,13 @@ export default function SearchBar() {       // all the CSS of this search bar is
               placeholder="Search Cuisines"
               className="search-input "
               value={text}
-              onChange={e => onChangeHandler(e.target.value)}
+              onChange={(e) => onChangeHandler(e.target.value)}
               onBlur={() => {
                 setTimeout(() => {
                   setSuggestions([])
                 }, 300)
               }}
             />
-
           </div>
         </div>
         <div className={cssClass}>
@@ -118,8 +118,6 @@ export default function SearchBar() {       // all the CSS of this search bar is
           </div>}
 
         </div>
-
-
       </div>
       <div className="col-md-3"></div>
     </div>
