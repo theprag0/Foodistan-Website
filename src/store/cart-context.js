@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useCallback, useReducer } from 'react';
 
 export const CartContext = React.createContext({
   restaurantId: '',
@@ -7,10 +7,14 @@ export const CartContext = React.createContext({
   method: '',
   cartItems: [],
   totalAmount: 0,
+  cartChanged: '',
   addItem: (cartData) => {},
   removeItem: (id) => {},
   updateItem: (updatedItemData) => {},
   replaceCartContext: () => {},
+  fetchCartItems: () => {},
+  sendCartItems: () => {},
+  cartChangeReset: () => {},
 });
 
 const cartReducer = (state, action) => {
@@ -21,6 +25,11 @@ const cartReducer = (state, action) => {
       address: action.itemData.address,
       method: action.itemData.method,
     };
+
+    // await updateDoc(doc(database, 'cart', DUMMY_USER['cart-id']), {
+    //   'vendor-id': action.itemData.id,
+    //   'vendor-name': action.itemData.restaurantName,
+    // });
 
     const { cartItem } = action.itemData;
 
@@ -41,16 +50,38 @@ const cartReducer = (state, action) => {
       };
       updatedCartItems[existingCartItemIndex] = updatedCartItem;
       //updating quantity by 1 and increase totalAmount + price
+      // await updateDoc(
+      //   doc(database, 'cart', DUMMY_USER['cart-id'], 'items', cartItem.id),
+      //   {
+      //     id: updatedCartItem.id,
+      //     name: updatedCartItem.name,
+      //     price: `${updatedCartItem.price}`,
+      //     quantity: `${updatedCartItem.qty}`,
+      //     veg: false,
+      //   }
+      // );
       return {
         ...restroInfo,
         cartItems: updatedCartItems,
         totalAmount: state.totalAmount + updatedCartItem.price,
+        cartChanged: action.type,
       };
     } else {
+      // await setDoc(
+      //   doc(database, 'cart', DUMMY_USER['cart-id'], 'items', cartItem.id),
+      //   {
+      //     id: cartItem.id,
+      //     name: cartItem.name,
+      //     price: `${cartItem.price}`,
+      //     quantity: `${cartItem.qty}`,
+      //     veg: false,
+      //   }
+      // );
       return {
         ...restroInfo,
         cartItems: [...updatedCartItems, cartItem],
         totalAmount: state.totalAmount + cartItem.price,
+        cartChanged: action.type,
       };
     }
   }
@@ -69,11 +100,13 @@ const cartReducer = (state, action) => {
 
     let totalAmount = state.totalAmount;
 
+    const newId = `${idPreffix}-${action.updateItemData.customize}`;
+
     //reducing old price
     totalAmount -= foundCartItem.qty * foundCartItem.price;
 
     //updating items
-    foundCartItem.id = `${idPreffix}-${action.updateItemData.customize}`;
+    foundCartItem.id = newId;
     foundCartItem.customize = action.updateItemData.customize;
     foundCartItem.price = action.updateItemData.price;
 
@@ -84,6 +117,7 @@ const cartReducer = (state, action) => {
       ...state,
       totalAmount,
       cartItems: updatedCartItems,
+      cartChanged: action.type,
     };
   }
 
@@ -104,6 +138,7 @@ const cartReducer = (state, action) => {
         ...state,
         cartItems: state.cartItems.filter((c) => c.id !== action.id),
         totalAmount: state.totalAmount - +updatedCartItem.price,
+        cartChanged: `${action.type}_${action.id}`,
       };
     }
     if (updatedCartItem.qty > 1) {
@@ -113,6 +148,7 @@ const cartReducer = (state, action) => {
         ...state,
         cartItems: updatedCartItems,
         totalAmount: state.totalAmount - updatedCartItem.price,
+        cartChanged: action.type,
       };
     }
   }
@@ -126,9 +162,31 @@ const cartReducer = (state, action) => {
       method: '',
       cartItems: [],
       totalAmount: 0,
+      cartChanged: false,
     };
   }
 
+  if (action.type === 'FETCH') {
+    //after fetching change Context
+    return {
+      cartItems: action.items.cartItems,
+      restaurantId: action.items.restaurantId,
+      restaurantName: action.items.restaurantName,
+      address: action.items.address,
+      method: action.items.method,
+      totalAmount: action.items.totalAmount,
+    };
+  }
+
+  if (action.type === 'CHANGE') {
+    //after fetching change Context
+    return {
+      ...state,
+      cartChanged: false,
+    };
+  }
+
+  // returning initialState
   return state;
 };
 
@@ -158,12 +216,25 @@ const CartProvider = (props) => {
     dispatchCartState({ type: 'REPLACE' });
   };
 
+  const fetchCart = useCallback((items) => {
+    dispatchCartState({ type: 'FETCH', items: items });
+  }, []);
+
+  const cartChangeReset = useCallback(() => {
+    dispatchCartState({ type: 'CHANGE' });
+  }, []);
+
+  const sendCartItems = async () => {};
+
   const value = {
     ...cartState,
     addItem,
     removeItem,
     replaceCart,
     updateItem,
+    fetchCart,
+    sendCartItems,
+    cartChangeReset,
   };
 
   return (
