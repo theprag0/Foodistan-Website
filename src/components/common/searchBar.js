@@ -29,7 +29,7 @@ export default function SearchBar() {
         });
 
         setRestaurants(loadedData);
-        // console.log(loadedData);
+        //console.log(loadedData);
         setIsLoading(false);
       } catch (err) {
         setError('Something went wrong!!');
@@ -58,10 +58,10 @@ export default function SearchBar() {
     setText(text);
   };
 
-  let cssClass = 'noSuggestionList';
+  let cssClass = "noSuggestionList"
 
-  if (suggestions.length > 0) {
-    cssClass = 'suggestionList';
+  if (suggestions.length >= 1) {
+    cssClass = "suggestionList"
   }
 
   return (
@@ -89,33 +89,34 @@ export default function SearchBar() {
               onChange={(e) => onChangeHandler(e.target.value)}
               onBlur={() => {
                 setTimeout(() => {
-                  setSuggestions([]);
-                }, 100);
+                  setSuggestions([])
+                }, 300)
               }}
             />
           </div>
         </div>
         <div className={cssClass}>
-          {suggestions &&
-            suggestions.length > 0 &&
-            suggestions.map((suggestion, i) => (
-              <Link to={`/restaurant/${suggestion.id}`}>
-                <div
-                  className="search-input suggestion"
-                  key={i}
-                  onClick={() => onSuggestHandler(suggestion.Name)}
-                >
-                  <span>
-                    <img
-                      style={{ height: '5.5rem', weight: '5rem' }}
-                      src={suggestion.FoodImage}
-                      alt="food"
-                    />
-                  </span>
-                  <div className="suggestionName">{suggestion.Name}</div>
+          {suggestions.map((suggestion, i) =>
+            <Link to={`/restaurant/${suggestion.id}`}>
+              <div
+                className="search-input suggestion"
+                key={i}
+                onClick={() => onSuggestHandler(suggestion.Name)}>
+                <span><img style={{ height: '5.5rem', weight: '5rem' }} src={suggestion.FoodImage} alt="food" /></span>
+                <div className="suggestionName">
+                  {suggestion.Name}
                 </div>
-              </Link>
-            ))}
+              </div>
+            </Link>
+          )}
+
+        </div>
+        <div>
+          {suggestions.length==0 && text.length!=0 && <div className="noResultText">
+            <div>
+          No Results Found</div>
+          </div>}
+
         </div>
       </div>
       <div className="col-md-3"></div>
