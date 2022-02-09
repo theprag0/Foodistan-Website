@@ -26,6 +26,7 @@ export default function Login() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [cartId,setCartId]= useState('');
   // auth.onAuthStateChanged(())
 
 
@@ -89,13 +90,21 @@ export default function Login() {
               if (doc.exists()) {
                 console.log("user exist in data base-1");
                 //fetch cart id
+                
+                  const map = doc.data();
+
+                  //fetching cart id
+                  setCartId(map["cart-id"])
+                
               }
               else {
                 console.log("user does not exist in data base,open modal and add details to data base")
                 setModalShow(true);
 
               }
+             
             })
+           
 
 
 
@@ -123,18 +132,20 @@ export default function Login() {
   const handleClose = () => {
 
     //Cart document for user generated with auto id
-    const cartDocRef =  doc(collection(database, "cart"))
+    const cartDocRef = doc(collection(database, "cart"))
 
     // getting reference of user document created using phone number as key
     const docRef = doc(database, 'users', phoneNumber)
+
+    setCartId(cartDocRef.id);
 
     //updating details into created user document
     setDoc(docRef, {
       "cart-id": cartDocRef.id,
       name: name,
       email: email,
-      phoneNumber:phoneNumber
-     
+      phoneNumber: phoneNumber
+
     }).then(
       console.log("user added")
     ).catch((error) => {
@@ -266,7 +277,7 @@ export default function Login() {
             </Modal.Footer>
           </Modal>
 
-      
+
 
 
           <div className="d-flex justify-content-center align-items-center my-2">
