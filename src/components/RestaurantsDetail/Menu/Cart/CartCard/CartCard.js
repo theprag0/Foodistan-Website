@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { HiShoppingCart } from 'react-icons/hi';
 
 import CartLink from '../CartLink/CartLink';
@@ -19,7 +19,7 @@ function loadScript(src){
 }
 
 const CartCard = (props) => {
-  const cartRef = useRef();
+  // const cartRef = useRef();
 
   // Razor pay settings 
  async function displayRazorpay(){
@@ -59,7 +59,7 @@ const CartCard = (props) => {
 
 
   return (
-    <div className={props.checkout ? 'checkout' : 'cart'} ref={cartRef}>
+    <div className={props.checkout ? 'checkout' : 'cart'}>
       <div className={props.checkout ? '' : 'cart-card__container'}>
         <div className="cart-card">
           <div className="cart-info">
@@ -78,7 +78,7 @@ const CartCard = (props) => {
             </div>
             {props.children}{' '}
           </div>
-          {!props.checkout && <CartLink />}
+          {!props.checkout && <CartLink cartId={props.cartId} />}
           {props.checkout && (
             <div className="checkout-actions">
               <button onClick={displayRazorpay} className="checkout-cart__btn">Order Now</button>

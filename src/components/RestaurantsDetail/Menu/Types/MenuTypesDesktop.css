@@ -8,7 +8,7 @@
   font-size: 25px;
   font-weight: 700;
   cursor: pointer;
-  padding: 2rem 40px;
+  padding: 2rem 0;
 }
 
 .menu-types ul {
@@ -16,7 +16,7 @@
 }
 
 .menu-types li {
-  padding: 2rem 40px;
+  padding: 2rem 0;
   font-size: 15px;
   color: #000;
 }

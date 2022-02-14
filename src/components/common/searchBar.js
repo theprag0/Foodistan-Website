@@ -4,8 +4,9 @@ import { FiSearch } from 'react-icons/fi';
 import { database } from '../../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
-import '../css/searchBar.css'
-export default function SearchBar() {       // all the CSS of this search bar is in landing.css file
+import '../css/searchBar.css';
+export default function SearchBar() {
+  // all the CSS of this search bar is in landing.css file
 
   const [state, setState] = useState([]);
   const [restaurants, setRestaurants] = useState([]);
@@ -42,26 +43,25 @@ export default function SearchBar() {       // all the CSS of this search bar is
   const onSuggestHandler = (text) => {
     setText(text);
     setSuggestions([]);
-  }
+  };
 
   const onChangeHandler = (text) => {
-    let matches = []
+    let matches = [];
     if (text.length > 0) {
-      matches = restaurants.filter(restaurant => {
-        const regex = new RegExp(`${text}`, "gi");
-        return restaurant.search.match(regex)
-      })
+      matches = restaurants.filter((restaurant) => {
+        const regex = new RegExp(`${text}`, 'gi');
+        return restaurant.search.match(regex);
+      });
     }
 
-    setSuggestions(matches)
-    setText(text)
-  }
+    setSuggestions(matches);
+    setText(text);
+  };
 
-  let cssClass="noSuggestionList"
+  let cssClass = 'noSuggestionList';
 
-  if(suggestions.length>=1)
-  {
-    cssClass = "suggestionList"
+  if (suggestions.length > 0) {
+    cssClass = 'suggestionList';
   }
 
   return (
@@ -86,34 +86,37 @@ export default function SearchBar() {       // all the CSS of this search bar is
               placeholder="Search Cuisines"
               className="search-input "
               value={text}
-              onChange={e => onChangeHandler(e.target.value)}
+              onChange={(e) => onChangeHandler(e.target.value)}
               onBlur={() => {
                 setTimeout(() => {
-                  setSuggestions([])
-                }, 100)
+                  setSuggestions([]);
+                }, 100);
               }}
             />
-
           </div>
         </div>
         <div className={cssClass}>
-          {suggestions && suggestions.map((suggestion, i) =>
-            <Link to={`/restaurant/${suggestion.id}`}>
-              <div
-                className="search-input suggestion"
-                key={i}
-                onClick={() => onSuggestHandler(suggestion.Name)}>
-                <span><img style={{ height: '5.5rem',weight:'5rem' }} src={suggestion.FoodImage} alt="food" /></span>
-                <div className="suggestionName">
-                {suggestion.Name}
+          {suggestions &&
+            suggestions.length > 0 &&
+            suggestions.map((suggestion, i) => (
+              <Link to={`/restaurant/${suggestion.id}`}>
+                <div
+                  className="search-input suggestion"
+                  key={i}
+                  onClick={() => onSuggestHandler(suggestion.Name)}
+                >
+                  <span>
+                    <img
+                      style={{ height: '5.5rem', weight: '5rem' }}
+                      src={suggestion.FoodImage}
+                      alt="food"
+                    />
+                  </span>
+                  <div className="suggestionName">{suggestion.Name}</div>
                 </div>
-                
-              </div>
-            </Link>
-          )}
+              </Link>
+            ))}
         </div>
-
-
       </div>
       <div className="col-md-3"></div>
     </div>

@@ -5,7 +5,7 @@
 .heading-font {
   font-size: var(--l-font);
 }
-a{
+a {
   text-decoration: none;
   color: black;
 }
@@ -48,10 +48,10 @@ footer {
   box-shadow: 0px -5px 10px rgb(211, 209, 209);
   margin-top: 40rem;
 }
-@media (max-width:600px){
-    footer{
+@media (max-width: 600px) {
+  footer {
     margin-top: 20rem;
-    }
+  }
 }
 
 .footer-download-icons {
@@ -83,78 +83,15 @@ footer {
 
 /* ------------listingcards-------------- */
 
-.card {
-  position: relative;
-  height: 40rem;
-  width: 50rem;
-  border-radius: 2rem;
-  overflow: hidden;
-  margin: auto;
-  box-shadow: 0px 1px 5px 1px #e0e0e0;
-}
-
-.card-image-container {
-  position: relative;
-  width: 100%;
-  height: 24rem;
-  border-radius: 2rem;
-}
-
-.card-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 2rem;
-}
-
-.card-image-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #f6c12a;
-  padding-left: 1rem;
-  color: white;
-  border-radius: 0 0 2rem 2rem;
-  height: 4rem;
-}
-
-.card-footer {
-  position: absolute;
-  bottom: 0;
-  height: 4rem;
-  width: 100%;
-  background: #e3493a;
-}
-
-.card-details { 
-  padding: 1.5rem;
-}
-.card-details-container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background: white;
-  -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
-  clip-path: polygon(47% 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.card-details-container-padding {
-  padding-left: 14rem;
-}
-
-.icons-circle {
-  height: 2rem;
-  width: 2rem;
-  background-color: red;
-  border-radius: 50%;
-}
-
 /* ---------------trolly----------------- */
+.main-container {
+  width: 100%;
+}
 
 .tab-selection-container {
   border-bottom: 0.1px solid #c4c4c4;
   width: fit-content;
   position: relative;
-  margin-left: 2rem;
 }
 
 .tab-selection-container::before {
@@ -195,13 +132,19 @@ footer {
   height: 10rem;
   display: inline-block;
   padding: 1rem;
-  margin: 0 0 2rem 5rem;
+  margin: 0 0 2rem 0;
   background-color: #fab84c;
   border-radius: 50%;
   overflow: none;
 }
-.trolly-img{
-    width: 100%;
+.trolly-img {
+  width: 100%;
+}
+
+@media (max-width: 60rem) {
+  .main-container {
+    width: 90%;
+  }
 }
 
 /* -----------------Delivery-Dashboard------------------ */
@@ -303,9 +246,6 @@ footer {
 .cart-container-inner-top {
   border-bottom: 0.1rem solid black;
   text-align: center;
-}
-
-.cart-container-inner-bottom {
 }
 
 .card-container-resturant {
