@@ -16,7 +16,7 @@ import Payments from './Profile/P-components/payments';
 import trackOrder from './Profile/P-components/trackOrder';
 import notifications from './Profile/P-components/notifications';
 import reportWebVitals from './reportWebVitals';
-import landingPage from './components/LandingPage';
+import landingPage from './components/landingPage';
 import Login from '../src/login';
 import Menu from './delivery-dashboard/main-menu';
 import RestaurantDetail from './Pages/RestaurantDetail';
