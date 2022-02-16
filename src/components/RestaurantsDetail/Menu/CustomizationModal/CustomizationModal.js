@@ -75,14 +75,14 @@ const CustomizationModal = ({
           />
           <label>Full</label>
         </div>
-        <footer className="customization-footer">
+        <div className="customization-footer">
           <button className="menu-list__add-btn" type="submit">
             ADD
           </button>
           <button className="menu-list__add-btn" type="btn" onClick={onClose}>
             Close
           </button>
-        </footer>
+        </div>
       </form>
     </Modal>
   );

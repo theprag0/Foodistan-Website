@@ -1,5 +1,5 @@
 .cart-item {
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .cart-item p,
@@ -8,15 +8,14 @@
 }
 
 .cart-item__name {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .cart-item__price {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 800;
-  margin-top: 1rem;
+  margin-top: 0.2rem;
   text-align: end;
 }
 
@@ -30,24 +29,27 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 10px;
-  margin-top: 5px;
 }
 
 .cart-item p {
-  font-size: 10px;
+  font-size: 0.7rem;
   color: rgb(138, 138, 138);
 }
 
 .cart-item__actions button {
   border: none;
-  font-size: 10px;
+  font-size: 0.8rem;
 }
 
 .cart-item__customize button {
-  margin-top: 3px;
   background-color: #fff;
   padding: 0;
+  font-size: 0.7rem;
+}
+
+.cart-item__customize p {
+  margin: -0.5rem 0 0;
+  font-size: 0.8rem;
 }
 
 .cart-item__customize button span {
@@ -76,16 +78,16 @@
 }
 
 .cart-item__dial button {
-  height: 25px;
-  width: 25px;
-  font-size: 16px;
+  height: 2rem;
+  width: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
 .cart-item__dial p {
-  height: 25px;
-  font-size: 16px;
-  width: 25px;
+  height: 1.5rem;
+  font-size: 1rem;
+  width: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,6 +98,7 @@
   -ms-flex-align: center;
   align-items: center;
   color: #f7c12b;
+  transform: translateY(8px);
 }
 
 .cart-item__dial button:last-of-type {

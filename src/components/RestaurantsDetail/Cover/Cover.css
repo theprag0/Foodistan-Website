@@ -1,22 +1,21 @@
 .restaurant-detail__cover {
-  width: calc(100% + 30rem);
-  height: 350px;
+  height: 20rem;
   margin-top: -3.5rem;
   position: relative;
-  margin-left: -10rem;
-  margin-right: -10rem;
+  margin-left: -3rem;
+  margin-right: -3rem;
 }
 
 .restaurant-detail__cover img {
   width: 100%;
-  height: 350px;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
 .restaurant-detail__cover .card {
   background-color: #3bb755;
-  padding: 0.8rem 1.5rem;
+  padding: 0.2rem 0.8rem;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -31,7 +30,7 @@
 }
 
 .restaurant-detail__cover .card-title {
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #fff;
   text-align: center;
@@ -44,19 +43,24 @@
 }
 
 .restaurant-detail__cover .card-text {
-  font-size: 12px;
+  font-size: 1rem;
   color: #fff;
 }
 
 @media (max-width: 960px) {
   .restaurant-detail__cover {
-    width: 100%;
-    height: 250px;
     margin-left: 0;
     margin-right: 0;
   }
 
-  .restaurant-detail__cover img {
-    height: 250px;
+  .restaurant-detail__cover .card {
+    padding: 0 0.8rem;
+  }
+
+  .restaurant-detail__cover .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
   }
 }

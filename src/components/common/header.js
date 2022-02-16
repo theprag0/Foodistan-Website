@@ -16,7 +16,6 @@ import { Link, NavLink } from 'react-router-dom';
 function Header() {
   return (
     <div>
-      {' '}
       <Navbar bg="white" expand="sm" className="navbar">
         <Container>
           <Navbar.Brand className="navbar-brand ">

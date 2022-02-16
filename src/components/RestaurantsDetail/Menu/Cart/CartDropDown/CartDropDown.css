@@ -1,18 +1,18 @@
 .cart-info__dropDown {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 25px;
+  margin-top: 1.5rem;
 }
 
 .cart-info__dropDown-other__option {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   border: 1px solid #000;
-  width: 100px;
-  padding: 1rem;
+  width: 6rem;
+  padding: 0.5rem;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 0.8rem;
   cursor: pointer;
 }
 

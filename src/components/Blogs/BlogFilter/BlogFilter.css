@@ -17,7 +17,7 @@
 
 .blog-filter p,
 .blog-filter h1 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .filters {
@@ -45,7 +45,7 @@
 .filter-card {
   background-color: #999999;
   margin: 0 10px;
-  padding: 1rem;
+  padding: 0 0.5rem;
   border-radius: 5px;
 }
 
@@ -56,17 +56,18 @@
   width: -moz-max-content;
   width: max-content;
   cursor: pointer;
+  margin: 0.2rem;
 }
 
 .filter-card__left-btn,
 .filter-card__right-btn {
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
   background-color: #fff;
 }
 
 .blog-filter + hr {
-  margin: 20px 0;
+  margin: 1.2rem 0;
   color: #999999;
 }
 
