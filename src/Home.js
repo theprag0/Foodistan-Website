@@ -20,7 +20,7 @@ function Home() {
         <SearchBar />
         <SpecialOffers />
         <Trolly />
-        <Deals />
+        {/* <Deals /> */}
         <OrderByCuisines />
         <Restaurants />
       </Layout>
