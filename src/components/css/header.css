@@ -1,5 +1,5 @@
 @font-face {
-  font-family:segoe;
+  font-family: segoe;
   src: url(../../fonts/Segoe\ UI.ttf);
 }
 .navlink-logo {
@@ -20,47 +20,51 @@
   font-family: segoe;
   font-weight: 600;
   color: #fcfcfc;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   padding: 1rem 3rem;
   border-radius: 6px;
 }
 .btn:hover {
   color: #fcfcfc;
+  -webkit-box-shadow: 1px 1px 5px gray;
   box-shadow: 1px 1px 5px gray;
 }
 .bg-white {
   background-color: #fcfcfc;
 }
-a{
+a {
   padding: 0rem;
 }
-.header-items{
+.header-items {
   font-size: 2.2rem;
   font-weight: 500;
   font-family: segoe;
   padding: 1.6rem 0rem 2rem 0rem;
   margin-right: 8rem;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
-.header-items>a{
+.header-items > a {
   color: black;
   text-decoration: none;
 }
 .header-items:hover {
   color: black;
   text-shadow: 1px 1px 1px #e0e0e0;
-  border-bottom: 4px solid #FAB84C;
+  border-bottom: 4px solid #fab84c;
   padding: 1rem 0rem 1.42rem 0rem;
 }
 .navbar {
+  -webkit-box-shadow: 1px 1px 10px rgb(184, 184, 184);
   box-shadow: 1px 1px 10px rgb(184, 184, 184);
   background-color: rgb(253, 253, 253);
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   padding: 0rem;
   margin-bottom: 3.5rem;
 }
 .navbar-brand {
-  padding: 0rem; 
+  padding: 0rem;
 }
 .location {
   font-size: 1.2rem;

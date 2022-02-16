@@ -1,3 +1,7 @@
+.restaurant-detail__information {
+  cursor: pointer;
+}
+
 .restaurant-detail__information h1,
 .restaurant-detail__information p {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -20,13 +24,13 @@
   font-size: 12px;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .restaurant-detail__information {
     margin: 0;
   }
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 640px) {
   .restaurant-detail__information {
     margin: 0;
   }

@@ -118,6 +118,25 @@ const Cart = ({ checkout }) => {
         await deleteDoc(
           doc(database, 'cart', DUMMY_USER['cart-id'], 'items', id)
         );
+      } else if (cartChanged.includes('UPDATE')) {
+        const deleteId = cartChanged.split('_')[1];
+
+        await deleteDoc(
+          doc(database, 'cart', DUMMY_USER['cart-id'], 'items', deleteId)
+        );
+
+        for (const cartItem of cartItems) {
+          await setDoc(
+            doc(database, 'cart', DUMMY_USER['cart-id'], 'items', cartItem.id),
+            {
+              id: cartItem.id,
+              name: cartItem.name,
+              price: `${cartItem.price}`,
+              quantity: `${cartItem.qty}`,
+              veg: false,
+            }
+          );
+        }
       }
     };
 

@@ -1,6 +1,11 @@
 .blog-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -8,7 +13,11 @@
   width: 50%;
   height: 35px;
   background-color: rgb(252, 225, 158, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   border-radius: 8px;
 }
@@ -17,11 +26,15 @@
   font-size: 20px;
   margin: 1.5px 10px;
   color: #6b6b6b;
+  -webkit-transform: translateY(2px);
+  -ms-transform: translateY(2px);
   transform: translateY(2px);
 }
 
 .blog-searchbar input {
   background-color: transparent;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   border: none;
   font-size: 12px;
@@ -32,8 +45,14 @@
 }
 
 .post-blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
 }
@@ -56,10 +75,12 @@
 }
 
 .post-blog svg {
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .post-blog p {
     margin-right: 10px;
   }

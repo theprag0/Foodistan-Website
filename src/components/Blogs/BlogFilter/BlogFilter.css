@@ -1,6 +1,11 @@
 .blog-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 50px;
 }
@@ -16,10 +21,20 @@
 }
 
 .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
   transition-duration: 300ms;
+  -webkit-transform: translateX(200px);
+  -ms-transform: translateX(200px);
   transform: translateX(200px);
 }
 
@@ -37,6 +52,8 @@
 .filter-card p {
   color: #fff;
   text-align: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   cursor: pointer;
 }
@@ -53,7 +70,7 @@
   color: #999999;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .filter-card__right-btn,
   .filter-card__left-btn {
     top: 4px;

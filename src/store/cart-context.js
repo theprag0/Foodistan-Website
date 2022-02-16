@@ -89,35 +89,59 @@ const cartReducer = (state, action) => {
   if (action.type === 'UPDATE') {
     const updatedCartItems = [...state.cartItems];
 
-    const existingCartItem = updatedCartItems.findIndex(
+    const existingCartItemIndex = updatedCartItems.findIndex(
       (c) => c.id === action.updateItemData.id
     );
 
-    const foundCartItem = updatedCartItems[existingCartItem];
+    //updateitemData contains id price customize
 
-    //there are two ids for same product for eg waffle have different id for half customization 'waffle1-half' and 'waffle2-full'
-    const idPreffix = foundCartItem.id.split('-')[0];
+    const foundCartItem = updatedCartItems[existingCartItemIndex];
 
-    let totalAmount = state.totalAmount;
+    // //there are two ids for same product for eg waffle have different id for half customization 'waffle1-half' and 'waffle2-full'
+    let idPreffix;
+    if (foundCartItem.id.split('-').length > 2) {
+      idPreffix =
+        foundCartItem.id.split('-')[0] + '-' + foundCartItem.id.split('-')[1];
+    } else {
+      idPreffix = foundCartItem.id.split('-')[0];
+    }
 
     const newId = `${idPreffix}-${action.updateItemData.customize}`;
 
-    //reducing old price
+    let totalAmount = state.totalAmount;
+
+    // //reducing old price
     totalAmount -= foundCartItem.qty * foundCartItem.price;
 
-    //updating items
-    foundCartItem.id = newId;
-    foundCartItem.customize = action.updateItemData.customize;
-    foundCartItem.price = action.updateItemData.price;
+    const exitingItemWithNewIdIndex = updatedCartItems.findIndex(
+      (c) => c.id === newId
+    );
 
-    //adding new price
+    if (exitingItemWithNewIdIndex >= 0) {
+      const updatedCartItem = updatedCartItems[exitingItemWithNewIdIndex];
+
+      updatedCartItem.customize = action.updateItemData.customize;
+      updatedCartItem.qty += foundCartItem.qty;
+
+      updatedCartItems[existingCartItemIndex] = updatedCartItem;
+      updatedCartItems.splice(existingCartItemIndex, 1);
+    } else {
+      // //updating items
+      foundCartItem.id = newId;
+      foundCartItem.customize = action.updateItemData.customize;
+      foundCartItem.price = action.updateItemData.price;
+
+      // //adding new price
+      updatedCartItems[existingCartItemIndex] = foundCartItem;
+    }
+
     totalAmount += foundCartItem.qty * action.updateItemData.price;
 
     return {
       ...state,
       totalAmount,
       cartItems: updatedCartItems,
-      cartChanged: action.type,
+      cartChanged: `${action.type}_${action.updateItemData.id}_${newId}`,
     };
   }
 

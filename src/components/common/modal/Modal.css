@@ -16,13 +16,15 @@
   background-color: white;
   padding: 1rem;
   border-radius: 8px;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 150;
   overflow: hidden;
+  -webkit-animation: fade 200ms ease-in forwards;
   animation: fade 200ms ease-in forwards;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .backdrop {
     background-color: rgba(255, 255, 255, 0.486);
   }
@@ -30,37 +32,78 @@
   .modal-overlay {
     width: 100%;
     border-radius: none;
+    -webkit-box-shadow: none;
     box-shadow: none;
     height: 100vh;
     left: 0;
     top: 50vh;
     bottom: 0;
+    -webkit-animation: slideUp 200ms ease-in forwards;
     animation: slideUp 200ms ease-in forwards;
+  }
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  50% {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes slideUp {
   0% {
+    -webkit-transform: translateY(100%);
     transform: translateY(100%);
   }
   50% {
+    -webkit-transform: translateY(50%);
     transform: translateY(50%);
   }
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
 @keyframes fade {
   0% {
+    -webkit-transform: scale(0.2);
     transform: scale(0.2);
     opacity: 0.8;
   }
   50% {
+    -webkit-transform: scale(0.5);
     transform: scale(0.5);
     opacity: 0.5;
   }
   100% {
+    -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }

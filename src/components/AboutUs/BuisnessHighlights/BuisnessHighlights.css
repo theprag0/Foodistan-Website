@@ -6,8 +6,13 @@
   color: #3e313e;
 }
 .buisness-highlights__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 10rem;
 }
@@ -18,9 +23,18 @@
   background-size: cover;
   height: 200px;
   width: 32%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   border-radius: 20px;
 }
@@ -55,8 +69,11 @@
   font-weight: normal;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .buisness-highlights__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -80,7 +97,7 @@
   }
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 640px) {
   .buisness-highlights__item {
     height: 150px;
   }
