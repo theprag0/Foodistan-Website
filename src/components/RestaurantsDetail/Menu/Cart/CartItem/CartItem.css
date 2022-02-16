@@ -10,17 +10,25 @@
 .cart-item__name {
   font-size: 16px;
   font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .cart-item__price {
-  text-align: right;
   font-size: 16px;
   font-weight: 800;
+  margin-top: 1rem;
+  text-align: end;
 }
 
 .cart-item__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 10px;
   margin-top: 5px;
@@ -50,12 +58,20 @@
 
 .cart-item__customize span svg {
   color: #fff;
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
   transform: translateY(-1px);
 }
 
 .cart-item__dial {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -70,8 +86,14 @@
   height: 25px;
   font-size: 16px;
   width: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #f7c12b;
 }

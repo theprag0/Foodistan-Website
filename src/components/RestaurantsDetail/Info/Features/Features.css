@@ -1,9 +1,16 @@
 .restaurant-detail__features {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 50%;
   margin: 10px 0;
+  cursor: pointer;
   /* margin-left: 100px; */
 }
 
@@ -28,18 +35,21 @@
 }
 
 .restaurant-detail__features span svg {
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
   transform: translateY(-2px);
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .restaurant-detail__features {
     width: 70%;
   }
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 640px) {
   .restaurant-detail__features {
     width: 100%;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     margin: 30px 0;
   }

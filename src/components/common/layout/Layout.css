@@ -1,9 +1,9 @@
 .main {
-  padding: 0 15rem;
+  padding: 0 8rem;
   width: 100vw;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .main {
     padding: 0;
   }

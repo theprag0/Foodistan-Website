@@ -1,21 +1,34 @@
 .restaurant-detail__info-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .restaurant-detail__info-information {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 640px) {
   .restaurant-detail__info-information {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 }

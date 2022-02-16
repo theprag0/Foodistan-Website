@@ -1,4 +1,6 @@
 .overview {
+  -webkit-box-flex: 7;
+  -ms-flex: 7;
   flex: 7;
   margin-bottom: 6rem;
 }
@@ -23,10 +25,11 @@
 .overview__img_container img {
   height: 40px;
   width: 40px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .overview-container h1 {
     font-size: 6rem;
   }

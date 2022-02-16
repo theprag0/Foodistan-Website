@@ -1,12 +1,13 @@
 .amount-line {
-  margin: 6rem;
+  margin: 3rem;
 }
 
 .total-amount {
   text-align: right;
+  margin-right: 2rem;
 }
 
 .total-amount h1 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 }
