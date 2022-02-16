@@ -7,7 +7,7 @@
   font-weight: 400;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .overview-story p {
     font-size: 3rem;
   }

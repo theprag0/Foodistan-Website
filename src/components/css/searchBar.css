@@ -1,62 +1,61 @@
-.suggestionList{
-    background-color: rgb(255, 255, 255);
-    width: 70%;
-    max-height: 500px;
-    overflow: scroll;
-    margin:auto;
-    position: absolute;
-    z-index: 10;
-    border: 2px solid rgba(104, 104, 104, 0.378);
-    border-radius: 10px;
+.suggestionList {
+  background-color: rgb(255, 255, 255);
+  width: 70%;
+  max-height: 500px;
+  overflow: scroll;
+  margin: auto;
+  position: absolute;
+  z-index: 10;
+  border: 2px solid rgba(104, 104, 104, 0.378);
+  border-radius: 10px;
 }
-.noSuggestionList{
-    display:none;
+.noSuggestionList {
+  display: none;
 }
-.suggestion{
-    cursor:pointer;
-    border-bottom: 1px solid #aeaeae;
-    padding:10px;
-    padding-left: 100px;
+.suggestion {
+  cursor: pointer;
+  border-bottom: 1px solid #aeaeae;
+  padding: 10px;
+  padding-left: 100px;
 }
-.suggestion:hover{
-    background-color:rgba(196, 196, 196, 0.481) !important;
-}
-
-.suggestionName{
-    display: inline;
-    padding-left: 50px;
-  
+.suggestion:hover {
+  background-color: rgba(196, 196, 196, 0.481) !important;
 }
 
-.noResultText{
-    background-color: rgb(255, 255, 255);
-    color: black;
-    font-size: 20px;
-    padding-left: 15%;
-    padding-top: 10px;
-    position: absolute;
-    z-index: 9;
-    width: 69vw;
-    height: 40px;
-    margin: auto;
-    align-items: center;
-    border: 2px solid rgba(104, 104, 104, 0.378);
-    border-radius: 10px;
+.suggestionName {
+  display: inline;
+  padding-left: 50px;
 }
 
-.suggestionList> .MuiSvgIcon-root{
-    padding: 1px;
-    color: gray;
+.noResultText {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-size: 20px;
+  padding-left: 15%;
+  padding-top: 10px;
+  position: absolute;
+  z-index: 9;
+  width: 69vw;
+  height: 40px;
+  margin: auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid rgba(104, 104, 104, 0.378);
+  border-radius: 10px;
+}
+
+.suggestionList > .MuiSvgIcon-root {
+  padding: 1px;
+  color: gray;
 }
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-    
-  }
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-  
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}

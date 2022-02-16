@@ -10,6 +10,8 @@
 .specialOffer-slider {
   padding-left: 0rem;
   margin-bottom: 12rem;
+  margin-left: -10rem;
+  margin-right: -10rem;
 }
 .specialOffer-slider2 {
   padding-left: 15rem;
@@ -28,10 +30,12 @@
 
 @media (max-width: 600px) {
   .specialOffer-slider {
-    padding-left: 6rem;
     margin-bottom: 8rem;
     overflow: hidden;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
   }
   .specialoffer-img {
     width: 100%;

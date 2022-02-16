@@ -5,6 +5,8 @@
 
 .menu {
   margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
@@ -18,7 +20,7 @@
   letter-spacing: 1.5px;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .menu h1,
   .menu h3,
   .menu ul,

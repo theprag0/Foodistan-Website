@@ -1,23 +1,29 @@
-import React from "react";
-import { useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
-import { auth, googleAuthProvider } from "./firebase";
-import { database } from "./firebase";
+import React from 'react';
+import { useState } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
+import { auth, googleAuthProvider } from './firebase';
+import { database } from './firebase';
 // import { Modal, Button } from 'react-bootstrap';
 // import {database} from 'firebase/app';
-import { addDoc, collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  setDoc,
+} from 'firebase/firestore';
 
-import app from "./firebase";
-import { RecaptchaVerifier, signInWithPopup } from "firebase/auth";
-import { signInWithPhoneNumber } from "firebase/auth";
-import { Link } from "react-router-dom";
-import Modal from "react-bootstrap/Modal";
-import { Form, Button, Col, Container, Row } from "react-bootstrap";
+import app from './firebase';
+import { RecaptchaVerifier, signInWithPopup } from 'firebase/auth';
+import { signInWithPhoneNumber } from 'firebase/auth';
+import { Link } from 'react-router-dom';
+import Modal from 'react-bootstrap/Modal';
+import { Form, Button, Col, Container, Row } from 'react-bootstrap';
 
 export default function Login() {
-
   const [phoneno, setPhoneno] = useState('');
-  const [countryCode, setCountryCode] = useState("+91");
+  const [countryCode, setCountryCode] = useState('+91');
   const [OTP, setOTP] = useState('');
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [showModal, setShowModal] = useState(true);
@@ -26,20 +32,20 @@ export default function Login() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [cartId,setCartId]= useState('');
   // auth.onAuthStateChanged(())
 
-
-
   const generateRecaptcha = () => {
-    window.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {
-      'size': 'invisible',
-      'callback': (response) => {
-        // reCAPTCHA solved, allow signInWithPhoneNumber.   
-      }
-    }, auth);
-  }
-
+    window.recaptchaVerifier = new RecaptchaVerifier(
+      'sign-in-button',
+      {
+        size: 'invisible',
+        callback: (response) => {
+          // reCAPTCHA solved, allow signInWithPhoneNumber.
+        },
+      },
+      auth
+    );
+  };
 
   const requestOTP = (e) => {
     e.preventDefault();
@@ -51,14 +57,15 @@ export default function Login() {
       let appVerifier = window.recaptchaVerifier;
       console.log(appVerifier);
       signInWithPhoneNumber(auth, phoneNumber, appVerifier)
-        .then(confirmationResult => {
+        .then((confirmationResult) => {
           window.confirmationResult = confirmationResult;
-          console.log("OTP has been sent");
-        }).catch((error) => {
-          console.log(error);
+          console.log('OTP has been sent');
         })
+        .catch((error) => {
+          console.log(error);
+        });
     }
-  }
+  };
 
   const verifyOTP = (e) => {
     e.preventDefault();
@@ -66,55 +73,45 @@ export default function Login() {
     setOTP(otp);
     if (otp.length === 6) {
       let confirmationResult = window.confirmationResult;
-      confirmationResult.confirm(otp).then((result) => {
-        const user = result.user;
-        console.log(user)
-        console.log("user verified")
-        // alert("User is verified")
+      confirmationResult
+        .confirm(otp)
+        .then((result) => {
+          const user = result.user;
+          console.log(user);
+          console.log('user verified');
+          // alert("User is verified")
 
-        //phone number stored to state
-        setPhoneNumber(user.phoneNumber)
+          //phone number stored to state
+          setPhoneNumber(user.phoneNumber);
 
+          e.preventDefault();
+          //if user is verified using otp
+          if (user != null) {
+            console.log('user present');
 
-        e.preventDefault();
-        //if user is verified using otp
-        if (user != null) {
-          console.log("user present")
+            //get document reference
+            const docRef = doc(database, 'users', user.phoneNumber);
 
-          //get document reference
-          const docRef = doc(database, 'users', user.phoneNumber)
-
-          getDoc(docRef)
-            .then((doc) => {
+            getDoc(docRef).then((doc) => {
               // if user already exist in the data base
               if (doc.exists()) {
-                console.log("user exist in data base-1");
+                console.log('user exist in data base-1');
                 //fetch cart id
-                
-                  const map = doc.data();
-
-                  //fetching cart id
-                  setCartId(map["cart-id"])
-                
-              }
-              else {
-                console.log("user does not exist in data base,open modal and add details to data base")
+              } else {
+                console.log(
+                  'user does not exist in data base,open modal and add details to data base'
+                );
                 setModalShow(true);
-
               }
-             
-            })
-           
-
-
-
-        }
-      }).catch((error) => {
-        console.log(error)
-        console.log("Wrong OTP")
-      })
+            });
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+          console.log('Wrong OTP');
+        });
     }
-  }
+  };
 
   //Google , Facebook authentication function
   const handleOnClick = async (provider) => {
@@ -124,40 +121,33 @@ export default function Login() {
       })
       .catch((er) => {
         console.log(er);
-      })
+      });
   };
-
 
   // const handleShow = () => setShow(true);
   const handleClose = () => {
-
     //Cart document for user generated with auto id
-    const cartDocRef = doc(collection(database, "cart"))
+    const cartDocRef = doc(collection(database, 'cart'));
 
     // getting reference of user document created using phone number as key
-    const docRef = doc(database, 'users', phoneNumber)
-
-    setCartId(cartDocRef.id);
+    const docRef = doc(database, 'users', phoneNumber);
 
     //updating details into created user document
     setDoc(docRef, {
-      "cart-id": cartDocRef.id,
+      'cart-id': cartDocRef.id,
       name: name,
       email: email,
-      phoneNumber: phoneNumber
-
-    }).then(
-      console.log("user added")
-    ).catch((error) => {
-      console.log(error)
-      console.log("user details not added")
+      phoneNumber: phoneNumber,
     })
+      .then(console.log('user added'))
+      .catch((error) => {
+        console.log(error);
+        console.log('user details not added');
+      });
 
-    console.log(phoneNumber)
+    console.log(phoneNumber);
     setModalShow(false);
-  }
-
-
+  };
 
   return (
     <div className="container-fluid normal-font">
@@ -181,12 +171,16 @@ export default function Login() {
           <img src="/logo.png" width="80%" />
           <div>
             <button className="active-log-sign login-tab-btn">Login</button>
-            <Link to='/signUp'><button className="signup-tab-btn-L">Sign Up</button></Link>
+            <Link to="/signUp">
+              <button className="signup-tab-btn-L">Sign Up</button>
+            </Link>
           </div>
           <div className="d-flex align-items-center login-form-container mx-auto">
             <select
               className="login-input-select"
-              onChange={e => { setCountryCode(e.target.value); }}
+              onChange={(e) => {
+                setCountryCode(e.target.value);
+              }}
             >
               <option>+91</option>
               <option>+92</option>
@@ -198,21 +192,17 @@ export default function Login() {
                 type="tel"
                 className="login-input"
                 placeholder="Enter mobile number"
-                onChange={e => {
+                onChange={(e) => {
                   setPhoneno(e.target.value);
                 }}
               ></input>
-              <button
-                className="login-input-btn"
-              >
+              <button className="login-input-btn">
                 <FaArrowRight />
               </button>
               <div className="sign-in-button"></div>
             </form>
 
-
             <form className="my-5 login-form">
-
               <input
                 type="tel"
                 className="login-input"
@@ -220,39 +210,37 @@ export default function Login() {
                 value={OTP}
                 onChange={verifyOTP}
               ></input>
-              <button
-                className="login-input-btn"
-              >
+              <button className="login-input-btn">
                 <FaArrowRight />
               </button>
             </form>
-
           </div>
-
-
 
           {/* <!-- Modal --> */}
 
           <Modal
-
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
             show={modalShow}
             onHide={() => setModalShow(false)}
-
           >
-            <Modal.Header closeButton >
-              <Modal.Title id="contained-modal-title-vcenter" style={{ fontSize: 40 }}>
+            <Modal.Header closeButton>
+              <Modal.Title
+                id="contained-modal-title-vcenter"
+                style={{ fontSize: 40 }}
+              >
                 Enter Your Details
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-
               <label></label>
               <Form style={{ fontSize: 30 }}>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" >
-                  <Form.Label >Name</Form.Label>
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlInput1"
+                >
+                  <Form.Label>Name</Form.Label>
 
                   <Form.Control
                     type="email"
@@ -261,7 +249,10 @@ export default function Login() {
                     onChange={(e) => setName(e.target.value)}
                   />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlTextarea1"
+                >
                   <Form.Label>Email address</Form.Label>
                   <Form.Control
                     type="email"
@@ -277,16 +268,16 @@ export default function Login() {
             </Modal.Footer>
           </Modal>
 
-
-
-
           <div className="d-flex justify-content-center align-items-center my-2">
             <div className="login-or-dash"></div>
             <p className="px-2">or</p>
             <div className="login-or-dash"></div>
           </div>
           <div className="my-5">
-            <button onClick={() => handleOnClick(googleAuthProvider)} className="google-tab-btn mx-2 ">
+            <button
+              onClick={() => handleOnClick(googleAuthProvider)}
+              className="google-tab-btn mx-2 "
+            >
               <div className="d-flex justify-content-center align-items-center">
                 <img src="/goggle.png" className="login-icons" />
                 <p className="mx-2">Login with Google</p>

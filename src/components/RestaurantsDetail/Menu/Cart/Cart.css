@@ -66,11 +66,14 @@
 .nocart-img__container img,
 .checkout-nocart img {
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
 .nocart-img__container {
   height: 360px;
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
   flex: 3;
   overflow: hidden;
   position: relative;
@@ -98,7 +101,7 @@
   position: relative;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .nocart-img__container {
     display: none;
   }
