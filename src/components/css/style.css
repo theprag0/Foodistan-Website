@@ -5,7 +5,7 @@
 .heading-font {
   font-size: var(--l-font);
 }
-a{
+a {
   text-decoration: none;
   color: black;
 }
@@ -40,27 +40,23 @@ ul li {
 
 .footer-download-container {
   background-color: black;
-  height: 8rem;
-  width: 30rem;
+  height: 4rem;
+  width: 10rem;
 }
 footer {
   background-color: white;
+  -webkit-box-shadow: 0px -5px 10px rgb(211, 209, 209);
   box-shadow: 0px -5px 10px rgb(211, 209, 209);
-  margin-top: 40rem;
-}
-@media (max-width:600px){
-    footer{
-    margin-top: 20rem;
-    }
+  margin-top: 10rem;
 }
 
 .footer-download-icons {
-  font-size: 5rem;
+  font-size: 1.5rem;
   margin: inherit;
 }
 
 .footer-icons {
-  font-size: 4rem;
+  font-size: 2rem;
   margin: 0 1rem;
 }
 
@@ -69,7 +65,25 @@ footer {
   color: black;
 }
 
+.footer-list {
+  list-style: none;
+  padding-left: 0;
+}
+
 .food-background {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(255, 255, 255, 0.7)),
+      to(rgba(255, 255, 255, 0.7))
+    ),
+    url('/src/components/Images/food.png');
+  background-image: -o-linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url('/src/components/Images/food.png');
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.7)
@@ -83,78 +97,17 @@ footer {
 
 /* ------------listingcards-------------- */
 
-.card {
-  position: relative;
-  height: 40rem;
-  width: 50rem;
-  border-radius: 2rem;
-  overflow: hidden;
-  margin: auto;
-  box-shadow: 0px 1px 5px 1px #e0e0e0;
-}
-
-.card-image-container {
-  position: relative;
-  width: 100%;
-  height: 24rem;
-  border-radius: 2rem;
-}
-
-.card-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 2rem;
-}
-
-.card-image-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #f6c12a;
-  padding-left: 1rem;
-  color: white;
-  border-radius: 0 0 2rem 2rem;
-  height: 4rem;
-}
-
-.card-footer {
-  position: absolute;
-  bottom: 0;
-  height: 4rem;
-  width: 100%;
-  background: #e3493a;
-}
-
-.card-details { 
-  padding: 1.5rem;
-}
-.card-details-container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background: white;
-  -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
-  clip-path: polygon(47% 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.card-details-container-padding {
-  padding-left: 14rem;
-}
-
-.icons-circle {
-  height: 2rem;
-  width: 2rem;
-  background-color: red;
-  border-radius: 50%;
-}
-
 /* ---------------trolly----------------- */
+.main-container {
+  width: 100%;
+}
 
 .tab-selection-container {
   border-bottom: 0.1px solid #c4c4c4;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  margin-left: 2rem;
 }
 
 .tab-selection-container::before {
@@ -175,6 +128,7 @@ footer {
   height: 1rem;
   background-color: #c4c4c4;
   position: absolute;
+  -webkit-clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
   clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
 }
 
@@ -195,13 +149,19 @@ footer {
   height: 10rem;
   display: inline-block;
   padding: 1rem;
-  margin: 0 0 2rem 5rem;
+  margin: 0 0 2rem 0;
   background-color: #fab84c;
   border-radius: 50%;
   overflow: none;
 }
-.trolly-img{
-    width: 100%;
+.trolly-img {
+  width: 100%;
+}
+
+@media (max-width: 60rem) {
+  .main-container {
+    width: 90%;
+  }
 }
 
 /* -----------------Delivery-Dashboard------------------ */
@@ -237,7 +197,11 @@ footer {
 .food-dashboard-horizontal {
   position: absolute;
   left: 0.5rem;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
   transform-origin: 0 0;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   bottom: -2rem;
   border-bottom: 0.1rem solid white;
@@ -289,13 +253,20 @@ footer {
   width: 70rem;
   margin: auto;
   color: #b6b6b6;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-shadow: 1px 1px 10px #e9e9e9;
   box-shadow: 1px 1px 10px #e9e9e9;
 }
 
 .cart-container {
+  -webkit-box-shadow: 1px 1px 10px #e9e9e9;
   box-shadow: 1px 1px 10px #e9e9e9;
   border-radius: 1rem;
 }
@@ -303,9 +274,6 @@ footer {
 .cart-container-inner-top {
   border-bottom: 0.1rem solid black;
   text-align: center;
-}
-
-.cart-container-inner-bottom {
 }
 
 .card-container-resturant {
@@ -328,6 +296,8 @@ footer {
   color: white;
   background-color: #fac05e;
   width: 5rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 1rem;
   border-radius: 50%;
@@ -346,6 +316,7 @@ footer {
 .mainmenu-card-container {
   height: 50rem;
   width: 40rem;
+  -webkit-box-shadow: 1px 1px 10px #e9e9e9;
   box-shadow: 1px 1px 10px #e9e9e9;
   border-radius: 1rem;
 }
@@ -468,6 +439,7 @@ footer {
   width: 29.5rem;
   height: 5rem;
   border: none;
+  -webkit-box-shadow: 0px 1px 5px 1px #e0e0e0;
   box-shadow: 0px 1px 5px 1px #e0e0e0;
   background: none;
 }
@@ -476,6 +448,7 @@ footer {
   width: 29.5rem;
   height: 5rem;
   border: none;
+  -webkit-box-shadow: 0px 1px 5px 1px #e0e0e0;
   box-shadow: 0px 1px 5px 1px #e0e0e0;
   background: none;
 }
@@ -484,6 +457,7 @@ footer {
   width: 60rem;
   height: 5rem;
   border: none;
+  -webkit-box-shadow: 0px 1px 5px 1px #e0e0e0;
   box-shadow: 0px 1px 5px 1px #e0e0e0;
   background: none;
 }

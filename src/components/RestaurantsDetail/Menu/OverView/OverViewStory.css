@@ -1,14 +1,14 @@
 .overview-story {
-  margin: 6rem;
+  margin: 4rem 2rem;
 }
 
 .overview-story p {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .overview-story p {
-    font-size: 3rem;
+    font-size: 0.8rem;
   }
 }

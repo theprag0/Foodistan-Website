@@ -1,6 +1,11 @@
 .blog-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -8,23 +13,31 @@
   width: 50%;
   height: 35px;
   background-color: rgb(252, 225, 158, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   border-radius: 8px;
 }
 
 .blog-searchbar span {
-  font-size: 20px;
+  font-size: 1.2rem;
   margin: 1.5px 10px;
   color: #6b6b6b;
+  -webkit-transform: translateY(2px);
+  -ms-transform: translateY(2px);
   transform: translateY(2px);
 }
 
 .blog-searchbar input {
   background-color: transparent;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   border: none;
-  font-size: 12px;
+  font-size: 0.8rem;
 }
 
 .blog-searchbar input:focus {
@@ -32,16 +45,23 @@
 }
 
 .post-blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
 }
 
 .post-blog p {
-  font-size: 12px;
+  font-size: 1rem;
   color: #c4c4c4;
-  margin-right: 15px;
+  margin-right: 1rem;
+  margin-top: 1rem;
 }
 
 .post-blog button {
@@ -49,18 +69,15 @@
   background-color: #fab84c;
   border: 1px solid #fff;
   color: #fff;
-  font-size: 30px;
+  font-size: 2rem;
   padding: 0;
-  height: 35px;
-  width: 35px;
+  height: 25px;
+  width: 25px;
 }
 
 .post-blog svg {
-  transform: translateY(-2px);
+  transform: translate(-4px, -16px);
 }
 
-@media (max-width: 60rem) {
-  .post-blog p {
-    margin-right: 10px;
-  }
+@media (max-width: 960px) {
 }

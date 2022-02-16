@@ -1,32 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-import phoneImg from '../../..//images/phone.png';
-import googlePlayImg from '../../../images/googlePlay.png';
+import circle from '../assets/Ellipse.png'
+import rectangle6 from '../assets/Rectangle6.png'
+import rectangle5 from '../assets/Rectangle5.png'
 import './Cover.css';
 
 const Cover = () => {
   return (
-    <section className="cover-about__us">
-      <div className="cover__text">
-        <h1>Love Street Food?</h1>
-        <p>
-          Enjoy your favorite street food from the comfort and safety of your
-          home.
-        </p>
-        <Link className="cover__text-link" to="/explore">
-          Order Now
-        </Link>
+    <div className='cover'>
+      <div className='row'>
+        <div className='col-4'>
+          <h1 className='cover-title'>Love <span className='cover-title2'>Street <br/>Food?</span></h1>
+          <h1 className='cover-sub-title'>Enjoy your favorite street food from the comfort and safety of your home.</h1>
+          <button className='cover-orderNow'>Order Now</button>
+        </div>
+        <div className='col-8 container-fluid'>
+          <div className='circle-img-wrapper'>
+          <img src={circle} className='circle-img'></img>
+          <img src={rectangle6} className='rectangle-left'></img>
+          <img src={rectangle5} className='rectangle-right'></img>
+          </div>
+        </div>
       </div>
-      <div className="img-container__aboutus">
-        <img src={phoneImg} alt="phone" />
-        <img src={phoneImg} alt="phone" />
-      </div>
-      <div className="cover-footer">
-        <img src={googlePlayImg} alt="googleplay" />
-        <p>Streato App - Coming soon</p>
-      </div>
-    </section>
+    </div>
   );
 };
 

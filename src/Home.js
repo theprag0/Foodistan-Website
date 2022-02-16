@@ -11,18 +11,19 @@ import Menu from './delivery-dashboard/main-menu';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Restaurants from './components/Restaurants/Restaurants';
+import Layout from './components/common/layout/Layout';
 
 function Home() {
   return (
     <div className="App">
-      <Header />
-      <SearchBar />
-      <SpecialOffers />
-      <Trolly />
-      <Deals /> 
-      <OrderByCuisines />
-      <Restaurants />
-      <Footer />
+      <Layout>
+        <SearchBar />
+        <SpecialOffers />
+        <Trolly />
+        {/* <Deals /> */}
+        <OrderByCuisines />
+        <Restaurants />
+      </Layout>
     </div>
   );
 }

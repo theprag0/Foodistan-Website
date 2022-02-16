@@ -1,14 +1,16 @@
 .menu-types {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
   flex: 2;
   border-right: 3px solid #cfcfcf;
-  height: 500px;
+  height: 30rem;
 }
 
 .menu-types__heading {
-  font-size: 25px;
+  font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
-  padding: 2rem 40px;
+  padding: 1rem 0;
 }
 
 .menu-types ul {
@@ -16,8 +18,8 @@
 }
 
 .menu-types li {
-  padding: 2rem 40px;
-  font-size: 15px;
+  padding: 1rem 0;
+  font-size: 1rem;
   color: #000;
 }
 
@@ -28,7 +30,7 @@
   border-right: 5px solid #f7c12b;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .menu-types {
     display: none;
   }

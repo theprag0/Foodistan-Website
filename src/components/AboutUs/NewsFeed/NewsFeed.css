@@ -3,7 +3,7 @@
 }
 
 .newsfeed h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   text-align: center;
   font-weight: 700;
   margin: 0 0 4rem;
@@ -11,9 +11,16 @@
 }
 
 .newsfeed__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  list-style: none;
+  padding-left: 0;
 }
 
 .newsfeed__item {
@@ -26,22 +33,23 @@
 
 .newsfeed__item-img-container {
   width: 100%;
-  height: 35rem;
+  height: 20rem;
 }
 
 .newsfeed__item-img-container img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
 .newsfeed__item-info {
-  height: 15rem;
+  height: 10rem;
 }
 
 .newsfeed__item-info h2 {
-  margin: 3rem 2.5rem;
-  font-size: 3rem;
+  margin: 1rem 2.5rem;
+  font-size: 2rem;
   color: #3e313e;
   font-weight: 700;
 }
@@ -49,62 +57,36 @@
 .newsfeed__item-info p {
   margin: 0 2.5rem 3rem;
   color: #3e313e;
-  font-size: 2rem;
-  line-height: 3rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .newsfeed {
     margin-top: 5rem;
   }
 
   .newsfeed h1 {
-    font-size: 5rem;
+    font-size: 2rem;
     font-weight: 900;
   }
 
   .newsfeed__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
   .newsfeed__item {
-    width: 80%;
-    margin: 4rem 0;
-  }
-
-  .newsfeed__item-img-container {
-    height: 90rem;
-  }
-  .newsfeed__item-info {
-    height: 25rem;
-  }
-
-  .newsfeed__item-info h2 {
-    font-size: 5rem;
-  }
-
-  .newsfeed__item-info p {
-    font-size: 4rem;
-  }
-}
-
-@media (max-width: 40rem) {
-  .newsfeed__item {
     width: 90%;
+    margin: 2rem 0;
   }
 
   .newsfeed__item-img-container {
-    height: 50rem;
-  }
-  .newsfeed__item-info {
     height: 20rem;
   }
-
-  .newsfeed__item-info h2 {
-    font-size: 4rem;
-  }
-
-  .newsfeed__item-info p {
-    font-size: 3rem;
+  .newsfeed__item-info {
+    height: 10rem;
   }
 }

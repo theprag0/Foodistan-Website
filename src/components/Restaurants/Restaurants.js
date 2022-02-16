@@ -10,6 +10,7 @@ const Restaurants = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+
   useEffect(() => {
     const fetchdatahandler = async () => {
       setIsLoading(true);
@@ -24,7 +25,6 @@ const Restaurants = () => {
         });
 
         setRestaurants(loadedData);
-        console.log(restaurants);
         setIsLoading(false);
       } catch (err) {
         setError('Something went wrong!!');

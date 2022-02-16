@@ -1,72 +1,77 @@
 import React from 'react';
 
-import { FaStar, FaShoppingBag, FaLocationArrow } from 'react-icons/fa';
-import { MdVerifiedUser } from 'react-icons/md';
-import { HiCurrencyRupee } from 'react-icons/hi';
+import { FaStar, FaShoppingBag } from 'react-icons/fa';
 import { GiScooter } from 'react-icons/gi';
 import { IoLocationSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
 const RestaurantsItem = (props) => {
-  const stars = [];
-  for (let i = 0; i < props.stars; i++) {
-    stars.push(<FaStar key={`${props.id}-${i}`} />);
-  }
+  const name =
+    props.name.length > 25 ? `${props.name.slice(0, 25)}...` : props.name;
+  const cuisines = props.cuisines.split(',').splice(0, 2);
+  const locationArray = props.address.includes(',')
+    ? props.address.split(',')
+    : props.address.split(' ');
+  const lastIndex = locationArray.length - 1;
+  const locationToShow = `${locationArray[lastIndex - 1]}, ${
+    locationArray[lastIndex]
+  }`;
+
   return (
-    <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
-      <div className="card" style={{ height: '42.5rem' }}> 
+    <div className="restaurant-item">
+      {props.foodistaanCertified && (
+        <div className="restaurant-badge">
+          <h1>
+            Foodi<span>staan</span> <span>+</span>
+          </h1>
+        </div>
+      )}
+      {props.foodistaanCertified && (
+        <div className="restaurant-badge__bottom"></div>
+      )}
+      <div className="restaurant-card">
         <Link to={`/restaurant/${props.id}`}>
-          <div className="card-image-container ">
-            <img
-              className="card-image"
-              src={props.image}
-              alt="not found"
-              style={{ objectFit: 'cover' }}
-            />
-            {props.foodistaanCertified && (
-              <p className="card-image-footer d-flex align-items-center">
-                Foodistan - Certified
-                <MdVerifiedUser className="heading-font mx-2" />
+          <div className="restaurant-card__image-container">
+            <img src={props.image} alt="" />
+          </div>
+          <div className="restaurant__info">
+            <div className="restaurant__name-ratings">
+              <h1>{name}</h1>
+              <p>
+                {props.stars}
+                <FaStar />
               </p>
-            )}
-          </div>
-          <div className="card-details">
-            <div className="d-flex justify-content-between">
-              <div>
-                <p className="heading-font font-weight-bolder">{props.name}</p>
-                <p className="text-muted my-1">{props.cuisines}</p>
-              </div>
-              <div className="heading-font text-warning">
-                {stars.map((s) => s)}
-              </div>
             </div>
-            <div className="d-flex justify-content-between my-3">
-              <div className="d-flex align-items-center">
-                <HiCurrencyRupee className="heading-font mx-2" />
-                <p>Cost For Two {props.cost}</p>
+            <div className="restaurant__cuisines-cost">
+              <div className="restaurant__cuisines">
+                {cuisines.map((c, i) => (
+                  <p key={`${c}-${i}`}>{c}</p>
+                ))}
               </div>
-              {props.delivery && (
-                <div className="d-flex align-items-center">
-                  <GiScooter className="heading-font mx-2" />
-                  <p> Delivery</p>
-                </div>
-              )}
-              {props.takeaway && (
-                <div className="d-flex align-items-center">
-                  <FaShoppingBag className="normal-heading-font mx-2" />
-                  <p>Takeaway</p>
-                </div>
-              )}
+              <h1 className="cost">₹ {props.cost} for Two</h1>
             </div>
-          </div>
-          <div className="card-footer text-white d-flex justify-content-between align-items-center">
-            <p className="d-flex justify-content-between align-items-center">
-              <IoLocationSharp className="heading-font mx-2" />
-              {props.address}
-            </p>{' '}
-            <p className="d-flex justify-content-between align-items-center">
-              <FaLocationArrow className="heading-font mx-2" /> {props.distance}{' '}
-            </p>
+            <hr />
+            <div className="restaurant-specifications">
+              <div className="restaurant-specifications__delivery-takeaway">
+                <h1
+                  className={
+                    props.delivery ? 'specification' : 'error-specification'
+                  }
+                >
+                  <GiScooter /> Delivery
+                </h1>
+                <h1
+                  className={
+                    props.takeaway ? 'specification' : 'error-specification'
+                  }
+                >
+                  <FaShoppingBag /> Takeaway
+                </h1>
+              </div>
+              <p className="specification">
+                <IoLocationSharp /> {locationToShow}
+              </p>
+            </div>
           </div>
         </Link>
       </div>

@@ -77,8 +77,6 @@ const AboutUs = () => {
           data={wsData}
           title={'What is Streato?'}
           backgroundColor={'#FFFCE8'}
-          imgHeight={'45rem'}
-          imgWidth={'80%'}
         />
         <SuperStar />
         <BuisnessHighlights />

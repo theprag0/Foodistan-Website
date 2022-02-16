@@ -1,5 +1,5 @@
 .restaurant-detail__info-offers {
-  margin-right: 80px;
+  /* margin-right: 80px; */
   display: flex;
   align-self: flex-start;
 }
@@ -7,7 +7,7 @@
 .restaurant-detail__info-offers .card {
   height: max-content;
   width: max-content;
-  padding: 1.5rem 2.5rem 1.5rem 6rem;
+  padding: 0.8rem 1.5rem 0.8rem 3rem;
   border-radius: 5px;
   color: #fff;
   position: relative;
@@ -25,71 +25,50 @@
 .offers__title {
   margin: 0;
   position: absolute;
-  left: -15px;
+  left: 2px;
   top: 25px;
   bottom: 25px;
-  font-size: 18px;
+  font-size: 1.6rem;
   font-weight: 700;
   transform: rotate(270deg);
-  border-bottom: 1px solid #fff;
 }
 
 .restaurant-detail__info-offers .card-title {
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .restaurant-detail__info-offers .card-text {
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
 }
 
 .restaurant-detail__info-offers p {
-  font-size: 10px;
+  font-size: 0.7rem;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .restaurant-detail__info-offers {
     margin: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
+  .restaurant-detail__info-offers .card {
+    padding: 0.8rem 1rem 0.8rem 2rem;
+  }
   .restaurant-detail__info-offers .card:first-of-type {
     margin: 0 0 5px 0;
   }
 
   .offers__title {
-    left: -20px;
+    left: -16px;
     border: none;
   }
 }
 
-@media (max-width: 40rem) {
-  /* .restaurant-detail__info-offers {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-  } */
-
-  .restaurant-detail__info-offers .card {
-    height: max-content;
-    width: max-content;
-    padding: 1rem 1rem 1rem 5rem;
-    border-radius: 5px;
-    color: #fff;
-    position: relative;
-  }
-
+@media (max-width: 640px) {
   .restaurant-detail__info-offers .card:first-of-type {
     margin: 0 0 5px 0;
-  }
-
-  .offers__title {
-    left: -8px;
-    top: 15px;
-    bottom: 15px;
-    font-size: 12px;
-    font-weight: 600;
   }
 
   .restaurant-detail__info-offers .card-title {

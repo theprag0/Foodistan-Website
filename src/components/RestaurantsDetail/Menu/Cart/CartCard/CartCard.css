@@ -1,19 +1,22 @@
 .cart {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
   flex: 3;
-  border-right: 2px solid #c4c4c4;
-}
-
-.cart-card__container {
-  border-right: 5px solid #f7c12b;
+  border-left: 2px solid #c4c4c4;
+  height: 30rem;
+  padding-left: 1rem;
 }
 
 .cart-card {
   background-color: #fff;
   border-radius: 8px;
+  -webkit-box-shadow: 2px 2px 8px rgb(0, 0, 0, 0.225);
   box-shadow: 2px 2px 8px rgb(0, 0, 0, 0.225);
-  margin: 10px;
+  margin: 0 10px 10px;
   padding: 0;
   overflow: hidden;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
 }
 
@@ -27,60 +30,71 @@
 }
 
 .cart-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  font-size: 30px;
-  padding: 2rem;
+  font-size: 1.6rem;
+  padding: 1rem;
   border-bottom: 1px solid #000;
 }
 
 .cart-info__logo {
-  margin-right: 20px;
+  margin-right: 1.2rem;
   color: #fff;
   background-color: #fac05e;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: 2.5rem;
+  width: 2.5rem;
   text-align: center;
 }
 
-.cart-info h1 {
+.cart-info__heading {
   font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .cart-info__main {
-  margin: 2rem;
+  margin: 0.8rem;
 }
 
 .cart-info__restro-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
 .cart-info__img-container {
-  height: 50px;
-  width: 50px;
+  height: 3rem;
+  width: 3rem;
   background-color: #c4c4c4;
 }
 
 .cart-info__restro-info h1,
 .cart-info__restro-info p {
-  font-size: 14px;
+  font-size: 0.9rem;
   margin-left: 5px;
 }
 
 .cart-info__restro-info h1 {
   font-weight: 900;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 .checkout-cart__btn {
   background-color: #f7c12b;
   padding: 1rem;
   border: none;
-  margin-bottom: 200px;
+  margin-bottom: 20px;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 800;
@@ -93,7 +107,7 @@
   padding: 0 3rem;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .cart {
     display: none;
   }

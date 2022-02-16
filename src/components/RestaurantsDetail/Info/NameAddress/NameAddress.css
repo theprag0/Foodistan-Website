@@ -1,50 +1,44 @@
+.restaurant-detail__information {
+  cursor: pointer;
+}
+
 .restaurant-detail__information h1,
 .restaurant-detail__information p {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.restaurant-detail__information {
-  margin-left: 100px;
-}
-
 .restaurant-detail__information h1 {
-  font-size: 30px;
+  font-size: 1.9rem;
   font-weight: 600;
 }
 
 .restaurant-detail__information p {
-  margin: 5px 0;
+  margin: 2px 0;
 }
 
 .restaurant-detail__information p:first-of-type {
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
 .restaurant-detail__information p:last-of-type {
-  font-size: 12px;
+  font-size: 1rem;
 }
 
-@media (max-width: 60rem) {
-  .restaurant-detail__information {
-    margin: 0;
-  }
-}
-
-@media (max-width: 40rem) {
+@media (max-width: 640px) {
   .restaurant-detail__information {
     margin: 0;
   }
 
   .restaurant-detail__information h1 {
-    font-size: 18px;
+    font-size: 1rem;
   }
 
   .restaurant-detail__information p:first-of-type {
-    font-size: 12px;
+    font-size: 0.8rem;
   }
 
   .restaurant-detail__information p:last-of-type {
-    font-size: 10px;
+    font-size: 0.7rem;
   }
 }
 

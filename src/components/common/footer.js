@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import {
   FaApple,
   FaGooglePlay,
   FaTwitter,
   FaFacebookF,
   FaInstagram,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
 export default function footer() {
   return (
@@ -14,10 +14,15 @@ export default function footer() {
         <div className="container-fluid normal-font bg-white ">
           <div className="row py-4">
             <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 food-background">
-                <img src="/logo.png" alt="  " className="opacity-100" width="100%"></img>
+              <img
+                src="/logo.png"
+                alt="  "
+                className="opacity-100"
+                width="100%"
+              ></img>
             </div>
             <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-              <ul className="">
+              <ul className="footer-list">
                 <li className="heading-font my-4 text-dark">Company</li>
                 <li>About Us</li>
                 <li>Blog</li>
@@ -27,8 +32,8 @@ export default function footer() {
               </ul>
             </div>
             <div className="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-              {" "}
-              <ul>
+              {' '}
+              <ul className="footer-list">
                 <li className="heading-font my-4 text-dark">For You</li>
                 <li>Privacy</li>
                 <li>Terms</li>
@@ -57,8 +62,8 @@ export default function footer() {
               </div>
               <div className="text-dark d-flex justify-content-center my-4">
                 <FaTwitter className="footer-icons" />
-                <FaFacebookF className="footer-icons"/>
-                <FaInstagram className="footer-icons"/>
+                <FaFacebookF className="footer-icons" />
+                <FaInstagram className="footer-icons" />
               </div>
             </div>
           </div>

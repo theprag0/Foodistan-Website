@@ -64,24 +64,28 @@ const CartItem = ({
         />
       )}
       <div className="cart-item">
-        <h1 className="cart-item__name">{name}</h1>
         <div className="cart-item__actions">
-          <div className="cart-item__customize">
-            <p>{customize}</p>
-            <button onClick={customizationCartModal}>
-              Customize{' '}
-              <span>
-                <IoMdArrowDropdown />
-              </span>
-            </button>
+          <div>
+            <h1 className="cart-item__name">{name}</h1>
+            <div className="cart-item__customize">
+              <p>{customize}</p>
+              <button onClick={customizationCartModal}>
+                Customize{' '}
+                <span>
+                  <IoMdArrowDropdown />
+                </span>
+              </button>
+            </div>
           </div>
-          <div className="cart-item__dial">
-            <button onClick={decreaseItemHandler}>-</button>
-            <p>{qty}</p>
-            <button onClick={increaseItemHandler}>+</button>
+          <div>
+            <div className="cart-item__dial">
+              <button onClick={decreaseItemHandler}>-</button>
+              <p>{qty}</p>
+              <button onClick={increaseItemHandler}>+</button>
+            </div>
+            <h1 className="cart-item__price">₹ {price}</h1>
           </div>
         </div>
-        <h1 className="cart-item__price">₹ {price}</h1>
       </div>
     </>
   );

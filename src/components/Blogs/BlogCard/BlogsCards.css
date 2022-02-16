@@ -1,15 +1,15 @@
 .blog-card {
+  -webkit-box-shadow: 0 2px 4px rgb(0, 0, 0, 0.3);
   box-shadow: 0 2px 4px rgb(0, 0, 0, 0.3);
   border-radius: 8px;
-  padding: 1rem;
   margin: 3rem;
   margin-left: 6rem;
-  width: 60%;
+  width: 75%;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 960px) {
   .blog-card {
     width: 90%;
-    margin: 1rem auto;
+    margin: 4rem 0;
   }
 }
