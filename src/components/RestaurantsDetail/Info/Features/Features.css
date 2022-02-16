@@ -9,13 +9,13 @@
   -ms-flex-align: center;
   align-items: center;
   width: 50%;
-  margin: 10px 0;
+  margin: 0.8rem 0;
   cursor: pointer;
   /* margin-left: 100px; */
 }
 
 .restaurant-detail__features p {
-  font-size: 15px;
+  font-size: 0.9rem;
 }
 
 .restaurant-detail__features span {

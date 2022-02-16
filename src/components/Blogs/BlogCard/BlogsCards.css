@@ -10,6 +10,6 @@
 @media (max-width: 960px) {
   .blog-card {
     width: 90%;
-    margin: 4rem auto;
+    margin: 4rem 0;
   }
 }

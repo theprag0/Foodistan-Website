@@ -12,8 +12,8 @@
 }
 
 .blog-item__img-container {
-  width: 156rem;
-  height: 30rem;
+  width: 100rem;
+  height: 20rem;
   -o-object-fit: cover;
   object-fit: cover;
   margin-right: 5rem;
@@ -35,19 +35,19 @@
 }
 
 .blog-item__title h1 {
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 1.2px;
   margin-bottom: 10px;
 }
 
 .blog-item__title p {
-  font-size: 12px;
+  font-size: 0.8rem;
   color: #999999;
 }
 
 .blog-item__blog p {
-  font-size: 10px;
+  font-size: 0.7rem;
   width: 90%;
 }
 
@@ -61,7 +61,7 @@
 
 .blog-item__actions button {
   background-color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
   color: #fab84c;
 }
@@ -92,7 +92,7 @@
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    height: 5rem;
+    height: 8rem;
     width: 100%;
     margin: -1rem 0 0 0;
   }
