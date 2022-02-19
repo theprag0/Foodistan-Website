@@ -15,7 +15,7 @@
   height: 3rem;
 }
 
-.btn {
+.btnn{
   font-size: 1rem;
   font-family: segoe;
   font-weight: 600;
@@ -24,7 +24,7 @@
   padding: 0.5rem 1rem;
   border-radius: 6px;
 }
-.btn:hover {
+.btnn:hover {
   color: #fcfcfc;
   -webkit-box-shadow: 1px 1px 5px gray;
   box-shadow: 1px 1px 5px gray;
@@ -72,9 +72,6 @@ a {
 .search-bar {
   margin-bottom: 2.5rem;
 }
-.search {
-  min-height: 4rem;
-}
 .services {
   font-size: 1.6rem;
 }
@@ -91,7 +88,7 @@ a {
   .header-items > a {
     margin: 1rem;
   }
-  .btn {
+  .btnn {
     margin: 1rem;
   }
 }

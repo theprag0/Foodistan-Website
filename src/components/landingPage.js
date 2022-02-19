@@ -42,7 +42,7 @@ export default function LandingPage() {
 
     return (
         <div className='container-fluid'>
-            <div className='landingPage'>
+            <div className='landingPage'> 
                 <Header />
                 {/* <div className='row outer-search-bar container-fluid'>
                     <div className='col-md-3 '></div>
@@ -207,13 +207,13 @@ export default function LandingPage() {
             <div className='container-fluid'>
                 <div className='partner-wrapper'>
                     <div className='row'>
-                        <div className='col-7'>
-                            <div className='partner-banner-text'>Become Our<br /> Partner</div>
+                        <div className='col-6 search'>
+                            <div className='partner-banner-text'>Become Our Partner</div>
                             <div className='below-banner'>Become our partner in<br />food. Start a new<br />journey!</div>
-                            <Button variant="danger" className="explore-btn md-font">Learn More</Button>
+                            <Button variant="danger" className="explore-btn">Learn More</Button>
 
                         </div>
-                        <div className='col-5'><img src={partner} className='partner-img' /></div>
+                        <div className='col-6 search'><img src={partner} className='partner-img' /></div>
                     </div>
                 </div>
             </div>
@@ -230,13 +230,13 @@ export default function LandingPage() {
 
             <div className='container-fluid'>
                 <div className='get-app'>
-                    <div className='row'>
-                        <div className='col-7 get-app-left'>
+                    <div className='row get-app-left'>
+                        <div className='col-7 search '>
                             <div className='get-app-banner'>Get Foodistaan <br />APP</div>
                             <div className='below-get-app'>Download the application from Playstore or Apple store to get exciting updates.</div>
                             <Button variant="success" className="explore-btn md-font">Download Now</Button>
                         </div>
-                        <div className='col-5'>
+                        <div className='col-5 search'>
                             <div className='mobile'><img className='mobile-img' src={mobile}></img></div>
                         </div>
                     </div>

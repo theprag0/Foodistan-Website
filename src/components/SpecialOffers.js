@@ -40,7 +40,7 @@ export default class CenterMode extends Component {
   render() {
     
     if (WindowWidth() <= 600) {
-      flag = 1.5;
+      flag = 1.2;
   }else{
       flag = 3.5;
   } 
@@ -53,7 +53,7 @@ export default class CenterMode extends Component {
     //   nextArrow: <SampleNextArrow />,
     //   prevArrow: <SamplePrevArrow />
     // };
-
+ 
     return (
     <div className="specialOffer-slider">
       <Swiper slidesPerView={`${flag}`} spaceBetween={10} centeredSlides={true} loop={true} Pagination={{

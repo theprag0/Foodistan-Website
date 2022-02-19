@@ -65,10 +65,11 @@ export default function SearchBar() {
   }
 
   return (
-    <div className="row container-fluid search">
-      <div className="col-md-3"></div>
+    <div className="row">
+      <div className="col-md-2"></div>
+      <div className='col-md-8 search'>
       <div className="outer-search-bar-2">
-        <div className="col-md-6 search-bar-2">
+        <div className="search-bar-2">
           <div className="location-container">
             <div className="location-wrapper-2">
               <div className="location-icon-name">
@@ -119,7 +120,8 @@ export default function SearchBar() {
 
         </div>
       </div>
-      <div className="col-md-3"></div>
+      </div>
+      <div className="col-md-2"></div>
     </div>
   );
 }
