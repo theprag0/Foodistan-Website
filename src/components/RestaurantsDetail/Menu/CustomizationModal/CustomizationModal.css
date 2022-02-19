@@ -31,6 +31,7 @@
   padding: 0.5rem;
   width: 100px;
   margin-bottom: 10px;
+  margin-right: 1rem;
 }
 
 .customization-footer button:last-of-type {
@@ -51,7 +52,7 @@
   }
 
   .customization-footer button {
-    width: 90%;
+    width: 70%;
     height: 30px;
     margin: 10px;
   }

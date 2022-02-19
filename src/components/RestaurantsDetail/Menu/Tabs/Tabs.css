@@ -41,9 +41,6 @@
 
 @media (max-width: 640px) {
   .menu-list__tabs div {
-    font-size: 0.8rem;
-  }
-  .menu-list__tabs svg {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }

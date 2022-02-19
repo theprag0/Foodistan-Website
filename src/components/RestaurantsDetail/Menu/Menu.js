@@ -75,7 +75,7 @@ const Menu = ({ menu, name, address, restaurantId }) => {
         onSelect={typeClickHandler}
         selectedMethod={selectedMethod}
       />
-      {selectedMethod !== 'Overview' && isLoading && (
+      {selectedMethod !== 'Overview' && isLoading && menuItems.length === 0 && (
         <div className="menu-list__list">
           <LoadingSpinner center />
         </div>

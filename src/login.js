@@ -1,37 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { auth, googleAuthProvider } from './firebase';
 import { database } from './firebase';
 // import { Modal, Button } from 'react-bootstrap';
 // import {database} from 'firebase/app';
-import {
-  addDoc,
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  setDoc,
-} from 'firebase/firestore';
+import { collection, doc, getDoc, setDoc } from 'firebase/firestore';
 
-import app from './firebase';
 import { RecaptchaVerifier, signInWithPopup } from 'firebase/auth';
 import { signInWithPhoneNumber } from 'firebase/auth';
 import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
-import { Form, Button, Col, Container, Row } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
+import { AuthContext } from './store/auth-context';
+import { useHistory } from 'react-router-dom';
 
 export default function Login() {
+  const authCtx = useContext(AuthContext);
   const [phoneno, setPhoneno] = useState('');
   const [countryCode, setCountryCode] = useState('+91');
   const [OTP, setOTP] = useState('');
-  const [isSignedIn, setIsSignedIn] = useState(false);
-  const [showModal, setShowModal] = useState(true);
-  const [userExist, setUserExist] = useState(false);
   const [modalShow, setModalShow] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const history = useHistory();
   // auth.onAuthStateChanged(())
 
   const generateRecaptcha = () => {
@@ -97,6 +90,11 @@ export default function Login() {
               if (doc.exists()) {
                 console.log('user exist in data base-1');
                 //fetch cart id
+                authCtx.login({
+                  phoneNumber: user.phoneNumber,
+                  cartId: doc.data()['cart-id'],
+                });
+                history.push('/');
               } else {
                 console.log(
                   'user does not exist in data base,open modal and add details to data base'
@@ -139,7 +137,14 @@ export default function Login() {
       email: email,
       phoneNumber: phoneNumber,
     })
-      .then(console.log('user added'))
+      .then(() => {
+        setDoc(cartDocRef, {
+          'vendor-id': '',
+          'vendor-name': '',
+        }).then(() => {
+          console.log('success');
+        });
+      })
       .catch((error) => {
         console.log(error);
         console.log('user details not added');
@@ -147,6 +152,11 @@ export default function Login() {
 
     console.log(phoneNumber);
     setModalShow(false);
+    authCtx.login({
+      phoneNumber,
+      cartId: cartDocRef.id,
+    });
+    history.push('/');
   };
 
   return (
@@ -202,7 +212,13 @@ export default function Login() {
               <div className="sign-in-button"></div>
             </form>
 
-            <form className="my-5 login-form">
+            <form
+              className="my-5 login-form"
+              onSubmit={(e) => {
+                e.preventDefault();
+                verifyOTP(e);
+              }}
+            >
               <input
                 type="tel"
                 className="login-input"

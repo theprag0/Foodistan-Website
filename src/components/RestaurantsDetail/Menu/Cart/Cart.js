@@ -15,9 +15,9 @@ import {
   getDoc,
   getDocs,
   setDoc,
-  updateDoc,
 } from 'firebase/firestore';
 import { database } from '../../../../firebase';
+import { AuthContext } from '../../../../store/auth-context';
 
 const DUMMY_USER = {
   'cart-id': '8oSlGubRLtE0ckNinFDy',
@@ -43,12 +43,14 @@ const Cart = ({ checkout }) => {
     cartChanged,
   } = useContext(CartContext);
 
+  const { cartId } = useContext(AuthContext);
+
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchItems = async () => {
       setIsLoading(false);
-      const cartDocRef = doc(database, 'cart', DUMMY_USER['cart-id']);
+      const cartDocRef = doc(database, 'cart', cartId);
 
       const cartDocRefCollection = collection(
         database,
@@ -89,62 +91,63 @@ const Cart = ({ checkout }) => {
       }
     };
 
-    if (isInitial) {
+    if (isInitial && cartId) {
       isInitial = false;
       fetchItems();
     }
-  }, [fetchCart]);
+  }, [fetchCart, cartId]);
 
   useEffect(() => {
     const submitData = async () => {
       if (!cartChanged || cartChanged.trim() === '') {
         return;
       } else if (cartChanged === 'ADD' || cartChanged === 'REMOVE') {
+        await setDoc(doc(database, 'cart', cartId), {
+          'vendor-name': restaurantName,
+          'vendor-id': restaurantId,
+        });
         for (const cartItem of cartItems) {
-          await setDoc(
-            doc(database, 'cart', DUMMY_USER['cart-id'], 'items', cartItem.id),
-            {
-              id: cartItem.id,
-              name: cartItem.name,
-              price: `${cartItem.price}`,
-              quantity: `${cartItem.qty}`,
-              veg: false,
-            }
-          );
+          await setDoc(doc(database, 'cart', cartId, 'items', cartItem.id), {
+            id: cartItem.id,
+            name: cartItem.name,
+            price: `${cartItem.price}`,
+            quantity: `${cartItem.qty}`,
+            veg: false,
+          });
         }
       } else if (cartChanged.includes('REMOVE')) {
         const id = cartChanged.split('_')[1];
 
-        await deleteDoc(
-          doc(database, 'cart', DUMMY_USER['cart-id'], 'items', id)
-        );
+        await deleteDoc(doc(database, 'cart', cartId, 'items', id));
       } else if (cartChanged.includes('UPDATE')) {
         const deleteId = cartChanged.split('_')[1];
 
-        await deleteDoc(
-          doc(database, 'cart', DUMMY_USER['cart-id'], 'items', deleteId)
-        );
+        await deleteDoc(doc(database, 'cart', cartId, 'items', deleteId));
 
         for (const cartItem of cartItems) {
-          await setDoc(
-            doc(database, 'cart', DUMMY_USER['cart-id'], 'items', cartItem.id),
-            {
-              id: cartItem.id,
-              name: cartItem.name,
-              price: `${cartItem.price}`,
-              quantity: `${cartItem.qty}`,
-              veg: false,
-            }
-          );
+          await setDoc(doc(database, 'cart', cartId, 'items', cartItem.id), {
+            id: cartItem.id,
+            name: cartItem.name,
+            price: `${cartItem.price}`,
+            quantity: `${cartItem.qty}`,
+            veg: false,
+          });
         }
       }
     };
 
-    if (cartChanged && !isInitial) {
+    if (cartChanged && !isInitial && cartId) {
       submitData();
       cartChangeReset();
     }
-  }, [cartChanged, cartItems, cartChangeReset]);
+  }, [
+    cartChanged,
+    cartItems,
+    cartChangeReset,
+    restaurantId,
+    restaurantName,
+    cartId,
+  ]);
 
   return (
     <>
