@@ -48,7 +48,7 @@ const App = () => {
         </Route>
         <Route path="/menu" component={Menu} />
         <Route path="/cart/:cid">
-          {authCtx.isLoggedIn ? <Redirect to="/" /> : <Checkout />}
+          {authCtx.isLoggedIn ? <Checkout /> : <Redirect to="/" />}
         </Route>
         <Route path="/blogs" component={Blog} />
         <Route path="*">

@@ -179,12 +179,12 @@ export default function Login() {
         </div>
         <div className="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 login-container-right">
           <img src="/logo.png" width="80%" />
-          <div>
+          {/* <div>
             <button className="active-log-sign login-tab-btn">Login</button>
             <Link to="/signUp">
               <button className="signup-tab-btn-L">Sign Up</button>
             </Link>
-          </div>
+          </div> */}
           <div className="d-flex align-items-center login-form-container mx-auto">
             <select
               className="login-input-select"

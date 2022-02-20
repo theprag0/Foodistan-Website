@@ -258,13 +258,13 @@
   }
 
   .restaurant-card {
-    width: 90%;
+    width: 92.5%;
     margin: 0.5rem 2rem;
   }
 }
 
 @media (max-width: 640px) {
   .restaurant-card {
-    width: 90%;
+    width: 85%;
   }
 }
