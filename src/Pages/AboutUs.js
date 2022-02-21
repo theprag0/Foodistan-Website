@@ -3,13 +3,13 @@ import React from 'react';
 import Cover from '../components/AboutUs/cover/Cover';
 import SectionTwoAndThree from '../components/AboutUs/streato_problemSolving/SectionTwoAndThree';
 import Layout from '../components/common/layout/Layout';
-import psImg from '../components/AboutUs/assets/img.png';
-import psImg1 from '../components/AboutUs/assets/img2.png';
-import psImg2 from '../components/AboutUs/assets/img3.png';
-import psImg3 from '../components/AboutUs/assets/img4.png';
-import wsImg from '../components/AboutUs/assets/wsimg.png';
-import wsImg1 from '../components/AboutUs/assets/wsimg1.png';
-import wsImg2 from '../components/AboutUs/assets/wsimg2.png';
+import psImg from '../components/AboutUs/assets/psimg1.png';
+import psImg1 from '../components/AboutUs/assets/psimg2.png';
+import psImg2 from '../components/AboutUs/assets/psimg3.png';
+import psImg3 from '../components/AboutUs/assets/psimg4.png';
+import wsImg from '../components/AboutUs/assets/wsimage1.png';
+import wsImg1 from '../components/AboutUs/assets/wsimage2.png';
+import wsImg2 from '../components/AboutUs/assets/wsimage3.png';
 import SuperStar from '../components/AboutUs/SuperStar/SuperStar';
 import BuisnessHighlights from '../components/AboutUs/BuisnessHighlights/BuisnessHighlights';
 import MarketOppurtunity from '../components/AboutUs/MarketOppurtunity/MarketOppurtunity';
@@ -76,7 +76,7 @@ const AboutUs = () => {
         <SectionTwoAndThree
           data={wsData}
           title={'What is Streato?'}
-          backgroundColor={'#FFFCE8'}
+         
         />
         <SuperStar />
         <BuisnessHighlights />

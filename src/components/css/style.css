@@ -395,19 +395,22 @@ footer {
 }
 
 .login-form-container {
-  width: 30rem;
+  width: 80%;
+  flex-direction: column;
 }
 
 .login-form {
+ display: flex;
   position: relative;
   width: 100%;
+  margin: 1rem 0 !important;
 }
 
 .login-input,
 .login-input-S {
   border: 0.1rem solid #fab84c;
   height: 3rem;
-  width: 100%;
+  width: 85%;
   outline: none;
   padding: 0 1rem;
 }
@@ -424,6 +427,7 @@ footer {
   border: none;
   border-left: 0.1rem solid #fab84c;
   color: white;
+  margin-left: 5px;
 }
 .login-input-btn-S {
   width: 100%;

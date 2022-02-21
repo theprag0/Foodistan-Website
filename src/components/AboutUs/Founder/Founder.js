@@ -1,14 +1,14 @@
 import React from 'react';
 
-import cf1 from '../assets/IMAGEcf1.png';
-import cf2 from '../assets/IMAGEcf2.png';
-import cf3 from '../assets/IMAGEcf3.png';
+import cf1 from '../assets/founderImg1.png';
+import cf2 from '../assets/founderImg1.png';
+import cf3 from '../assets/founderImg1.png';
 import './Founder.css';
 
 const Founders = [
-  { id: 'founder1', name: 'Angad', img: cf1 },
-  { id: 'founder2', name: 'Akansha', img: cf2 },
-  { id: 'founder3', name: 'Kavita', img: cf3 },
+  { id: 'founder1', name: 'Mayank', img: cf1 },
+  { id: 'founder2', name: 'Dhruv', img: cf2 },
+  { id: 'founder3', name: 'Name', img: cf3 },
 ];
 
 const Founder = () => {
