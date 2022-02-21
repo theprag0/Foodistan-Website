@@ -94,7 +94,7 @@ export default function Login() {
                   phoneNumber: user.phoneNumber,
                   cartId: doc.data()['cart-id'],
                 });
-                history.push('/');
+                history.goBack();
               } else {
                 console.log(
                   'user does not exist in data base,open modal and add details to data base'
@@ -156,7 +156,7 @@ export default function Login() {
       phoneNumber,
       cartId: cartDocRef.id,
     });
-    history.push('/');
+    history.goBack();
   };
 
   return (
@@ -211,6 +211,8 @@ export default function Login() {
               </button>
               <div className="sign-in-button"></div>
             </form>
+
+
 
             <form
               className="my-5 login-form"
