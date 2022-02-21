@@ -1,7 +1,7 @@
 .cover{
   background: linear-gradient(180deg, rgba(255, 171, 56, 0.22) 0%, rgba(255, 252, 232, 0) 100%);
   margin: -3.4rem -3.2rem 0rem -3rem;
-  padding: 5rem 0rem 0rem 5rem;
+  padding: 5rem 1rem 0rem 5rem;
 }
 .cover-title{
   font-family:Roboto;
@@ -37,14 +37,46 @@
   left: 20%;
 }
 .rectangle-left{
+  width: 40%;
   position: relative;
   z-index: 5;
   top: 7rem;
   left: -50%;
 }
 .rectangle-right{
+  width: 40%;
   position: relative;
   z-index: 5;
   top: -6rem;
-  left: 10rem;
+  left: 16%;
+}
+@media (max-width: 600px) {
+  .cover{
+    padding: 1.5rem 1rem 0rem 4rem;
+  }
+  .cover-title{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .circle-img{
+    width: 60%;
+  }
+  .rectangle-left{
+    top: 2rem;
+    left: -55%;
+  }
+  .rectangle-right{
+    top: -2rem;
+    left: 16%;
+  }
+  .cover-sub-title{
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .cover-orderNow{
+    padding: 0.5rem 2rem;
+    font-size: 0.8rem;
+  }
+
 }
