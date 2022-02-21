@@ -1,19 +1,11 @@
-import {
-  Navbar,
-  Container,
-  Button,
-  Nav,
-  Row,
-  Col,
-  Form,
-  FormControl,
-  Badge,
-} from 'react-bootstrap';
-import React from 'react';
+import { Navbar, Container, Button, Nav } from 'react-bootstrap';
+import React, { useContext } from 'react';
 import logo from '../../images/logo.jpg';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../store/auth-context';
 
 function Header() {
+  const authCtx = useContext(AuthContext);
   return (
     <div>
       <Navbar bg="white" expand="sm" className="navbar">
@@ -47,18 +39,33 @@ function Header() {
                   Become our patner
                 </Link>
               </Nav.Item>
-              <Nav.Item className="">
-                <Link to="/login">
+              {!authCtx.isLoggedIn && (
+                <Nav.Item className="">
+                  <Link to="/login">
+                    <Button
+                      type="button"
+                      variant="warning"
+                      size="lg"
+                      className="btnn"
+                    >
+                      Login/Sign Up
+                    </Button>
+                  </Link>{' '}
+                </Nav.Item>
+              )}
+              {authCtx.isLoggedIn && (
+                <Nav.Item className="">
                   <Button
                     type="button"
                     variant="warning"
                     size="lg"
                     className="btnn"
+                    onClick={authCtx.logout}
                   >
-                    Login/Sign Up
+                    Logout
                   </Button>
-                </Link>{' '}
-              </Nav.Item>
+                </Nav.Item>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

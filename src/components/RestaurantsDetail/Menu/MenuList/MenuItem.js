@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
 
-import waffleImg from '../../assets/waffle.jpg';
-import fvPizzaImg from '../../assets/fvpizza.png';
 import './MenuItem.css';
 import CustomizationModal from '../CustomizationModal/CustomizationModal';
 import { CartContext } from '../../../../store/cart-context';
+import { AuthContext } from '../../../../store/auth-context';
+import { useHistory } from 'react-router-dom';
 
 const MenuItem = ({
   name,
@@ -20,9 +20,15 @@ const MenuItem = ({
 }) => {
   const [showCustomizationModal, setShowCustomizationModal] = useState(false);
   const cartCtx = useContext(CartContext);
+  const authCtx = useContext(AuthContext);
+  const history = useHistory();
 
   const customizationModalHandler = () => {
-    setShowCustomizationModal((prev) => !prev);
+    if (authCtx.isLoggedIn) {
+      setShowCustomizationModal((prev) => !prev);
+    } else {
+      history.push('/login');
+    }
   };
 
   const addItemFromMenuItemHandler = (userSelection) => {

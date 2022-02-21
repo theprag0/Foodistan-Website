@@ -10,7 +10,7 @@ a {
   color: black;
 }
 
-.noraml-heading-font { 
+.noraml-heading-font {
   font-size: var(--m-font);
 }
 
@@ -36,7 +36,7 @@ ul li {
 }
 
 /* -------------footer-css----------- */
-footer{
+footer {
   box-shadow: -1px 0px 8px rgb(235, 233, 233);
   padding-top: 3rem;
 }
@@ -65,35 +65,36 @@ footer{
     url('/src/components/Images/food.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   /* opacity: 0.5; */
 }
-.link-head{
+.link-head {
   font-size: 1.5rem;
   color: black;
   box-shadow: none;
-} 
-.company-links{
-  list-style:none ;
+}
+.company-links {
+  list-style: none;
   color: #999999;
   text-align: center;
   padding: 0;
 }
-.for-you-links{
-  list-style:none ;
+.for-you-links {
+  list-style: none;
   color: #999999;
   text-align: center;
 }
-.for-you-links>li,.company-links>li{
+.for-you-links > li,
+.company-links > li {
   margin-bottom: 0.2rem;
   box-shadow: 1px 1px 10px rgb(238, 238, 238);
 }
-.download-button-wrapper{
+.download-button-wrapper {
   text-align: center;
   padding: 3rem 0rem 0rem 0rem;
 }
-.download-btn{
-  line-height: .8rem;
+.download-btn {
+  line-height: 0.8rem;
   padding: 1rem 3rem;
   color: white;
   font-size: 1.2rem;
@@ -168,13 +169,12 @@ footer{
   .main-container {
     width: 90%;
   }
-  .trolly-tab-selection{
+  .trolly-tab-selection {
     width: 3rem;
     height: 3rem;
     margin: 0 2rem 2rem 0;
-
   }
-  .lunch-tab-selection{
+  .lunch-tab-selection {
     width: 3rem;
     height: 3rem;
   }
@@ -356,22 +356,24 @@ footer{
 .login-container-left {
   height: 100vh;
   background-color: #fab84c;
-  padding: 5rem;
+  padding: 2.5rem;
+  flex: 1;
 }
 
 .login-container-right {
   height: 100vh;
-  padding: 5rem;
+  padding: 2.5rem;
   text-align: center;
+  flex: 1;
 }
 .login-tab-btn-S {
-  width: 30rem;
-  height: 5rem;
+  width: 15rem;
+  height: 3rem;
   border: none;
 }
 .login-tab-btn {
-  width: 30rem;
-  height: 5rem;
+  width: 15rem;
+  height: 3rem;
 }
 .active-log-sign {
   border: none;
@@ -380,20 +382,20 @@ footer{
 }
 
 .signup-tab-btn-L {
-  width: 30rem;
-  height: 5rem;
+  width: 15rem;
+  height: 3rem;
   border: none;
 }
 .signup-tab-btn-S {
-  width: 30rem;
-  height: 5rem;
+  width: 15rem;
+  height: 3rem;
 }
 .signUp-display-btn {
   margin-bottom: 4rem;
 }
 
 .login-form-container {
-  width: 60rem;
+  width: 30rem;
 }
 
 .login-form {
@@ -404,7 +406,7 @@ footer{
 .login-input,
 .login-input-S {
   border: 0.1rem solid #fab84c;
-  height: 5rem;
+  height: 3rem;
   width: 100%;
   outline: none;
   padding: 0 1rem;
@@ -417,7 +419,7 @@ footer{
   position: absolute;
   right: 0;
   height: 100%;
-  width: 5rem;
+  width: 2rem;
   background: #fab84c;
   border: none;
   border-left: 0.1rem solid #fab84c;
@@ -439,7 +441,7 @@ footer{
   padding: 0 1rem;
   border: 0.1rem solid #fab84c;
   border-right: 0;
-  height: 5rem;
+  height: 3rem;
 }
 .login-input-select-S {
   outline: none;
@@ -448,12 +450,12 @@ footer{
   padding: 0 1rem;
   border: 0.1rem solid #fab84c;
   border-right: 0;
-  height: 5rem;
+  height: 3rem;
 }
 
 .google-tab-btn {
-  width: 29.5rem;
-  height: 5rem;
+  width: 20rem;
+  height: 2.5rem;
   border: none;
   -webkit-box-shadow: 0px 1px 5px 1px #e0e0e0;
   box-shadow: 0px 1px 5px 1px #e0e0e0;
@@ -461,8 +463,8 @@ footer{
 }
 
 .facebook-tab-btn {
-  width: 29.5rem;
-  height: 5rem;
+  width: 20rem;
+  height: 2.5rem;
   border: none;
   -webkit-box-shadow: 0px 1px 5px 1px #e0e0e0;
   box-shadow: 0px 1px 5px 1px #e0e0e0;
@@ -470,8 +472,8 @@ footer{
 }
 
 .email-tab-btn {
-  width: 60rem;
-  height: 5rem;
+  width: 20rem;
+  height: 2.5rem;
   border: none;
   -webkit-box-shadow: 0px 1px 5px 1px #e0e0e0;
   box-shadow: 0px 1px 5px 1px #e0e0e0;
@@ -479,11 +481,76 @@ footer{
 }
 
 .login-or-dash {
-  width: 30rem;
+  width: 15rem;
   height: 0.1rem;
   border-top: 0.01rem solid #999999;
 }
 
 .login-icons {
-  height: 3rem;
+  height: 1.5rem;
+  align-self: flex-start;
+}
+
+@media (max-width: 960px) {
+  .login-container-left {
+    display: none !important;
+  }
+
+  .login-container-right {
+    margin: 0;
+    padding: 0.5rem;
+  }
+
+  .login-container-right img {
+    width: 50%;
+  }
+
+  .login-form {
+    width: 100%;
+    overflow: hidden;
+    margin: 1rem 0 !important;
+  }
+
+  .login-input-select {
+    border-right: 0.1rem solid #fac05e;
+    margin-bottom: 0;
+    height: 2rem;
+  }
+
+  .login-input {
+    height: 2rem;
+    width: 80%;
+  }
+
+  .login-form-container {
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .google-tab-btn {
+    width: 60%;
+    height: 2rem;
+  }
+
+  .google-tab-btn p,
+  .email-tab-btn p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .login-icons {
+    height: 1rem !important;
+    width: 1rem !important;
+  }
+
+  .email-tab-btn {
+    width: 60%;
+    height: 2rem;
+  }
+
+  .email-tab-btn + p {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem;
+  }
 }

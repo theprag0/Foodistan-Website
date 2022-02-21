@@ -30,6 +30,9 @@
 }
 
 @media (max-width: 960px) {
+  .overview-container {
+    margin: 0;
+  }
   .overview-container h1 {
     font-size: 2rem;
   }
