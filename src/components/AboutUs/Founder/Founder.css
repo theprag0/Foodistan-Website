@@ -6,7 +6,7 @@
   font-size: 2.5rem;
   text-align: center;
   font-weight: 700;
-  margin: 0 0 4rem;
+  margin: 0 0 2rem;
   color: #3e313e;
 }
 
@@ -77,18 +77,8 @@
   .founder__item p {
     font-size: 1rem;
   }
-}
 
-/* @media (max-width: 640px) {
   .founder__item {
-    height: 90rem;
+    height: 30rem;
   }
-
-  .founder__item h2 {
-    font-size: 5rem;
-  }
-
-  .founder__item p {
-    font-size: 4rem;
-  }
-} */
+}

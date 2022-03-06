@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { BsFilterLeft } from 'react-icons/bs';
 import { ImCross } from 'react-icons/im';

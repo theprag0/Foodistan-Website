@@ -60,3 +60,12 @@
   background: #888;
 }
 
+@media (max-width: 640px) {
+  .suggestionList {
+    width: 100%;
+  }
+
+  .suggestion {
+    padding: 0.5rem 1rem;
+  }
+}

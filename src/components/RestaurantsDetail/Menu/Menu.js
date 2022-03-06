@@ -36,13 +36,9 @@ const Menu = ({ menu, name, address, restaurantId }) => {
       setIsLoading(true);
 
       try {
-        const menuItemsRef = collection(
-          database,
-          'DummyData',
-          restaurantId,
-          'menu-items'
+        const snapshot = await getDocs(
+          collection(database, 'DummyData', restaurantId, 'menu-items')
         );
-        const snapshot = await getDocs(menuItemsRef);
 
         const loadedMenu = [];
 
@@ -51,10 +47,11 @@ const Menu = ({ menu, name, address, restaurantId }) => {
         });
 
         setMenuItems(loadedMenu);
+        setIsLoading(false);
       } catch (err) {
         console.log(err);
+        setIsLoading(false);
       }
-      setIsLoading(false);
     };
 
     fetchMenuItems();
@@ -68,42 +65,46 @@ const Menu = ({ menu, name, address, restaurantId }) => {
   // }, [selectedType, menu]);
 
   return (
-    <section className="menu">
+    <>
       <MenuTypes
         types={menuTypes}
         selectedType={selectedType}
         onSelect={typeClickHandler}
         selectedMethod={selectedMethod}
       />
-      {selectedMethod !== 'Overview' && isLoading && menuItems.length === 0 && (
-        <div className="menu-list__list">
-          <LoadingSpinner center />
-        </div>
-      )}
-      {selectedMethod !== 'Overview' && !isLoading && menuItems.length === 0 && (
-        <div className="menu-list__list">
-          <h1 className="center">No items in Menu</h1>
-        </div>
-      )}
-      {selectedMethod !== 'Overview' && !isLoading && menuItems.length > 0 && (
-        <MenuList
-          menu={menuItems}
-          restaurantName={name}
-          address={address}
-          restaurantId={restaurantId}
-          selectedMethod={selectedMethod}
-          onSelectMethod={methodClickHandler}
-        />
-      )}
-      {selectedMethod === 'Overview' && (
-        <OverView
-          name={name}
-          selectedMethod={selectedMethod}
-          onSelectMethod={methodClickHandler}
-        />
-      )}
-      <Cart />
-    </section>
+      <section className="menu">
+        {selectedMethod !== 'Overview' && isLoading && menuItems.length === 0 && (
+          <div className="menu-list__list">
+            <LoadingSpinner center />
+          </div>
+        )}
+        {selectedMethod !== 'Overview' && !isLoading && menuItems.length === 0 && (
+          <div className="menu-list__list">
+            <h1 className="center">No items in Menu</h1>
+          </div>
+        )}
+        {selectedMethod !== 'Overview' &&
+          !isLoading &&
+          menuItems.length > 0 && (
+            <MenuList
+              menu={menuItems}
+              restaurantName={name}
+              address={address}
+              restaurantId={restaurantId}
+              selectedMethod={selectedMethod}
+              onSelectMethod={methodClickHandler}
+            />
+          )}
+        {selectedMethod === 'Overview' && (
+          <OverView
+            name={name}
+            selectedMethod={selectedMethod}
+            onSelectMethod={methodClickHandler}
+          />
+        )}
+        <Cart />
+      </section>
+    </>
   );
 };
 
