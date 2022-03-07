@@ -15,6 +15,7 @@
 .banner-text {
   text-align: center;
   margin-top: 10rem;
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.062), #000000);
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -22,7 +23,6 @@
     from(rgba(0, 0, 0, 0.062)),
     to(#000000)
   );
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.062), #000000);
   background-image: linear-gradient(rgba(0, 0, 0, 0.062), #000000);
   padding-bottom: 10rem;
   padding-top: 10rem;
@@ -154,14 +154,15 @@
   text-shadow: 2px 2px 5px black;
 }
 .explore-btn {
-  color: white;
+  color: rgb(240, 240, 240);
   padding: 0.5rem 3rem;
   font-size: 1.5rem;
-  font-family: 550;
-  border-radius: 4px;
+  font-weight: bold;
+  border-radius: 24px;
   margin-top: 1rem;
   font-family: segoe;
   letter-spacing: 2px;
+  text-shadow: 1px 1px rgb(0, 0, 0);
 }
 
 /*--------------- slider---------------- */
@@ -176,7 +177,7 @@
   font-weight: 600;
   font-family: segoe;
   text-align: center;
-  padding: 5rem 0rem 3rem 0rem;
+  padding: 1rem 0rem 3rem 0rem;
   /* text-shadow: 1px 1px .5px black; */
   /* background-image: linear-gradient(to right, #FFAB38, #FFEE8A); */
 }
@@ -225,7 +226,7 @@
 .partner-wrapper {
   background-color: #040404;
   padding: 2rem 0rem 2rem 5rem;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
 }
 .partner-banner-text {
   font-size: 3rem;
@@ -270,7 +271,6 @@
 }
 .get-app {
   /* background-color: #FFAB38; */
-  margin-bottom: 30rem;
   background-color: rgba(233, 229, 229, 0.199);
 }
 .get-app-left {
@@ -280,7 +280,7 @@
   font-size: 5rem;
   color: black;
   font-weight: 600;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   letter-spacing: 3px;
   font-family: segoe;
 }
@@ -361,16 +361,16 @@
     padding: 0;
   }
   .vendors-wrapper {
-    margin: 1rem 0rem 10rem 0rem;
+    margin: 1rem 0rem 3rem 0rem;
     overflow: hidden;
   }
   .partner-wrapper {
     padding: 2rem 1rem;
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
   }
   .heading-text {
     /* text-align: left; */
-    padding: 3rem 1rem 0.5rem 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
     text-shadow: 1px 1px 0.5px black;
     font-size: 1.5rem;
   }
@@ -385,7 +385,7 @@
     line-height: 1rem;
   }
   .our-services-wrapper {
-    margin: 1rem 0.5rem 15rem 0.5rem;
+    margin: 1rem 0.5rem 4rem 0.5rem;
   }
   .services {
     height: 10rem;

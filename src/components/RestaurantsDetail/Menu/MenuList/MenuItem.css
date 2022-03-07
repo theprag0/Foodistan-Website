@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .menu-list__item {
   background-color: #fff;
   border-radius: 15px;
@@ -101,7 +108,7 @@
 }
 
 .menu-list__add-btn {
-  margin: 3rem 0 1rem 1rem;
+  margin: 1.8rem 0 0.5rem 1rem;
   background-color: #d72525;
   color: #fff;
   font-size: 15px;
@@ -124,5 +131,11 @@
     -webkit-box-flex: 1;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .menu-list__add-btn {
+    margin: 0.5rem 1rem;
   }
 }

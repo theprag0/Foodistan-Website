@@ -21,7 +21,7 @@
   /* box-shadow: 1px 1px 5px gray; */
 }
 .order-container {
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
   padding-top: 4rem;
   padding-bottom: 2rem;
 }
@@ -29,9 +29,10 @@
 
 /* DealsOfTheDay */
 .deal-container {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   padding: 2rem 0.5rem 0rem 0.5rem;
   margin-top: 2rem;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 .deal-img {
@@ -76,7 +77,6 @@
     -ms-flex-pack: distribute;
     justify-content: space-around;
     margin-bottom: 1rem;
-
   }
   .deal-img {
     width: 90%;

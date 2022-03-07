@@ -1,11 +1,17 @@
 .restaurant-detail__info-offers {
-  /* margin-right: 80px; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: start;
   align-self: flex-start;
 }
 
 .restaurant-detail__info-offers .card {
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   padding: 0.8rem 1.5rem 0.8rem 3rem;
   border-radius: 5px;
@@ -13,24 +19,42 @@
   position: relative;
 }
 
+.restaurant-detail__info-offers .card {
+  background-color: #999;
+  overflow: hidden;
+}
+
 .restaurant-detail__info-offers .card:first-of-type {
-  background-color: #e23744;
   margin-right: 10px;
 }
 
-.restaurant-detail__info-offers .card:last-of-type {
+.restaurant-detail__info-offers .card:first-of-type .offers__title {
+  background-color: #e23744;
+}
+
+.restaurant-detail__info-offers .card:last-of-type .offers__title {
   background-color: #84c225;
+}
+
+.offer_container {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  position: absolute;
+  left: -35px;
+  top: 35px;
 }
 
 .offers__title {
   margin: 0;
-  position: absolute;
-  left: 2px;
-  top: 25px;
+  padding: 0.25rem 1rem;
   bottom: 25px;
   font-size: 1.6rem;
   font-weight: 700;
-  transform: rotate(270deg);
+  /* -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg); */
+  margin: 0;
 }
 
 .restaurant-detail__info-offers .card-title {
@@ -48,8 +72,15 @@
 @media (max-width: 960px) {
   .restaurant-detail__info-offers {
     margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
@@ -60,22 +91,29 @@
     margin: 0 0 5px 0;
   }
 
-  .offers__title {
-    left: -16px;
-    border: none;
+  .offers__container {
+    font-size: 0.5rem;
   }
 }
 
 @media (max-width: 640px) {
+  .restaurant-detail__info-offers .card {
+    padding-left: 3rem;
+  }
   .restaurant-detail__info-offers .card:first-of-type {
     margin: 0 0 5px 0;
   }
 
   .restaurant-detail__info-offers .card-title {
-    font-size: 12px;
+    font-size: 0.8rem;
   }
 
   .restaurant-detail__info-offers p {
-    font-size: 8px;
+    font-size: 0.5rem;
+  }
+
+  .offers__title {
+    font-size: 1.2rem;
+    padding: 0.25rem 1.5rem;
   }
 }

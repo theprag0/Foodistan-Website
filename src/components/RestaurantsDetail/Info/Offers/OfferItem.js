@@ -4,7 +4,9 @@ import { Card } from 'react-bootstrap';
 const OfferItem = ({ id, title, offer }) => {
   return (
     <Card>
-      <h1 className="offers__title">OFFER</h1>
+      <div className="offer_container">
+        <h1 className="offers__title">OFFER</h1>
+      </div>
       <Card.Title>{title}</Card.Title>
       <Card.Text>{offer}</Card.Text>
       <p>Terms and Conditions Applied</p>
