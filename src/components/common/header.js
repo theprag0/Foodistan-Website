@@ -1,6 +1,6 @@
 import { Navbar, Container, Button, Nav } from 'react-bootstrap';
 import React, { useContext } from 'react';
-import logo from '../../images/logo.jpg';
+import logo from '../../images/logo.png';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../store/auth-context';
 
@@ -8,7 +8,7 @@ function Header() {
   const authCtx = useContext(AuthContext);
   return (
     <div>
-      <Navbar bg="white" expand="sm" className="navbar">
+      <Navbar expand="sm" className="navbar">
         <Container>
           <Navbar.Brand className="navbar-brand ">
             <NavLink to="/" className="navlink-logo">

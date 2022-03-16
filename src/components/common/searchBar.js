@@ -65,26 +65,21 @@ export default function SearchBar() {
   }
 
   return (
-    <div className="row">
-      <div className="col-md-2"></div>
-      <div className='col-md-8 search'>
+    <div className='row'>
+     <div className='col-md-4'></div>
+      <div className='col-md-4 search'>
       <div className="outer-search-bar-2">
         <div className="search-bar-2">
           <div className="location-container">
             <div className="location-wrapper-2">
               <div className="location-icon-name">
                 <TiLocation className="absolute-center location-icon" />
-                <div>
-                  <span className="home-text">Home</span>
-                  <br /> Rohini, Delhi
-                </div>
               </div>
             </div>
           </div>
           <div className="input-search-bar-2">
-            <FiSearch className="search-icon absolute-center" />
             <input
-              placeholder="Search Cuisines"
+              placeholder="Where you want to eat?"
               className="search-input "
               value={text}
               onChange={(e) => onChangeHandler(e.target.value)}
@@ -121,7 +116,7 @@ export default function SearchBar() {
         </div>
       </div>
       </div>
-      <div className="col-md-2"></div>
+      <div className='col-md-4'></div>
     </div>
   );
 }

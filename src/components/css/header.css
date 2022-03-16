@@ -11,17 +11,18 @@
 }
 
 .logo {
-  width: 10rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #040809;
 }
 
 .btnn{
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: segoe;
   font-weight: 600;
   color: #fcfcfc;
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
+  margin-top: 0.8rem;
+  padding: 0.5rem 1.6rem;
   border-radius: 6px;
 }
 .btnn:hover {
@@ -36,9 +37,9 @@ a {
   padding: 0rem;
 }
 .header-items {
-  font-size: 1rem;
-  font-weight: 500;
-  font-family: segoe;
+  font-size: 1.2rem;
+  font-weight: thin;
+  font-family:segoe;
   padding: 1rem 0rem 1.25rem;
   margin-right: 2.5rem;
   -webkit-transition: 0.2s;
@@ -46,18 +47,19 @@ a {
   transition: 0.2s;
 }
 .header-items > a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 .header-items > a:hover {
-  color: black;
+  color: white;
+  padding-bottom: 1rem;
   text-shadow: 1px 1px 1px #e0e0e0;
   border-bottom: 4px solid #fab84c;
 }
 .navbar {
-  -webkit-box-shadow: 1px 1px 10px rgb(184, 184, 184);
-  box-shadow: 1px 1px 10px rgb(184, 184, 184);
-  background-color: rgb(253, 253, 253);
+  /* -webkit-box-shadow: 1px 1px 10px rgb(184, 184, 184); */
+  /* box-shadow: 1px 1px 10px rgb(184, 184, 184); */
+  background-color: #040809;
   padding-bottom: 0.5rem;
   padding: 0rem;
   margin-bottom: 3.5rem;
