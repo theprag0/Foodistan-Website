@@ -16,6 +16,10 @@ import vendor2 from "./Images/vendor2.png"
 import vendor3 from "./Images/vendor3.png"
 import vendor4 from "./Images/vendor4.png"
 import partner from "./Images/partner.png"
+import Pvendorimg1 from "../images/vendorImg1.png"
+import Pvendorimg2 from "../images/vendorImg2.png"
+import Pvendorimg3 from "../images/vendorImg3.png"
+import Pvendorimg4 from "../images/vendorImg4.png"
 import mobile from "../components/Images/mobile.png";
 // import nearbyShop from './Images/nearbyShop.png'
 import { Link } from 'react-router-dom';
@@ -192,46 +196,46 @@ export default function LandingPage() {
             <div className='heading-text'>Popular Vendors</div>
             <div className='container popular-wrapper'>
                 <div className='row'>
-                    <div className='col-md-4'>
-                        <div className='popular-vendor-img'><img ></img></div>
+                    <div className='col-md-4 popular-vendors padd-0'>
+                        <div><img className='popular-vendor-img'src={Pvendorimg4}></img></div>
                         <div className='popular-vendor-name'>
                             <span>Ram Ramesh Chandra</span>
-                            <div className='popular-vendor-location'>kala bazarm chandni chowk</div>
+                            <div className='popular-vendor-location'>Khana Khazana Corner <br/> kala bazarm chandni chowk</div>
                         </div>
                     </div>
-                    <div className='col-md-4'>
-                     <div className='popular-vendor-img'><img ></img></div>
+                    <div className='col-md-4 popular-vendors  padd-0'>
+                     <div><img className='popular-vendor-img' src={Pvendorimg1}></img></div>
                         <div className='popular-vendor-name'>
                             <span>Ram Ramesh Chandra</span>
-                            <div className='popular-vendor-location'>kala bazarm chandni chowk</div>
+                            <div className='popular-vendor-location'>Khana Khazana Corner <br/> kala bazarm chandni chowk</div>
                      </div>
                     </div>
-                    <div className='col-md-4'>
-                    <div className='popular-vendor-img'><img ></img></div>
+                    <div className='col-md-4 popular-vendors padd-0'>
+                    <div><img className='popular-vendor-img' src={Pvendorimg4}></img></div>
                         <div className='popular-vendor-name'>
                             <span>Ram Ramesh Chandra</span>
-                            <div className='popular-vendor-location'>kala bazarm chandni chowk</div>
+                            <div className='popular-vendor-location'>Khana Khazana Corner <br/> kala bazarm chandni chowk</div>
                     </div>
                     </div>
-                    <div className='col-md-4'>
-                    <div className='popular-vendor-img'><img ></img></div>
+                    <div className='col-md-4 popular-vendors padd-0'>
+                    <div><img className='popular-vendor-img' src={Pvendorimg1}></img></div>
                         <div className='popular-vendor-name'>
                             <span>Ram Ramesh Chandra</span>
-                            <div className='popular-vendor-location'>kala bazarm chandni chowk</div>
+                            <div className='popular-vendor-location'>Khana Khazana Corner <br/> kala bazarm chandni chowk</div>
                     </div>
                     </div>
-                    <div className='col-md-4'>
-                    <div className='popular-vendor-img'><img ></img></div>
+                    <div className='col-md-4 popular-vendors padd-0'>
+                    <div><img className='popular-vendor-img' src={Pvendorimg2}></img></div>
                         <div className='popular-vendor-name'>
                             <span>Ram Ramesh Chandra</span>
-                            <div className='popular-vendor-location'>kala bazarm chandni chowk</div>
+                            <div className='popular-vendor-location'>Khana Khazana Corner <br/> kala bazarm chandni chowk</div>
                     </div>
                     </div>
-                    <div className='col-md-4'>
-                    <div className='popular-vendor-img'><img ></img></div>
+                    <div className='col-md-4 popular-vendors padd-0' >
+                    <div><img className='popular-vendor-img'src={Pvendorimg3}></img></div>
                         <div className='popular-vendor-name'>
                             <span>Ram Ramesh Chandra</span>
-                            <div className='popular-vendor-location'>kala bazarm chandni chowk</div>
+                            <div className='popular-vendor-location'>Khana Khazana Corner <br/> kala bazarm chandni chowk</div>
                     </div>
                 </div>
             </div>

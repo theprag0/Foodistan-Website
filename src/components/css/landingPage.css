@@ -250,27 +250,28 @@
   background-color: #FAB84C;
   border-radius: 5rem;
 }
-.our-services-wrapper {
-  margin: 0rem 10rem 15rem 10rem;
+/* ------------------------Popular vendor----------------------- */
+.popular-wrapper{
+  margin-bottom: 4rem;
 }
-.services {
-  height: 20rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.popular-vendors{
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content:center;
+  text-align: center;
+  margin-bottom: 2rem;
 }
-.vendors {
-  background-color: #c4c2c2;
-  border-radius: 8px;
-  width: 47.5%;
+.popular-vendor-name{
+  font-size: 1.2rem;
+  font-family: segoe;
+  font-weight: bold;
 }
-.tiffin-service {
-  background-color: #c4c2c2;
-  border-radius: 8px;
-  width: 47.5%;
+.popular-vendor-location{
+  font-size:1rem;
+  font-family: segoe;
+  font-weight: 300;
+}
+.popular-vendor-img{
+  width: 70%;
 }
 .get-app {
   /* background-color: #FFAB38; */

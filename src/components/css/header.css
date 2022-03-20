@@ -8,12 +8,13 @@
 
 .navlink-logo.active {
   padding: 0;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .logo {
   width: 4rem;
   height: 4rem;
-  background-color: #040809;
+  background-color: #00000000;
 }
 
 .btnn{
@@ -49,20 +50,23 @@ a {
 .header-items > a {
   color: white;
   text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  font-weight: bold;
 }
 .header-items > a:hover {
   color: white;
   padding-bottom: 1rem;
-  text-shadow: 1px 1px 1px #e0e0e0;
+  /* text-shadow: 1px 1px 1px #e0e0e0; */
   border-bottom: 4px solid #fab84c;
 }
 .navbar {
   /* -webkit-box-shadow: 1px 1px 10px rgb(184, 184, 184); */
   /* box-shadow: 1px 1px 10px rgb(184, 184, 184); */
-  background-color: #040809;
+  background-color: #ffffff00;
   padding-bottom: 0.5rem;
   padding: 0rem;
   margin-bottom: 3.5rem;
+  /* box-shadow: 1px; */
 }
 .navbar-brand {
   padding: 0rem;
