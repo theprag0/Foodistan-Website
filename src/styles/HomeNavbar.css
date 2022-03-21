@@ -1,0 +1,62 @@
+.home-navbar {
+	background-color: #fff !important;
+	padding: 0rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+	margin-bottom: 3.5rem;
+}
+
+.home-navbar-brand a {
+	background-color: #fff;
+	color: #012933;
+	font-family: 'Lobster', cursive;
+	padding: 0rem;
+	font-size: 25px;
+}
+
+.home-logo {
+	background-color: #fff;
+	width: 4rem;
+	height: 3rem;
+}
+
+.home-header-items {
+	font-size: 15px;
+	font-weight: 500;
+	font-family: segoe;
+	padding-top: 1rem;
+	padding-right: 15px;
+	margin-right: 2.5rem;
+	-webkit-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+}
+.home-header-items > a {
+	color: #fab84c;
+	text-decoration: none;
+}
+
+.home-btnn {
+	font-size: 14px;
+	font-family: segoe;
+	font-weight: 600;
+	color: #fcfcfc;
+	margin-top: 0.5rem;
+	padding: 0.5rem 1rem;
+	border-radius: 6px;
+}
+.home-btnn:hover {
+	color: #fcfcfc;
+	-webkit-box-shadow: 1px 1px 5px gray;
+	box-shadow: 1px 1px 5px gray;
+}
+
+.nav-search-bar {
+	display: block;
+}
+
+@media screen and (max-width: 768px) {
+	.nav-search-bar {
+		display: none;
+	}
+}
