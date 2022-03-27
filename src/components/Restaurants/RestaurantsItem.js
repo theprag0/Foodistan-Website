@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const RestaurantsItem = (props) => {
   const name =
     props.name.length > 25 ? `${props.name.slice(0, 25)}...` : props.name;
-  const cuisines = props.cuisines.split(',').splice(0, 2);
+
   const locationArray = props.address.includes(',')
     ? props.address.split(',')
     : props.address.split(' ');
@@ -19,17 +19,13 @@ const RestaurantsItem = (props) => {
 
   return (
     <div className="restaurant-item">
-      {props.foodistaanCertified && (
-        <div className="restaurant-badge">
-          <h1>
-            Foodi<span>staan</span> <span>+</span>
-          </h1>
-        </div>
-      )}
-      {props.foodistaanCertified && (
-        <div className="restaurant-badge__bottom"></div>
-      )}
       <div className="restaurant-card">
+        <div className="badges">
+          <h1>50% off</h1>
+          <p>
+            S <span>Certified</span>
+          </p>
+        </div>
         <Link to={`/restaurant/${props.id}`}>
           <div className="restaurant-card__image-container">
             <img src={props.image} alt="" />
@@ -43,14 +39,9 @@ const RestaurantsItem = (props) => {
               </p>
             </div>
             <div className="restaurant__cuisines-cost">
-              <div className="restaurant__cuisines">
-                {cuisines.map((c, i) => (
-                  <p key={`${c}-${i}`}>{c}</p>
-                ))}
-              </div>
-              <h1 className="cost">₹ {props.cost} for Two</h1>
+              <p className="restaurant__cuisines">Russian Cuisines</p>
+              <p className="cost">₹ {props.cost} for Two</p>
             </div>
-            <hr />
             <div className="restaurant-specifications">
               <div className="restaurant-specifications__delivery-takeaway">
                 <h1

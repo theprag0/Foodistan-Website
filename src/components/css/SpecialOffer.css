@@ -9,14 +9,14 @@
 }
 .specialOffer-slider {
   padding-left: 0rem;
-  margin-bottom: 12rem;
+  margin-bottom: 5rem;
   margin-left: -3rem;
   margin-right: -3rem;
 }
 .specialOffer-slider2 {
   padding-left: 15rem;
   padding-right: 25rem;
-  margin-bottom: 12rem;
+  margin-bottom: 5rem;
 }
 
 .slider {
@@ -34,7 +34,7 @@
     margin-top: 2rem;
   }
   .specialOffer-slider {
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
     overflow: hidden;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -44,7 +44,7 @@
   .specialOffer-slider2 {
     padding-left: 0rem;
     padding-right: 1rem;
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
   }
   .specialoffer-img {
     width: 100%;

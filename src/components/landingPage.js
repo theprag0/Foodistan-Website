@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper';
-import "swiper/swiper-bundle.css";
+import 'swiper/swiper-bundle.css';
 import { Button } from 'react-bootstrap';
-import Header from './common/header'
+import Header from './common/header';
 import SearchBar from './common/searchBar.js';
 import Footer from './common/footer'
 import "./css/landingPage.css";
@@ -25,30 +25,29 @@ import mobile from "../components/Images/mobile.png";
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {
-    <Link to={"/explore"}></Link>
-}
+  <Link to={'/explore'}></Link>;
+};
 var flag, flag2;
 function WindowWidth() {
-
-    const screenSize = window.innerWidth;
-    return screenSize;
+  const screenSize = window.innerWidth;
+  return screenSize;
 }
 
 export default function LandingPage() {
+  if (WindowWidth() <= 600) {
+    flag = 1.7;
+    flag2 = 1.7;
+  } else {
+    flag = 4;
+    flag2 = 4;
+  }
 
-    if (WindowWidth() <= 600) {
-        flag = 1.7;
-        flag2 = 1.7
-    } else {
-        flag = 4;
-        flag2 = 4
-    }
-
-    return (
-        <div className='container-fluid'>
-            <div className='landingPage'> 
-                <Header />
-                {/* <div className='row outer-search-bar container-fluid'>
+  return (
+    <div>
+    <div className="container-fluid">
+      <div className="landingPage">
+        <Header />
+        {/* <div className='row outer-search-bar container-fluid'>
                     <div className='col-md-3 '></div>
                     <div className='col-md-6 search-bar'>
                         <div className='location-container'>
@@ -74,6 +73,7 @@ export default function LandingPage() {
                 </div>
 
             </div>
+          </div>
 
             {/* --------------------banner complete---------------------- */}
 
@@ -111,74 +111,8 @@ export default function LandingPage() {
                     </div>
                 </div>
                 </div>
-                <div className='heading-text'>Listen From Vendors</div>
-                <div className='vendors-wrapper'>
-                    <Swiper slidesPerView={`${flag2}`} spaceBetween={10} pagination={{
-                        "clickable": true
-                    }} className="mySwiper">
-                        <SwiperSlide>
-                            <div><img src={vendor1} className='vendor-img' />
-
-                                <div className='vendor-name'>Ram Ramesh Chandra</div>
-                                <p className='vendor-location'>Khana Khaza corner</p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div><img src={vendor2} className='vendor-img' />
-
-                                <div className='vendor-name'>Ram Ramesh Chandra</div>
-                                <span className='vendor-location'>Khana Khaza corner</span>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-
-                            <div ><img src={vendor3} className='vendor-img' />
-
-                                <div className='vendor-name'>Ram Ramesh Chandra</div>
-                                <span className='vendor-location'>Khana Khaza corner</span>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-
-                            <div><img src={vendor4} className='vendor-img' />
-                                <div className='vendor-name'>Ram Ramesh Chandra</div>
-                                <span className='vendor-location'>Khana Khaza corner</span>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div><img src={vendor1} className='vendor-img' />
-
-                                <div className='vendor-name'>Ram Ramesh Chandra</div>
-                                <p className='vendor-location'>Khana Khaza corner</p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div><img src={vendor2} className='vendor-img' />
-
-                                <div className='vendor-name'>Ram Ramesh Chandra</div>
-                                <span className='vendor-location'>Khana Khaza corner</span>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-
-                            <div ><img src={vendor3} className='vendor-img' />
-
-                                <div className='vendor-name'>Ram Ramesh Chandra</div>
-                                <span className='vendor-location'>Khana Khaza corner</span>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-
-                            <div><img src={vendor4} className='vendor-img' />
-                                <div className='vendor-name'>Ram Ramesh Chandra</div>
-                                <span className='vendor-location'>Khana Khaza corner</span>
-                            </div>
-                        </SwiperSlide>
-
-                    </Swiper>
-                </div>
-            </div>
-
+              </div>
+          
             <div className='container'>
                 <div className='partner-wrapper'>
                     <div className='row'>
@@ -257,11 +191,141 @@ export default function LandingPage() {
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <Footer />
+        <div className="heading-text">Listen From Vendors</div>
+        <div className="vendors-wrapper">
+          <Swiper
+            slidesPerView={`${flag2}`}
+            spaceBetween={10}
+            pagination={{
+              clickable: true,
+            }}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div>
+                <img src={vendor1} className="vendor-img" />
 
+                <div className="vendor-name">Ram Ramesh Chandra</div>
+                <p className="vendor-location">Khana Khaza corner</p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <img src={vendor2} className="vendor-img" />
+
+                <div className="vendor-name">Ram Ramesh Chandra</div>
+                <span className="vendor-location">Khana Khaza corner</span>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <img src={vendor3} className="vendor-img" />
+
+                <div className="vendor-name">Ram Ramesh Chandra</div>
+                <span className="vendor-location">Khana Khaza corner</span>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <img src={vendor4} className="vendor-img" />
+                <div className="vendor-name">Ram Ramesh Chandra</div>
+                <span className="vendor-location">Khana Khaza corner</span>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <img src={vendor1} className="vendor-img" />
+
+                <div className="vendor-name">Ram Ramesh Chandra</div>
+                <p className="vendor-location">Khana Khaza corner</p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <img src={vendor2} className="vendor-img" />
+
+                <div className="vendor-name">Ram Ramesh Chandra</div>
+                <span className="vendor-location">Khana Khaza corner</span>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <img src={vendor3} className="vendor-img" />
+
+                <div className="vendor-name">Ram Ramesh Chandra</div>
+                <span className="vendor-location">Khana Khaza corner</span>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <img src={vendor4} className="vendor-img" />
+                <div className="vendor-name">Ram Ramesh Chandra</div>
+                <span className="vendor-location">Khana Khaza corner</span>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
 
-    )
+      <div className="container-fluid">
+        <div className="partner-wrapper">
+          <div className="row">
+            <div className="col-6 search">
+              <div className="partner-banner-text">Become Our Partner</div>
+              <div className="below-banner">
+                Become our partner in
+                <br />
+                food. Start a new
+                <br />
+                journey!
+              </div>
+              <Button variant="danger" className="explore-btn">
+                Learn More
+              </Button>
+            </div>
+            <div className="col-6 search">
+              <img src={partner} className="partner-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="heading-text">Our Services</div>
+      <div className="our-services-wrapper">
+        <div className="services">
+          <div className="vendors"></div>
+          <div className="tiffin-service"></div>
+        </div>
+      </div>
+
+      <div className="container-fluid">
+        <div className="get-app">
+          <div className="row get-app-left">
+            <div className="col-7 search ">
+              <div className="get-app-banner">
+                Get Foodistaan <br />
+                APP
+              </div>
+              <div className="below-get-app">
+                Download the application from Playstore or Apple store to get
+                exciting updates.
+              </div>
+              <Button variant="success" className="explore-btn md-font">
+                Download Now
+              </Button>
+            </div>
+            <div className="col-5 search">
+              <div className="mobile">
+                <img className="mobile-img" src={mobile}></img>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  </div>
+  );
+
 }

@@ -4,7 +4,6 @@ import './MenuTypesDesktop.css';
 const MenuTypesDesktop = ({ types, selectedType, onSelect }) => {
   return (
     <div className="menu-types">
-      <h1 className="menu-types__heading">Menu</h1>
       <ul>
         {types.map((t) => (
           <li

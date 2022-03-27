@@ -36,6 +36,7 @@
 }
 a {
   padding: 0rem;
+  color: #000;
 }
 .header-items {
   font-size: 1.2rem;
@@ -68,8 +69,10 @@ a {
   margin-bottom: 3.5rem;
   /* box-shadow: 1px; */
 }
-.navbar-brand {
+.navbar-brand a {
   padding: 0rem;
+  background-color: #012933;
+  color: #fff;
 }
 .location {
   font-size: 1.2rem;

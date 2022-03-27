@@ -13,26 +13,27 @@ function Header() {
           <Navbar.Brand className="navbar-brand ">
             <NavLink to="/" className="navlink-logo">
               <img src={logo} alt="logo" className="logo"></img>
+              Streato
             </NavLink>
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Nav className="ml-auto">
               <Nav.Item className="header-items ">
-                <Link to="/explore" className="">
+                <NavLink to="/explore" className="" activeClassName="selected">
                   Explore{' '}
-                </Link>
+                </NavLink>
               </Nav.Item>
               <Nav.Item className="header-items">
-                <Link to="/about" className="">
+                <NavLink activeClassName="selected" to="/about" className="">
                   {' '}
                   About Us
-                </Link>
+                </NavLink>
               </Nav.Item>
               <Nav.Item className="header-items ">
-                <Link to="/Blogs" className="">
-                  Blogs{' '}
-                </Link>
+                <NavLink to="/Blogs" className="" activeClassName="selected">
+                  Blogs
+                </NavLink>
               </Nav.Item>
               <Nav.Item className="header-items">
                 <Link to="/become-our-patner" className="">

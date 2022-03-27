@@ -58,10 +58,10 @@ export default function SearchBar() {
     setText(text);
   };
 
-  let cssClass = "noSuggestionList"
+  let cssClass = 'noSuggestionList';
 
   if (suggestions.length >= 1) {
-    cssClass = "suggestionList"
+    cssClass = 'suggestionList';
   }
 
   return (
@@ -75,6 +75,20 @@ export default function SearchBar() {
               <div className="location-icon-name">
                 <TiLocation className="absolute-center location-icon" />
               </div>
+            </div>
+            <div className="input-search-bar-2">
+              <FiSearch className="search-icon absolute-center" />
+              <input
+                placeholder="Search Cuisines"
+                className="search-input "
+                value={text}
+                onChange={(e) => onChangeHandler(e.target.value)}
+                onBlur={() => {
+                  setTimeout(() => {
+                    setSuggestions([]);
+                  }, 300);
+                }}
+              />
             </div>
           </div>
           <div className="input-search-bar-2">
@@ -102,21 +116,20 @@ export default function SearchBar() {
                 <div className="suggestionName">
                   {suggestion.Name}
                 </div>
+                </div>
+              </Link>
+            )}
+          </div>
+          <div>
+            {suggestions.length == 0 && text.length != 0 && (
+              <div className="noResultText">
+                <div>No Results Found</div>
               </div>
-            </Link>
-          )}
-
-        </div>
-        <div>
-          {suggestions.length==0 && text.length!=0 && <div className="noResultText">
-            <div>
-          No Results Found</div>
-          </div>}
-
+            )}
+          </div>
         </div>
       </div>
-      </div>
-      <div className='col-md-4'></div>
+      <div className="col-md-4"></div>
     </div>
   );
 }

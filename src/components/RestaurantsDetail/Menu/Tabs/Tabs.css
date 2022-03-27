@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .menu-list__tabs {
   border-radius: 25px;
   background-color: #fff;
@@ -40,6 +47,10 @@
 }
 
 @media (max-width: 640px) {
+  .menu-list__tabs {
+    width: 95%;
+  }
+
   .menu-list__tabs div {
     font-size: 1rem;
   }

@@ -10,7 +10,7 @@ import LoadingSpinner from '../components/common/LoadingSpinner/LoadingSpinner';
 
 const RestaurantDetail = () => {
   const { rid } = useParams();
-  const [resDetail, setResDetail] = useState({});
+  const [resDetail, setResDetail] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -38,6 +38,9 @@ const RestaurantDetail = () => {
     };
 
     fetchResDetail();
+    return () => {
+      setResDetail({}); // This worked for me
+    };
   }, [rid]);
 
   //finding detail from store data by checking params id and data id
