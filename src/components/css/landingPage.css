@@ -2,6 +2,9 @@
   font-family: segoe;
   src: url(../../fonts/Segoe\ UI.ttf);
 }
+.gray{
+  background-color: #4949491c;
+}
 .container-fluid {
   padding: 0px;
 }
@@ -14,8 +17,7 @@
 }
 .banner-text {
   text-align: center;
-  margin-top: 10rem;
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.062), #000000);
+  margin-top: 15rem;
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -24,7 +26,7 @@
     to(#000000)
   );
   background-image: linear-gradient(rgba(0, 0, 0, 0.062), #000000);
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
   padding-top: 10rem;
 }
 .outer-search-bar-2 {
@@ -49,6 +51,7 @@
   background-color: white;
   padding: 0;
   margin: 0rem 1rem;
+  width: 80%;
 }
 .absolute-center {
   display: -webkit-box;
@@ -84,22 +87,14 @@
   font-family: segoe;
   letter-spacing: 1px;
 }
-.home-text {
-  font-weight: 600;
-}
 .location-icon {
   font-size: 2rem;
   color: #fac05e;
-  margin-right: 1rem;
 }
 .location-wrapper {
   border-right: 2px solid #dfdfdf;
-  padding-right: 2rem;
 }
-.location-wrapper-2 {
-  padding-right: 2rem;
-}
-.search {
+.search ,.padd-0{
   padding: 0;
 }
 .input-search-bar {
@@ -117,21 +112,14 @@
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
-  background-color: #fce19e5d;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 8px;
-  /* margin: 0rem 1rem; */
-}
-.search-icon {
-  font-size: 2rem;
-  color: #686868;
-  margin-right: 3rem;
-  margin-left: 0rem;
+  width: 10%;
 }
 .search-input {
   border: none;
   outline: none;
-  width: 99%;
+  width: 90%;
   font-size: 1.2rem;
   font-family: segoe;
   letter-spacing: 0.2rem;
@@ -154,15 +142,15 @@
   text-shadow: 2px 2px 5px black;
 }
 .explore-btn {
-  color: rgb(240, 240, 240);
-  padding: 0.5rem 3rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  border-radius: 24px;
-  margin-top: 1rem;
+  color: white;
+  padding: 0.5rem 3rem 0.5rem 1.5rem;
+  font-size: 2rem;
+  font-family: 550;
+  border-radius: 4px;
+  margin: 1rem 0rem;
   font-family: segoe;
   letter-spacing: 2px;
-  text-shadow: 1px 1px rgb(0, 0, 0);
+  text-align: center;
 }
 
 /*--------------- slider---------------- */
@@ -181,29 +169,34 @@
   /* text-shadow: 1px 1px .5px black; */
   /* background-image: linear-gradient(to right, #FFAB38, #FFEE8A); */
 }
-.explore-nearby-wrapper {
-  margin: 0rem 10rem 5rem 10rem;
+/* ------------------lets dive in -------------------- */
+.letsDiveIn-wrapper{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8rem;
 }
-.nearbyFoodImgBurger {
-  width: 80%;
-}
-.nearbyFoodImgFries {
-  width: 72%;
-}
-.explore-nearby-bg {
-  background-color: #0f0f0f09;
-  text-align: center;
-  padding: 2rem;
-  border-radius: 8px;
-}
-.explore-nearby-food-name {
+.diveIn-text{
   font-size: 1.5rem;
   font-family: segoe;
-  /* font-weight: bold; */
+  font-weight: bold;
+  text-align: center;
+}
+.order-online-img{
+  margin-top: 2rem;
+}
+.img-center{
+  text-align: center;
+}
+.order-online{
+  margin-top: 2rem;
+}
+.add-something{
+  margin-top: 1.5rem;
 }
 .vendors-wrapper {
   text-align: center;
-  margin: 0rem 10rem 15rem 10rem;
+  margin: 0rem 10rem 5rem 10rem;
 }
 .vendor-img {
   margin-bottom: 2rem;
@@ -225,49 +218,59 @@
 }
 .partner-wrapper {
   background-color: #040404;
-  padding: 2rem 0rem 2rem 5rem;
-  margin-bottom: 2rem;
+  padding: 0rem 0rem 2rem 5rem;
+  margin-bottom: 1rem;
+  border-radius: 5rem;
 }
 .partner-banner-text {
-  font-size: 3rem;
+  font-size: 4rem;
   color: white;
-  font-weight: 500;
+  font-weight: bolder;
   margin-bottom: 1rem;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   font-family: segoe;
   padding-top: 4rem;
+  line-height: 4rem;
 }
 .below-banner {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   font-weight: 400;
   font-family: segoe;
   margin-bottom: 2rem;
 }
 .partner-img {
-  width: 100%;
+  width: 70%;
 }
-.our-services-wrapper {
-  margin: 0rem 10rem 15rem 10rem;
+.explore-btn-small{
+  margin: 0rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: #FAB84C;
+  border-radius: 5rem;
 }
-.services {
-  height: 20rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+/* ------------------------Popular vendor----------------------- */
+.popular-wrapper{
+  margin-bottom: 4rem;
+}
+.popular-vendors{
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content:center;
+  text-align: center;
+  margin-bottom: 2rem;
 }
-.vendors {
-  background-color: #c4c2c2;
-  border-radius: 8px;
-  width: 47.5%;
+.popular-vendor-name{
+  font-size: 1.2rem;
+  font-family: segoe;
+  font-weight: bold;
 }
-.tiffin-service {
-  background-color: #c4c2c2;
-  border-radius: 8px;
-  width: 47.5%;
+.popular-vendor-location{
+  font-size:1rem;
+  font-family: segoe;
+  font-weight: 300;
+}
+.popular-vendor-img{
+  width: 70%;
 }
 .get-app {
   /* background-color: #FFAB38; */
@@ -319,10 +322,6 @@
   }
   .location-icon {
     font-size: 1.5rem;
-    margin-right: 0.5rem;
-  }
-  .location-wrapper-2 {
-    padding-right: 1rem;
   }
   .search-icon {
     margin-right: 1rem;

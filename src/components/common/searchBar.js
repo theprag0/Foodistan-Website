@@ -65,20 +65,15 @@ export default function SearchBar() {
   }
 
   return (
-    <div className="row">
-      <div className="col-md-2"></div>
-      <div className="col-md-8 search">
-        <div className="outer-search-bar-2">
-          <div className="search-bar-2">
-            <div className="location-container">
-              <div className="location-wrapper-2">
-                <div className="location-icon-name">
-                  <TiLocation className="absolute-center location-icon" />
-                  <div>
-                    <span className="home-text">Home</span>
-                    <br /> Rohini, Delhi
-                  </div>
-                </div>
+    <div className='row'>
+     <div className='col-md-4'></div>
+      <div className='col-md-4 search'>
+      <div className="outer-search-bar-2">
+        <div className="search-bar-2">
+          <div className="location-container">
+            <div className="location-wrapper-2">
+              <div className="location-icon-name">
+                <TiLocation className="absolute-center location-icon" />
               </div>
             </div>
             <div className="input-search-bar-2">
@@ -96,25 +91,34 @@ export default function SearchBar() {
               />
             </div>
           </div>
-          <div className={cssClass}>
-            {suggestions.map((suggestion, i) => (
-              <Link to={`/restaurant/${suggestion.id}`}>
-                <div
-                  className="search-input suggestion"
-                  key={i}
-                  onClick={() => onSuggestHandler(suggestion.Name)}
-                >
-                  <span>
-                    <img
-                      style={{ height: '4.5rem', weight: '5rem' }}
-                      src={suggestion.FoodImage}
-                      alt="food"
-                    />
-                  </span>
-                  <div className="suggestionName">{suggestion.Name}</div>
+          <div className="input-search-bar-2">
+            <input
+              placeholder="Where you want to eat?"
+              className="search-input "
+              value={text}
+              onChange={(e) => onChangeHandler(e.target.value)}
+              onBlur={() => {
+                setTimeout(() => {
+                  setSuggestions([])
+                }, 300)
+              }}
+            />
+          </div>
+        </div>
+        <div className={cssClass}>
+          {suggestions.map((suggestion, i) =>
+            <Link to={`/restaurant/${suggestion.id}`}>
+              <div
+                className="search-input suggestion"
+                key={i}
+                onClick={() => onSuggestHandler(suggestion.Name)}>
+                <span><img style={{ height: '5.5rem', weight: '5rem' }} src={suggestion.FoodImage} alt="food" /></span>
+                <div className="suggestionName">
+                  {suggestion.Name}
+                </div>
                 </div>
               </Link>
-            ))}
+            )}
           </div>
           <div>
             {suggestions.length == 0 && text.length != 0 && (
@@ -125,7 +129,7 @@ export default function SearchBar() {
           </div>
         </div>
       </div>
-      <div className="col-md-2"></div>
+      <div className="col-md-4"></div>
     </div>
   );
 }

@@ -8,7 +8,7 @@ function Header() {
   const authCtx = useContext(AuthContext);
   return (
     <div>
-      <Navbar bg="white" expand="sm" className="navbar">
+      <Navbar expand="sm" className="navbar">
         <Container>
           <Navbar.Brand className="navbar-brand ">
             <NavLink to="/" className="navlink-logo">
