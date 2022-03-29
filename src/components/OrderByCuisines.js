@@ -26,10 +26,10 @@ function WindowWidth(){
     return (
       <div className="specialOffer-slider2 slider-gray-bg"> 
       <div className="container">
-        <h2 className="big-font absolute-center">Order By Cuisines</h2>
+        <h2 className="cuisines-header absolute-center">Order By Cuisines</h2>
          <Swiper slidesPerView={`${flag}`} spaceBetween={5} pagination={{
         "clickable": true
-        }} className="mySwiper container-fluid slider">
+        }} className="mySwiper container-fluid slider" navigation={true}>
         <SwiperSlide>  <div className='absolute-center' >
                          <div>
                           <h3><img className="cuisine-img"src={red}alt="First slide"/></h3>

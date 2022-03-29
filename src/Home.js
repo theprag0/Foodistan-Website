@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import { AuthContext } from './store/auth-context';
 import HomeNavbar from './HomeNavbar';
 import SearchBar from './components/common/searchBar.js';
 import SpecialOffers from './components/SpecialOffers';
@@ -10,11 +11,23 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 function Home() {
+  const [matches, setMatches] = useState(window.matchMedia("(max-width: 768px)").matches);
+  const authCtx = useContext(AuthContext);
+
+  useEffect(() => {
+    window
+    .matchMedia("(max-width: 768px)")
+    .addEventListener('change', e => setMatches( e.matches ));
+  }, []);
+
   return (
     <div className="App">
       <HomeNavbar />
       <main className='main'>
-        <div className='home-search-bar'>
+        <div 
+          className='home-search-bar'
+          style={{display: (!authCtx.isLoggedIn || matches) ? 'block' : 'none'}}
+        >
           <SearchBar />
         </div>
         <SpecialOffers />

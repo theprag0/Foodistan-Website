@@ -6,21 +6,22 @@
 */
 
 @font-face {
-  font-family: Segoe Ui;
-  src: url('../../../fonts/Segoe\ UI.ttf');
+	font-family: Segoe Ui;
+	src: url('../../../fonts/Segoe\ UI.ttf');
 }
 
 .menu {
-  margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
+	margin-top: 2rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	padding: 0 5rem;
 }
 
 .menu ul {
-  list-style: none;
-  padding-left: 0;
+	list-style: none;
+	padding-left: 0;
 }
 
 .menu h1,
@@ -28,16 +29,16 @@
 .menu ul,
 .menu li,
 .menu p {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: 1.5px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	letter-spacing: 1.5px;
 }
 
 @media (max-width: 960px) {
-  .menu h1,
-  .menu h3,
-  .menu ul,
-  .menu li,
-  .menu p {
-    letter-spacing: normal;
-  }
+	.menu h1,
+	.menu h3,
+	.menu ul,
+	.menu li,
+	.menu p {
+		letter-spacing: normal;
+	}
 }

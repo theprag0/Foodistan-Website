@@ -1,16 +1,18 @@
 import React, { useContext } from 'react';
 import { Navbar, Container, Button, Nav } from 'react-bootstrap';
 import logo from '../../images/logo.png';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../store/auth-context';
 
 function Header() {
+  const location = useLocation();
   const authCtx = useContext(AuthContext);
+  
   return (
     <div>
-      <Navbar expand="sm" className="navbar">
+      <Navbar expand="sm" className={`navbar ${location.pathname === '/' || location.pathname === '/about' ? '' : 'bg-dark'}`}>
         <Container>
-          <Navbar.Brand className="navbar-brand ">
+          <Navbar.Brand className="navbar-brand">
             <NavLink to="/" className="navlink-logo">
               <img src={logo} alt="logo" className="logo"></img>
               Streato

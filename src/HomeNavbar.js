@@ -12,40 +12,57 @@ function HomeNavbar(props) {
     return (
         <div>
             <Navbar expand="md" className="home-navbar navbar-light bg-light">
-                <Container>
-                    <Navbar.Brand className="home-navbar-brand ">
+                <Container className='align-items-center' style={{height: '100%'}}>
+                    <Navbar.Brand className="home-navbar-brand align-items-center">
                         <NavLink to="/" className="navlink-logo">
                             <img src={logo} alt="logo" className="home-logo"></img>
                             Foodistan
                         </NavLink>
                     </Navbar.Brand>
                     <Navbar.Toggle />
-                    <Navbar.Collapse className="justify-content-end">
-                        <Nav className="ml-auto">
-                            <Nav.Item className='home-header-items nav-search-bar'>
-                                <SearchBar />
-                            </Nav.Item>
-                            <Nav.Item className="home-header-items ">
-                                <NavLink to="/explore" className="" activeClassName="selected">
-                                Explore{' '}
-                                </NavLink>
-                            </Nav.Item>
-                            <Nav.Item className="home-header-items">
-                                <NavLink activeClassName="selected" to="/about" className="">
-                                {' '}
-                                About Us
-                                </NavLink>
-                            </Nav.Item>
-                            <Nav.Item className="home-header-items ">
-                                <NavLink to="/Blogs" className="" activeClassName="selected">
-                                Blogs
-                                </NavLink>
-                            </Nav.Item>
-                            <Nav.Item className="home-header-items">
-                                <Link to="/become-our-patner" className="">
-                                Become our patner
-                                </Link>
-                            </Nav.Item>
+                    <Navbar.Collapse>
+                        <Nav style={{width: '100%'}} className="justify-content-space-between align-items-center">
+                            {
+                                authCtx.isLoggedIn
+                                && (
+                                    <div className='container-fluid'>
+                                        <Nav.Item 
+                                            className='home-header-items nav-search-bar'
+                                            style={{marginRight: '5rem'}}
+                                        >
+                                            <SearchBar />
+                                        </Nav.Item>
+                                    </div>
+                                )
+                            }
+                            {
+                                !authCtx.isLoggedIn 
+                                && (
+                                    <>
+                                        <Nav.Item className="home-header-items ">
+                                            <NavLink to="/explore" className="" activeClassName="selected">
+                                            Explore{' '}
+                                            </NavLink>
+                                        </Nav.Item>
+                                        <Nav.Item className="home-header-items">
+                                            <NavLink activeClassName="selected" to="/about" className="">
+                                            {' '}
+                                            About Us
+                                            </NavLink>
+                                        </Nav.Item>
+                                        <Nav.Item className="home-header-items ">
+                                            <NavLink to="/Blogs" className="" activeClassName="selected">
+                                            Blogs
+                                            </NavLink>
+                                        </Nav.Item>
+                                        <Nav.Item className="home-header-items">
+                                            <Link to="/become-our-patner" className="">
+                                            Become our patner
+                                            </Link>
+                                        </Nav.Item>
+                                    </>
+                                )
+                            }
                             {!authCtx.isLoggedIn && (
                                 <Nav.Item className="">
                                 <Link to="/login">
@@ -61,7 +78,7 @@ function HomeNavbar(props) {
                                 </Nav.Item>
                             )}
                             {authCtx.isLoggedIn && (
-                                <Nav.Item className="">
+                                <Nav.Item>
                                 <Button
                                     type="button"
                                     variant="warning"

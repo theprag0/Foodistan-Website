@@ -4,7 +4,7 @@ import './Restaurants.css';
 
 const RestaurantsList = ({ restaurants }) => {
   return (
-    <div className="restaurant-items">
+    <div className="restaurant-items" style={{padding: '0 2rem'}}>
       {restaurants.map((r) => (
         <RestaurantsItem
           key={r.id}

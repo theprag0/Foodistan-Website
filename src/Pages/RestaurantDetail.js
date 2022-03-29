@@ -7,6 +7,7 @@ import FoundRestaurantsDetail from '../components/RestaurantsDetail/FoundRestaur
 // import { DUMMY_RESTAURANT_DETAIL } from './dummy-restaurant-detail';
 import { database } from '../firebase';
 import LoadingSpinner from '../components/common/LoadingSpinner/LoadingSpinner';
+import HomeNavbar from '../HomeNavbar';
 
 const RestaurantDetail = () => {
   const { rid } = useParams();
@@ -49,12 +50,11 @@ const RestaurantDetail = () => {
 
   return (
     <>
-      <Layout>
-        {isLoading && <LoadingSpinner center />}
-        {!isLoading && resDetail && (
-          <FoundRestaurantsDetail details={resDetail} />
-        )}
-      </Layout>
+      <HomeNavbar />
+      {isLoading && <LoadingSpinner center />}
+      {!isLoading && resDetail && (
+        <FoundRestaurantsDetail details={resDetail} />
+      )}
     </>
   );
 };

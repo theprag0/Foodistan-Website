@@ -8,6 +8,7 @@ import MenuList from './MenuList/MenuList';
 import OverView from './OverView/OverView';
 import MenuTypes from './Types/MenuTypes';
 import LoadingSpinner from '../../common/LoadingSpinner/LoadingSpinner';
+import Tabs from './Tabs/Tabs';
 
 const menuTypes = [
   { id: 't1', type: 'Recommended' },
@@ -66,12 +67,13 @@ const Menu = ({ menu, name, address, restaurantId }) => {
 
   return (
     <>
-      <MenuTypes
+      <Tabs selectedMethod={selectedMethod} onSelectMethod={methodClickHandler} />
+      {/* <MenuTypes
         types={menuTypes}
         selectedType={selectedType}
         onSelect={typeClickHandler}
         selectedMethod={selectedMethod}
-      />
+      /> */}
       <section className="menu">
         {selectedMethod !== 'Overview' && isLoading && menuItems.length === 0 && (
           <div className="menu-list__list">
@@ -93,6 +95,9 @@ const Menu = ({ menu, name, address, restaurantId }) => {
               restaurantId={restaurantId}
               selectedMethod={selectedMethod}
               onSelectMethod={methodClickHandler}
+              menuTypes={menuTypes}
+              selectedType={selectedType}
+              typeClickHandler={typeClickHandler}
             />
           )}
         {selectedMethod === 'Overview' && (

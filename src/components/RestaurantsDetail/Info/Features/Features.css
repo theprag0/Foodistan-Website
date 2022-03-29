@@ -1,59 +1,60 @@
 .restaurant-detail__features {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 50%;
-  margin: 0.8rem 0;
-  cursor: pointer;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 50%;
+	margin: 0.8rem 0;
+	cursor: pointer;
+	padding: 0.5rem 5rem;
 }
 
 .restaurant-detail__features p {
-  font-size: 0.9rem;
+	font-size: 0.9rem;
 }
 
 .restaurant-detail__features span {
-  padding: 0 2px;
-  background-color: #8cc8ff;
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 50%;
+	padding: 0 2px;
+	background-color: #8cc8ff;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
 }
 
 .restaurant-detail__features p:first-of-type span {
-  background-color: #fe5b67;
+	background-color: #fe5b67;
 }
 
 .restaurant-detail__features p:last-of-type span {
-  background-color: #b3e548;
+	background-color: #b3e548;
 }
 
 .restaurant-detail__features span svg {
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
+	-webkit-transform: translateY(-2px);
+	-ms-transform: translateY(-2px);
+	transform: translateY(-2px);
 }
 
 @media (max-width: 960px) {
-  .restaurant-detail__features {
-    width: 70%;
-  }
+	.restaurant-detail__features {
+		width: 70%;
+	}
 }
 
 @media (max-width: 640px) {
-  .restaurant-detail__features {
-    width: 100%;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    margin: 30px 0;
-  }
+	.restaurant-detail__features {
+		width: 100%;
+		-ms-flex-pack: distribute;
+		justify-content: space-around;
+		margin: 30px 0;
+	}
 
-  .restaurant-detail__features p {
-    font-size: 10px;
-  }
+	.restaurant-detail__features p {
+		font-size: 10px;
+	}
 }

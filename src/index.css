@@ -21,6 +21,9 @@ html {
 
 .home-search-bar {
 	display: none;
+	width: 100%;
+	margin: 0 auto;
+	margin-left: 4rem;
 }
 @media screen and (max-width: 768px) {
 	.home-search-bar {

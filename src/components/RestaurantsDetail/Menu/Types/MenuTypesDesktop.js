@@ -15,6 +15,7 @@ const MenuTypesDesktop = ({ types, selectedType, onSelect }) => {
           </li>
         ))}
       </ul>
+      <hr />
     </div>
   );
 };

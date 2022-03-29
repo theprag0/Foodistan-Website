@@ -2,6 +2,7 @@ import React from 'react';
 import Tabs from '../Tabs/Tabs';
 
 import MenuItem from './MenuItem';
+import MenuTypes from '../Types/MenuTypes';
 import './MenuList.css';
 
 const MenuList = ({
@@ -11,11 +12,20 @@ const MenuList = ({
   restaurantName,
   address,
   restaurantId,
+  menuTypes,
+  selectedType,
+  typeClickHandler
 }) => {
   return (
     <>
       <ul className="menu-list__list">
-        <Tabs selectedMethod={selectedMethod} onSelectMethod={onSelectMethod} />
+        {/* <Tabs selectedMethod={selectedMethod} onSelectMethod={onSelectMethod} /> */}
+        <MenuTypes
+          types={menuTypes}
+          selectedType={selectedType}
+          onSelect={typeClickHandler}
+          selectedMethod={selectedMethod}
+        />
         <div className="menu-list__items">
           {menu.map((f) => (
             <MenuItem

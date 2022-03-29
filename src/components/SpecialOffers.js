@@ -56,9 +56,9 @@ export default class CenterMode extends Component {
  
     return (
     <div className="specialOffer-slider">
-      <Swiper slidesPerView={`${flag}`} spaceBetween={10} centeredSlides={true} loop={true} Pagination={{
+      <Swiper slidesPerView={`${flag}`} spaceBetween={30} centeredSlides={true} loop={true} Pagination={{
         "clickable": true
-        }} navigation={true} className="mySwiper container-fluid slider">
+        }} navigation={true} className="mySwiper slider">
         <SwiperSlide>  <div className='' >
                         <div>
                           <h3><img className="specialoffer-img" src={offer}alt="First slide"/></h3>

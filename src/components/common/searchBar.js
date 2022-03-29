@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { TiLocation } from 'react-icons/ti';
-import { FiSearch } from 'react-icons/fi';
 import { database } from '../../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
@@ -14,6 +14,8 @@ export default function SearchBar() {
   const [error, setError] = useState(null);
   const [text, setText] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+
+  const location = useLocation();
 
   useEffect(() => {
     const fetchdatahandler = async () => {
@@ -69,31 +71,21 @@ export default function SearchBar() {
      <div className='col-md-4'></div>
       <div className='col-md-4 search'>
       <div className="outer-search-bar-2">
-        <div className="search-bar-2">
+        <div className="search-bar-2" style={{width: 'fit-content'}}>
           <div className="location-container">
             <div className="location-wrapper-2">
               <div className="location-icon-name">
                 <TiLocation className="absolute-center location-icon" />
               </div>
             </div>
-            <div className="input-search-bar-2">
-              <FiSearch className="search-icon absolute-center" />
-              <input
-                placeholder="Search Cuisines"
-                className="search-input "
-                value={text}
-                onChange={(e) => onChangeHandler(e.target.value)}
-                onBlur={() => {
-                  setTimeout(() => {
-                    setSuggestions([]);
-                  }, 300);
-                }}
-              />
-            </div>
           </div>
           <div className="input-search-bar-2">
             <input
-              placeholder="Where you want to eat?"
+              placeholder={
+                location.pathname === '/' 
+                ? "Where you want to eat?" 
+                : "Search Cuisines"
+              }
               className="search-input "
               value={text}
               onChange={(e) => onChangeHandler(e.target.value)}
@@ -101,6 +93,9 @@ export default function SearchBar() {
                 setTimeout(() => {
                   setSuggestions([])
                 }, 300)
+              }}
+              style={{
+                paddingRight: location.pathname === '/explore' || location.pathname.match('/restaurant') ? '100px' : '',
               }}
             />
           </div>
@@ -112,7 +107,13 @@ export default function SearchBar() {
                 className="search-input suggestion"
                 key={i}
                 onClick={() => onSuggestHandler(suggestion.Name)}>
-                <span><img style={{ height: '5.5rem', weight: '5rem' }} src={suggestion.FoodImage} alt="food" /></span>
+                <span>
+                  <img 
+                    style={{ height: '5.5rem', weight: '5rem' }} 
+                    src={suggestion.FoodImage} 
+                    alt="food" 
+                  />
+                </span>
                 <div className="suggestionName">
                   {suggestion.Name}
                 </div>

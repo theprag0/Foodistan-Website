@@ -39,7 +39,10 @@ const Restaurants = () => {
     <>
       {isLoading && !error && <LoadingSpinner center />}
       {!isLoading && !error && restaurants.length > 0 && (
+        <>
+        <h1 className='restaurants-header'>Restaurants near me</h1>
         <RestaurantsList restaurants={restaurants} />
+        </>
       )}
       {!isLoading && error && <p className="center">{error}</p>}
     </>

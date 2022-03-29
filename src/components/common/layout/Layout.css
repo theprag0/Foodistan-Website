@@ -1,9 +1,9 @@
-.main {
+/* .main {
   padding: 0 5rem;
-}
+} */
 
 @media (max-width: 960px) {
-  .main {
-    padding: 0;
-  }
+	.main {
+		padding: 0;
+	}
 }

@@ -25,11 +25,12 @@
 	font-weight: 500;
 	font-family: segoe;
 	padding-top: 1rem;
-	padding-right: 15px;
+	padding-right: 1rem;
 	margin-right: 2.5rem;
 	-webkit-transition: 0.2s;
 	-o-transition: 0.2s;
 	transition: 0.2s;
+	width: fit-content;
 }
 .home-header-items > a {
 	color: #fab84c;
@@ -53,6 +54,11 @@
 
 .nav-search-bar {
 	display: block;
+	width: fit-content;
+}
+
+.nav-search-bar .search-input {
+	width: fit-content;
 }
 
 @media screen and (max-width: 768px) {
