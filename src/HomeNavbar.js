@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Navbar, Container, Button, Nav } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from './store/auth-context';
+import LoginModal from './LoginModal';
 import SearchBar from './components/common/searchBar';
 import './styles/HomeNavbar.css';
 import logo from './images/logo.png';
@@ -10,6 +11,7 @@ function HomeNavbar(props) {
     const authCtx = useContext(AuthContext);
 
     return (
+        <>
         <div>
             <Navbar expand="md" className="home-navbar navbar-light bg-light">
                 <Container className='align-items-center' style={{height: '100%'}}>
@@ -21,14 +23,17 @@ function HomeNavbar(props) {
                     </Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse>
-                        <Nav style={{width: '100%'}} className="justify-content-space-between align-items-center">
+                        <Nav 
+                            style={{width: '100%'}} 
+                            className={!authCtx.isLoggedIn ? 'justify-content-end' : "justify-content-space-between align-items-center"}
+                        >
                             {
                                 authCtx.isLoggedIn
                                 && (
                                     <div className='container-fluid'>
                                         <Nav.Item 
                                             className='home-header-items nav-search-bar'
-                                            style={{marginRight: '5rem'}}
+                                            style={{marginRight: '5rem', width: '60%'}}
                                         >
                                             <SearchBar />
                                         </Nav.Item>
@@ -65,16 +70,17 @@ function HomeNavbar(props) {
                             }
                             {!authCtx.isLoggedIn && (
                                 <Nav.Item className="">
-                                <Link to="/login">
                                     <Button
-                                    type="button"
-                                    variant="warning"
-                                    size="lg"
-                                    className="home-btnn"
+                                        type="button"
+                                        variant="warning"
+                                        size="lg"
+                                        className="home-btnn"
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#loginBackdrop"
                                     >
-                                    Login/Sign Up
+                                        Login/Sign Up
                                     </Button>
-                                </Link>{' '}
+                                {' '}
                                 </Nav.Item>
                             )}
                             {authCtx.isLoggedIn && (
@@ -95,6 +101,8 @@ function HomeNavbar(props) {
                 </Container>
             </Navbar>
         </div>
+        <LoginModal />
+        </>
     )
 }
 

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Navbar, Container, Button, Nav } from 'react-bootstrap';
+import LoginModal from '../../LoginModal';
 import logo from '../../images/logo.png';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../store/auth-context';
@@ -9,13 +10,14 @@ function Header() {
   const authCtx = useContext(AuthContext);
   
   return (
+    <>
     <div>
       <Navbar expand="sm" className={`navbar ${location.pathname === '/' || location.pathname === '/about' ? '' : 'bg-dark'}`}>
         <Container>
           <Navbar.Brand className="navbar-brand">
             <NavLink to="/" className="navlink-logo">
               <img src={logo} alt="logo" className="logo"></img>
-              Streato
+              Foodistan
             </NavLink>
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -44,16 +46,16 @@ function Header() {
               </Nav.Item>
               {!authCtx.isLoggedIn && (
                 <Nav.Item className="">
-                  <Link to="/login">
-                    <Button
-                      type="button"
-                      variant="warning"
-                      size="lg"
-                      className="btnn"
-                    >
-                      Login/Sign Up
-                    </Button>
-                  </Link>{' '}
+                  <Button
+                    type="button"
+                    variant="warning"
+                    size="lg"
+                    className="btnn"
+                    data-bs-toggle="modal" 
+                    data-bs-target="#loginBackdrop"
+                  >
+                    Login/Sign Up
+                  </Button>{' '}
                 </Nav.Item>
               )}
               {authCtx.isLoggedIn && (
@@ -74,6 +76,8 @@ function Header() {
         </Container>
       </Navbar>
     </div>
+    <LoginModal />
+    </>
   );
 }
 export default Header;

@@ -83,12 +83,24 @@
 	padding-left: 1.5rem;
 	font-family: segoe;
 	letter-spacing: 1px;
+	padding-top: 10px;
+}
+.location-icon-name span {
+	padding: 0 10px;
+	cursor: pointer;
+}
+.location-icon-name span h2 {
+	font-size: 15px;
+	font-weight: 600;
+}
+.location-icon-name span p {
+	font-size: 12px;
 }
 .location-icon {
 	font-size: 2rem;
 	color: #fac05e;
-	padding-right: 10px;
-	padding-left: 10px;
+	/* padding-right: 10px;
+	padding-left: 10px; */
 	cursor: pointer;
 }
 .location-wrapper {

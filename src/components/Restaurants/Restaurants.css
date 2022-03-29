@@ -13,14 +13,19 @@
 }
 
 .restaurants-header {
-	display: flex;
-	justify-content: center;
+	/* display: flex;
+	justify-content: center; */
 	font-family: 'Segoe UI';
 	font-weight: 600;
 	font-size: 24px;
 	line-height: 32px;
 	letter-spacing: 0.075em;
 	margin: 20px auto;
+	text-align: start;
+	padding: 0 5rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 }
 
 .badges {
@@ -90,7 +95,11 @@
 }
 
 .restaurant__info {
-	padding: 3rem 2rem;
+	padding: 0.5rem 0.5rem;
+}
+
+.restaurant__info div {
+	margin: 10px 0;
 }
 
 .restaurant__name-ratings {

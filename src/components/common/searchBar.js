@@ -68,14 +68,18 @@ export default function SearchBar() {
 
   return (
     <div className='row'>
-     <div className='col-md-4'></div>
-      <div className='col-md-4 search'>
+     <div className='col-md-3'></div>
+      <div className='col-md-6 search'>
       <div className="outer-search-bar-2">
         <div className="search-bar-2" style={{width: 'fit-content'}}>
           <div className="location-container">
             <div className="location-wrapper-2">
               <div className="location-icon-name">
                 <TiLocation className="absolute-center location-icon" />
+                <span>
+                  <h2>Home</h2>
+                  <p>Rohini, Delhi</p>
+                </span>
               </div>
             </div>
           </div>
@@ -95,7 +99,7 @@ export default function SearchBar() {
                 }, 300)
               }}
               style={{
-                paddingRight: location.pathname === '/explore' || location.pathname.match('/restaurant') ? '100px' : '',
+                paddingRight: location.pathname === '/explore' || location.pathname.match('/restaurant') ? '150px' : '',
               }}
             />
           </div>

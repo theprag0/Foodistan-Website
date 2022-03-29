@@ -31,7 +31,7 @@ function Home() {
           <SearchBar />
         </div>
         <SpecialOffers />
-        <Trolly />
+        {/* <Trolly /> */}
         {/* <Deals /> */}
         <OrderByCuisines />
         <Restaurants />
