@@ -24,100 +24,97 @@ function WindowWidth(){
   } 
 
     return (
-      <div className="specialOffer-slider2 slider-gray-bg"> 
-      <div className="container">
-        <h2 className="cuisines-header absolute-center">Order By Cuisines</h2>
-         <Swiper slidesPerView={`${flag}`} spaceBetween={5} pagination={{
-        "clickable": true
-        }} className="mySwiper container-fluid slider" navigation={true}>
-        <SwiperSlide>  <div className='absolute-center' >
-                         <div>
-                          <h3><img className="cuisine-img"src={red}alt="First slide"/></h3>
-                         </div>
-                       </div>
-        </SwiperSlide>
-        <SwiperSlide>  <div className='absolute-center' >
-                         <div>
-                          <h3><img className="cuisine-img"src={yellow}alt="First slide"/></h3>
-                         </div>
-                       </div>
-                        </SwiperSlide>
-        <SwiperSlide>  <div className='absolute-center' >
-                         <div>
-                          <h3><img className="cuisine-img"src={green}alt="First slide"/></h3>
-                         </div>
-                       </div>
-                      </SwiperSlide>
-        <SwiperSlide>  <div className='absolute-center' >
-                         <div>
-                          <h3><img className="cuisine-img"src={blue}alt="First slide"/></h3>
-                         </div>
-                       </div></SwiperSlide>
-        <SwiperSlide>  <div className='absolute-center' >
-                         <div>
-                          <h3><img className="cuisine-img"src={red}alt="First slide"/></h3>
-                         </div>
-                       </div></SwiperSlide>
-        <SwiperSlide>  <div className='absolute-center' >
-                         <div>
-                          <h3><img className="cuisine-img"src={yellow}alt="First slide"/></h3>
-                         </div>
-                       </div></SwiperSlide>
-        <SwiperSlide>  <div className='absolute-center'>
-                         <div>
-                          <h3><img className="cuisine-img"src={green}alt="First slide"/></h3>
-                         </div>
-                       </div></SwiperSlide>
-        <SwiperSlide>  <div className='absolute-center'>
-                         <div>
-                          <h3><img className="cuisine-img"src={blue}alt="First slide"/></h3>
-                         </div>
-                       </div></SwiperSlide>
-        <SwiperSlide>  <div className='absolute-center'>
-                         <div>
-                          <h3><img className="cuisine-img"src={red}alt="First slide"/></h3>
-                         </div>
-                       </div></SwiperSlide>
-        </Swiper>
-        </div>
-        </div>
+      <div style={{width: '100%', backgroundColor: 'rgb(248, 248, 248)', padding: '10px 0'}}> 
+        <Container className="container-fluid">
+          <Row className="row absolute-center justify-content-start">
+            <Col className="col-md-6">
+              <h2 className="cuisines-header">Order By Cuisines</h2>
+            </Col>
+            <Col className="col-md-6"></Col>
+          </Row>
+          <Row className="row my-3 mx-4 absolute-center ">
+            <Col className="col-md-2 col-sm-2 col-xs-6">
+              <img className="cuisine-img img-fluid" src={red} alt="First slide"/>
+            </Col>
+            <Col className="col-md-2 col-sm-2 col-xs-6">
+              <img className="cuisine-img img-fluid" src={yellow} alt="First slide"/>
+            </Col>
+            <Col className="col-md-2 col-sm-2 col-xs-6">
+              <img className="cuisine-img img-fluid" src={green} alt="First slide"/>
+            </Col>
+            <Col className="col-md-2 col-sm-2 col-xs-6">
+              <img className="cuisine-img img-fluid" src={blue} alt="First slide"/>
+            </Col>
+          </Row>
+          <Row className="row my-3 mx-4 absolute-center">
+            <Col className="col-md-2 col-sm-2 col-xs-6">
+              <img className="cuisine-img img-fluid" src={blue} alt="First slide"/>
+            </Col>
+            <Col className="col-md-2 col-sm-2 col-xs-6">
+              <img className="cuisine-img img-fluid" src={red} alt="First slide"/>
+            </Col>
+            <Col className="col-md-2 col-sm-2 col-xs-6">
+              <img className="cuisine-img img-fluid" src={yellow} alt="First slide"/>
+            </Col>
+            <Col className="col-md-2 col-sm-2 col-xs-6">
+              <img className="cuisine-img img-fluid" src={green} alt="First slide"/>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     )};
     }
 
-//    <div className="container order-container">
-//    <h2 className="big-font">Order By Cuisines</h2>
-//      <Slider {...settings}>
-      //  <div>
-      //    <h3><img className="cuisine-img"
-      //    src={red}
-      //    alt="First slide"
-      //  /></h3>
-      //  </div>
-//        <div>
-//          <h3>   <img className="cuisine-img"
-//          src={yellow}
-//          alt="First slide"
-//        /></h3>
-//        </div>
-//        <div>
-//          <h3>   <img className="cuisine-img"
-//          src={green}
-//          alt="First slide"
-//        /></h3>
-//        </div>
-//        <div>
-//          <h3>   <img className="cuisine-img"
-//          src={blue}
-//          alt="First slide"
-//        /></h3>
-//        </div>
-//      </Slider>
-//    </div>
-//  );
 
-   
-     
-   
-// }
-// }
-    
+    // <Swiper slidesPerView={`${flag}`} spaceBetween={5} pagination={{
+    //   "clickable": true
+    //   }} className="mySwiper container-fluid slider" navigation={true}>
+    //   <SwiperSlide>  <div className='absolute-center' >
+    //                    <div>
+    //                     <h3><img className="cuisine-img"src={red}alt="First slide"/></h3>
+    //                    </div>
+    //                  </div>
+    //   </SwiperSlide>
+    //   <SwiperSlide>  <div className='absolute-center' >
+    //                    <div>
+    //                     <h3><img className="cuisine-img"src={yellow}alt="First slide"/></h3>
+    //                    </div>
+    //                  </div>
+    //                   </SwiperSlide>
+    //   <SwiperSlide>  <div className='absolute-center' >
+    //                    <div>
+    //                     <h3><img className="cuisine-img"src={green}alt="First slide"/></h3>
+    //                    </div>
+    //                  </div>
+    //                 </SwiperSlide>
+    //   <SwiperSlide>  <div className='absolute-center' >
+    //                    <div>
+    //                     <h3><img className="cuisine-img"src={blue}alt="First slide"/></h3>
+    //                    </div>
+    //                  </div></SwiperSlide>
+    //   <SwiperSlide>  <div className='absolute-center' >
+    //                    <div>
+    //                     <h3><img className="cuisine-img"src={red}alt="First slide"/></h3>
+    //                    </div>
+    //                  </div></SwiperSlide>
+    //   <SwiperSlide>  <div className='absolute-center' >
+    //                    <div>
+    //                     <h3><img className="cuisine-img"src={yellow}alt="First slide"/></h3>
+    //                    </div>
+    //                  </div></SwiperSlide>
+    //   <SwiperSlide>  <div className='absolute-center'>
+    //                    <div>
+    //                     <h3><img className="cuisine-img"src={green}alt="First slide"/></h3>
+    //                    </div>
+    //                  </div></SwiperSlide>
+    //   <SwiperSlide>  <div className='absolute-center'>
+    //                    <div>
+    //                     <h3><img className="cuisine-img"src={blue}alt="First slide"/></h3>
+    //                    </div>
+    //                  </div></SwiperSlide>
+    //   <SwiperSlide>  <div className='absolute-center'>
+    //                    <div>
+    //                     <h3><img className="cuisine-img"src={red}alt="First slide"/></h3>
+    //                    </div>
+    //                  </div></SwiperSlide>
+    //   </Swiper>   

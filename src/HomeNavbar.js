@@ -16,7 +16,7 @@ function HomeNavbar(props) {
             <Navbar expand="md" className="home-navbar navbar-light bg-light">
                 <Container className='align-items-center' style={{height: '100%'}}>
                     <Navbar.Brand className="home-navbar-brand align-items-center">
-                        <NavLink to="/" className="navlink-logo">
+                        <NavLink to="/" className="navlink-logo navbar-brand">
                             <img src={logo} alt="logo" className="home-logo"></img>
                             Foodistan
                         </NavLink>
@@ -25,22 +25,17 @@ function HomeNavbar(props) {
                     <Navbar.Collapse>
                         <Nav 
                             style={{width: '100%'}} 
-                            className={!authCtx.isLoggedIn ? 'justify-content-end' : "justify-content-space-between align-items-center"}
+                            className={!authCtx.isLoggedIn ? 'justify-content-end align-items-center' : "justify-content-space-between align-items-center"}
                         >
-                            {
-                                authCtx.isLoggedIn
-                                && (
-                                    <div className='container-fluid'>
-                                        <Nav.Item 
-                                            className='home-header-items nav-search-bar'
-                                            style={{marginRight: '5rem', width: '60%'}}
-                                        >
-                                            <SearchBar />
-                                        </Nav.Item>
-                                    </div>
-                                )
-                            }
-                            {
+                            <div className='container-fluid'>
+                                <Nav.Item 
+                                    className='home-header-items nav-search-bar'
+                                    style={{marginRight: '5rem', width: '60%'}}
+                                >
+                                    <SearchBar />
+                                </Nav.Item>
+                            </div>
+                            {/* {
                                 !authCtx.isLoggedIn 
                                 && (
                                     <>
@@ -67,7 +62,7 @@ function HomeNavbar(props) {
                                         </Nav.Item>
                                     </>
                                 )
-                            }
+                            } */}
                             {!authCtx.isLoggedIn && (
                                 <Nav.Item className="">
                                     <Button
@@ -77,6 +72,7 @@ function HomeNavbar(props) {
                                         className="home-btnn"
                                         data-bs-toggle="modal" 
                                         data-bs-target="#loginBackdrop"
+                                        style={{width: '100%'}}
                                     >
                                         Login/Sign Up
                                     </Button>

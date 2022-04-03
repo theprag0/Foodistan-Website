@@ -25,10 +25,10 @@ function LoginModal(props) {
         window.recaptchaVerifier = new RecaptchaVerifier(
             'sign-in-button',
             {
-            size: 'invisible',
-            callback: (response) => {
-                // reCAPTCHA solved, allow signInWithPhoneNumber.
-            },
+                size: 'invisible',
+                callback: (response) => {
+                    // reCAPTCHA solved, allow signInWithPhoneNumber.
+                },
             },
             auth
         );
@@ -164,7 +164,7 @@ function LoginModal(props) {
             aria-hidden="true"
         >
             <div className='modal-dialog modal-dialog-centered modal-lg'>
-                <div className='modal-content' style={{backgroundColor: '#5C5C5C'}}>
+                <div className='modal-content' style={{backgroundColor: 'rgba(92, 92, 92, 0.9)'}}>
                     <div className='modal-header login-header'>
                         <button type="button" data-bs-dismiss="modal" className='login-btn-close' aria-label="Close">
                             <i className="fa-solid fa-xmark"></i>
@@ -194,6 +194,7 @@ function LoginModal(props) {
                                     <option>+92</option>
                                 </select>
                                 <form onSubmit={requestOTP} style={{marginBottom: '15px'}}>
+                                    <div id="sign-in-button"></div>
                                     <input
                                         type="tel"
                                         className="login-input login-modal-input"
@@ -205,6 +206,7 @@ function LoginModal(props) {
                                     <button type="submit" className="login-modal-btn">
                                         <FaArrowRight />
                                     </button>
+                                    <div className="sign-in-button"></div>
                                 </form>
                                 <form
                                     onSubmit={(e) => {

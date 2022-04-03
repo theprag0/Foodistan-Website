@@ -15,7 +15,7 @@
   overflow: hidden;
   height: -webkit-max-content;
   height: -moz-max-content;
-  height: max-content;
+  height: fit-content;
   width: 45%;
 }
 
@@ -102,7 +102,7 @@
 .menu-list__description {
   margin: 0 1rem 1rem;
   font-size: 0.8rem;
-  height: 40px;
+  height: 30px;
   color: #000;
   letter-spacing: 0;
 }

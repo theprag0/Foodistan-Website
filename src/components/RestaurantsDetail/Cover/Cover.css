@@ -5,7 +5,7 @@
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	gap: 1rem;
-	padding: 1rem 5rem;
+	padding: 1rem 6rem;
 }
 
 .restaurant-img-container.maincover {
@@ -27,7 +27,7 @@
 .rating-badge {
 	position: absolute;
 	top: 2rem;
-	left: 5.5rem;
+	left: 6.5rem;
 }
 
 .rating-badge {
@@ -66,5 +66,11 @@
 @media (max-width: 640px) {
 	.restaurant-detail__cover {
 		height: 12.5rem;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.restaurant-detail__cover {
+		display: none;
 	}
 }

@@ -26,7 +26,7 @@ function Home() {
       <main className='main'>
         <div 
           className='home-search-bar'
-          style={{display: (!authCtx.isLoggedIn || matches) ? 'block' : 'none'}}
+          style={{display: (matches) ? 'block' : 'none'}}
         >
           <SearchBar />
         </div>

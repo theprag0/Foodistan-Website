@@ -90,7 +90,7 @@ export default function SearchBar() {
                 ? "Where you want to eat?" 
                 : "Search Cuisines"
               }
-              className="search-input "
+              className="search-input home-search-input"
               value={text}
               onChange={(e) => onChangeHandler(e.target.value)}
               onBlur={() => {

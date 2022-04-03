@@ -12,7 +12,7 @@
 	height: max-content;
 	width: -webkit-max-content;
 	width: -moz-max-content;
-	width: max-content;
+	width: 100%;
 	padding: 0.3rem 1rem 0.5rem 3rem;
 	border-radius: 10px;
 	color: #000;
@@ -86,7 +86,7 @@
 	}
 
 	.restaurant-detail__info-offers .card {
-		padding: 0.8rem 1rem 0.8rem 2rem;
+		padding: 0.5rem;
 	}
 	.restaurant-detail__info-offers .card:first-of-type {
 		margin: 0 0 5px 0;

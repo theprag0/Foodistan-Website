@@ -6,7 +6,7 @@ import Menu from './Menu/Menu';
 
 const FoundRestaurantsDetail = ({ details }) => {
   return (
-    <>
+    <section style={{position: 'relative'}}>
       <Cover
         rating={details.Stars}
         name={details.Name}
@@ -26,7 +26,7 @@ const FoundRestaurantsDetail = ({ details }) => {
         address={details.Address}
         restaurantId={details.id}
       />
-    </>
+    </section>
   );
 };
 

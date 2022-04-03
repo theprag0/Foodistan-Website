@@ -30,3 +30,12 @@ html {
 		display: block;
 	}
 }
+
+@media screen and (max-width: 576px) {
+	.home-search-bar {
+		margin-left: 0.5rem;
+	}
+	.home-search-input {
+		padding-right: 150px !important;
+	}
+}

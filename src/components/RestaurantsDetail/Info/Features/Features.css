@@ -11,7 +11,8 @@
 	width: 50%;
 	margin: 0.8rem 0;
 	cursor: pointer;
-	padding: 0.5rem 5rem;
+	padding: 0.5rem 6rem;
+	margin-bottom: 0;
 }
 
 .restaurant-detail__features p {
@@ -56,5 +57,11 @@
 
 	.restaurant-detail__features p {
 		font-size: 10px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.restaurant-detail__features {
+		padding-left: 0;
 	}
 }

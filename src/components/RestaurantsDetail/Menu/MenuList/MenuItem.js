@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 
 import './MenuItem.css';
 import CustomizationModal from '../CustomizationModal/CustomizationModal';
+import LoginModal from '../../../../LoginModal';
 import { CartContext } from '../../../../store/cart-context';
 import { AuthContext } from '../../../../store/auth-context';
 import { useHistory } from 'react-router-dom';
@@ -73,15 +74,33 @@ const MenuItem = ({
               <span></span>
             </span>
           </div>
-          <p className="menu-list__description">{description}</p>
-          <button
-            className="menu-list__add-btn"
-            onClick={customizationModalHandler}
-          >
-            ADD
-          </button>
+          <p className="menu-list__description">
+            {`${description.substring(0, 100)}...`}
+          </p>
+          {
+            authCtx.isLoggedIn
+            ? (
+              <button
+                className="menu-list__add-btn"
+                onClick={customizationModalHandler}
+              >
+                ADD
+              </button>
+            )
+            : (
+              <button
+                className="menu-list__add-btn"
+                data-bs-toggle="modal" 
+                data-bs-target="#loginBackdrop"
+                data-bs-dismiss="modal"
+              >
+                ADD
+              </button>
+            )
+          }
         </div>
       </li>
+      <LoginModal />
     </>
   );
 };
